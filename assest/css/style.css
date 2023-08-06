@@ -1,8 +1,12 @@
 * {
     box-sizing: border-box;
+    --margin1: 150px;
     --transition-1: all 0.3s ease;
     --color-primary: #00009b;
+    --color-textDesc3: #333333;
     --color-textDesc: #020202;
+    --color-textDesc2: #010101;
+    --color-red: #cc0e0e;
     --gradient-color: radial-gradient(
                 29.9% 70.94% at 44.25% 86.96%,
                 #aedcfa 0%,
@@ -83,6 +87,118 @@ body {
     color: #00009b;
     text-shadow: 2px 2px 2px #00000040;
 }
+
+.myCard {
+    position: relative;
+    width: 345px;
+    height: 547px;
+    border-radius: 15px 15px 0 0;
+    background: linear-gradient(
+        140.05deg,
+        #ffffff -61.39%,
+        rgba(255, 255, 255, 0) 109.15%
+    );
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
+.myCard .imgBox {
+    position: relative;
+    width: 345px;
+    aspect-ratio: 1;
+    background-color: #fff;
+    border-radius: 15px 15px 0 0;
+}
+
+.myCard .imgBox .imgSp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.myCard .imgBox .freeShip {
+    position: absolute;
+    top: 88%;
+    left: 80%;
+    height: 10%;
+}
+
+.myCard .imgBox .logoMini {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+.myCard .imgBox .sale {
+    position: absolute;
+    top: 88%;
+    left: 5%;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #fff;
+    padding: 8px 15px;
+    background-color: var(--color-primary);
+    border-radius: 5px;
+}
+
+.myCard .myCard_body {
+    padding: 17px 25px 5px 25px;
+}
+
+.myCard .myCard_body .buy {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    border: none;
+    padding: 17px;
+    color: var(--color-primary);
+    background: #eaeaff;
+    border-radius: 50px 50px 0 50px;
+    transition: var(--transition-1);
+}
+
+.myCard .myCard_body .buy:hover {
+    background-color: var(--color-primary);
+}
+.myCard .myCard_body .buy:hover svg path {
+    fill: #fff;
+}
+
+.myCard .myCard_body .category {
+    color: var(--color-primary);
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.myCard .myCard_body .title {
+    color: var(--color-textDesc3);
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    margin-bottom: 17px;
+    height: 90px;
+}
+
+.myCard .myCard_body .cost_discount {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--color-red);
+}
+
+.myCard .myCard_body .cost_discount sub {
+    font-size: 1.5rem;
+}
+
+.myCard .myCard_body .cost {
+    color: #a5a5a5;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: line-through;
+}
 /* =====================Header=========================== */
 header {
     width: 100%;
@@ -91,6 +207,29 @@ header {
     left: 0;
     z-index: 100;
 }
+.navbar {
+    padding-top: 20px;
+    position: relative;
+    animation: navAni 0.5s ease-out 1;
+}
+
+@keyframes navAni {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.navbar .bgNav {
+    position: absolute;
+    top: 0%;
+    left: -3%;
+    width: 106%;
+    z-index: -1;
+}
+
 .navbar .logo {
     width: 60px;
 }
@@ -112,6 +251,26 @@ header {
 .navbar .menu ul a {
     text-decoration: none;
     color: var(--color-textDesc);
+}
+
+.navbar .menu ul a.active {
+    position: relative;
+}
+
+.navbar .menu ul a.active::after {
+    position: absolute;
+    content: "";
+    bottom: -46px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 50px;
+    background-color: var(--color-primary);
+    z-index: 2;
+}
+
+.navbar.homePage .menu ul a.active::after {
+    bottom: -10px;
 }
 
 .navbar .features {
@@ -368,7 +527,6 @@ footer .copyright .boxContent .noti {
     font-size: 1.3rem;
     font-weight: 400;
     color: #666666;
-
 }
 
 footer .copyright .boxContent .imgBox {

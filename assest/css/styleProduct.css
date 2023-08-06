@@ -1,0 +1,193 @@
+main {
+    position: relative;
+    overflow: hidden;
+}
+
+main .backgroundMainGroup {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.backgroundMainGroup .bg {
+    width: 100vw;
+}
+
+.backgroundMainGroup .object {
+    position: absolute;
+}
+
+.backgroundMainGroup .obj0 {
+    display: block;
+    width: 100%;
+    top: 300px;
+    left: 0;
+}
+.backgroundMainGroup .obj1 {
+    display: block;
+    width: 50%;
+    top: 0;
+    right: 2%;
+}
+.backgroundMainGroup .obj2 {
+    display: block;
+    width: 50%;
+    top: 200px;
+    left: -8%;
+}
+
+/* =================SanPham================== */
+.sanPham {
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+.sanPham .contentBox {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 90px;
+}
+
+.sanPham .contentBox .heading {
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 46px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.sanPham .contentBox .localBox {
+    display: flex;
+    gap: 8px;
+}
+
+.sanPham .contentBox .localBox .desc {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: var(--color-textDesc3);
+    text-decoration: none;
+}
+
+.sanPham .nav-tabs {
+    display: flex;
+}
+
+.sanPham .nav-tabs .nav-link {
+    border-radius: 30px 0px;
+    border: 2px solid #fff;
+    background: #f3f3ff;
+    box-shadow: 4px -2px 5px 0px rgba(0, 0, 0, 0.05);
+    padding: 19px 28px 16px 35px;
+    text-transform: uppercase;
+    margin-left: 20px;
+}
+
+.sanPham .nav-tabs .nav-link.active {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.sanPham .boxTable {
+    width: 100%;
+    border-radius: 15px;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.51) 0%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    box-shadow: 0px 7.760000228881836px 14.65999984741211px 0px
+            rgba(100, 99, 99, 0.05),
+        0px 0px 15px 0px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(2.5799999237060547px);
+    border: 3px solid #fff;
+    padding: 35px 40px;
+}
+
+.sanPham .boxTable .rowHeading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sanPham .boxTable .rowHeading .heading {
+    font-size: 4.5rem;
+    font-weight: 400;
+    text-align: left;
+}
+
+.sanPham .boxTable .rowHeading .filterBox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sanPham .boxTable .rowHeading .filterBox .desc {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.sanPham .boxTable .rowHeading .filterBox .dropdown button {
+    background-color: transparent;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.sanPham .boxTable .rowHeading .filterBox .filter.active {
+    position: relative;
+}
+
+.sanPham .boxTable .rowHeading .filterBox .filter.active::after {
+    position: absolute;
+    content: "";
+    display: block;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-primary);
+}
+
+.sanPham .boxTable .listItem {
+    margin-top: 37px;
+}
+
+.sanPham .boxTable .listItem .item {
+    display: flex;
+    justify-content: center;
+}
+
+.sanPham .boxTable .listPage {
+    margin-top:  41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.sanPham .boxTable .listPage div {
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33px;
+    aspect-ratio: 1;
+    border-radius: 50px;
+    box-shadow: 0px 1px 4px 0px #00000026;
+    transition: var(--transition-1);
+}
+
+.sanPham .boxTable .listPage div:hover {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+.sanPham .boxTable .listPage div.active {
+    background-color: var(--color-primary);
+    color: #fff;
+}
