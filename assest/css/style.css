@@ -86,6 +86,7 @@ body {
     background: var(--gradient-color);
     color: #00009b;
     text-shadow: 2px 2px 2px #00000040;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.10);
 }
 
 .myCard {
@@ -199,6 +200,69 @@ body {
     font-weight: 400;
     text-decoration: line-through;
 }
+
+.articleItem {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 12px;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 52.87%,
+        #000000 91.86%
+    );
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 30px;
+    transition: var(--transition-1);
+}
+.articleItem .bg {
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.articleItem .categoryBox {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    transition: var(--transition-1);
+}
+
+.articleItem .categoryBox .category {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.articleItem .title {
+    width: 85%;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    transition: all 0.3s ease 0.1s;
+}
+
+.articleItem .listItem .item:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.articleItem .listItem .item:hover .categoryBox {
+    transform: translateY(-15px);
+}
+.articleItem .listItem .item:hover .title {
+    transform: translateY(-15px);
+}
 /* =====================Header=========================== */
 header {
     width: 100%;
@@ -253,11 +317,13 @@ header {
     color: var(--color-textDesc);
 }
 
-.navbar .menu ul a.active {
+.navbar .menu ul a.active,
+.navbar .features .bag.active{
     position: relative;
 }
 
-.navbar .menu ul a.active::after {
+.navbar .menu ul a.active::after,
+.navbar .features .bag.active::after {
     position: absolute;
     content: "";
     bottom: -46px;
@@ -539,3 +605,249 @@ footer .copyright .boxContent .imgBox {
 footer .copyright .boxContent .imgBox .img {
     height: 100%;
 }
+
+/* ====bootstrap loginFrom===== */
+.modal.show .modal-dialog {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.loginFrom {
+    width: 964px;
+    position: relative;
+    background-color: transparent;
+    border: none;
+}
+
+.loginFrom-close {
+    position: absolute;
+    top: -33px;
+    right: -33px;
+    border: none;
+    width: 33px;
+    aspect-ratio: 1/1;
+    background-color: transparent;
+}
+
+.loginFrom .loginFrom-body {
+    width: 964px;
+    display: flex;
+    padding: 0;
+}
+
+.loginFrom-body .leftSide {
+    position: relative;
+    width: 53%;
+}
+
+.loginFrom-body .leftSide img {
+    width: 100%;
+    object-fit: cover;
+    opacity: 0;
+}
+
+.loginFrom-body .leftSide .sub {
+    position: absolute;
+    width: 108.4%;
+    top: -20px;
+    left: -15px;
+    opacity: 1;
+    z-index: -1;
+}
+
+.loginFrom-body .rightSide {
+    width: 47%;
+}
+
+.loginFrom-body .rightSide {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px 15px 15px 0px;
+    background: #fff;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+    padding: 34px 48px 34px 48px;
+}
+
+.loginFrom-body .rightSide .desc {
+    color: #000;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 17px;
+}
+
+.loginFrom-body .rightSide .desc a {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
+.loginFrom-body label {
+    margin-bottom: 9px !important;
+}
+
+.loginFrom-body .inputButton {
+    display: flex;
+    border-radius: 10px;
+    border: 1px solid #cbcbff;
+    background: #fff;
+    box-shadow: 0px 4px 0px 0px #cbcbff;
+    padding: 12px;
+    margin-bottom: 23px;
+}
+
+.loginFrom-body .inputButton .icon {
+    width: 10%;
+}
+
+.loginFrom-body .inputButton .icon img {
+    width: 50%;
+    object-fit: cover;
+}
+
+.loginFrom-body .inputButton input {
+    border: none;
+}
+
+.loginFrom-body .inputButton input:focus {
+    border: none;
+    outline: none;
+}
+
+.loginFrom-body .desc.noti {
+    color: #666666;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.loginFrom-body .btnGradient {
+    margin-top: 10px;
+    text-align: center;
+    color: var(--color-primary);
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 13px;
+}
+
+/* ======= */
+.registerFrom {
+    width: 450px;
+    position: relative;
+    background-color: transparent;
+    border: none;
+}
+
+.registerFrom-close {
+    position: absolute;
+    top: -33px;
+    right: -33px;
+    border: none;
+    width: 33px;
+    aspect-ratio: 1/1;
+    background-color: transparent;
+}
+
+.registerFrom .registerFrom-body {
+    width: 450px;
+    display: flex;
+    padding: 0;
+}
+
+.registerFrom-body .rightSide {
+    width: 100%;
+}
+
+.registerFrom-body .rightSide {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+    padding: 34px 48px 34px 48px;
+}
+
+.registerFrom-body .rightSide .desc {
+    color: #000;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 17px;
+}
+
+.registerFrom-body .rightSide .desc a {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
+.registerFrom-body label {
+    margin-bottom: 9px !important;
+}
+
+.registerFrom-body .inputButton {
+    display: flex;
+    border-radius: 10px;
+    border: 1px solid #cbcbff;
+    background: #fff;
+    box-shadow: 0px 4px 0px 0px #cbcbff;
+    padding: 12px;
+    margin-bottom: 23px;
+}
+
+.registerFrom-body .inputButton .icon {
+    width: 10%;
+}
+
+.registerFrom-body .inputButton .icon img {
+    width: 50%;
+    object-fit: cover;
+}
+
+.registerFrom-body .inputButton input {
+    border: none;
+}
+
+.registerFrom-body .inputButton input:focus {
+    border: none;
+    outline: none;
+}
+
+.registerFrom-body .desc.noti {
+    color: #666666;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.registerFrom-body .btnGradient {
+    margin-top: 10px;
+    text-align: center;
+    color: var(--color-primary);
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 13px;
+}
+

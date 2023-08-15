@@ -470,3 +470,72 @@ main .backgroundMainGroup {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+/* =================tuVan================== */
+
+.tuVan {
+    padding: 60px 0 111px;
+    background: linear-gradient(
+        0deg,
+        #cedbff 0%,
+        rgba(255, 255, 255, 0.56) 100%
+    );
+    backdrop-filter: blur(4px);
+}
+
+.tuVan .heading {
+    color: var(--color-primary);
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.tuVan .formBox {
+    margin-top: 36px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tuVan .formBox .inputForm {
+    width: 85%;
+}
+
+.tuVan .formBox .inputForm .Name,
+.tuVan .formBox .inputForm .Sdt,
+.tuVan .formBox .inputForm .Info {
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    background: #fff;
+    box-shadow: 0px 4px 0px 0px #cbcbff;
+    padding: 16px 17px 18px 27px;
+}
+
+.tuVan .formBox .inputForm .Name:focus,
+.tuVan .formBox .inputForm .Sdt:focus,
+.tuVan .formBox .inputForm .Info :focus {
+    outline: none;
+}
+
+.tuVan .formBox .inputForm .Info {
+    margin-top: 14px;
+}
+
+.tuVan .formBox .buttonSend {
+    width: 13%;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    background: var(--gradient-color);
+    background-blend-mode: soft-light, normal, normal, normal, normal, normal,
+        normal, normal, normal, normal;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    text-align: center;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}

@@ -46,13 +46,14 @@
                             <li><a href="#!" class="active">TRANG CHỦ</a></li>
                             <li><a href="./intro.html">GIỚI THIỆU</a></li>
                             <li><a href="./product.html">SẢN PHẨM</a></li>
-                            <li><a href="#!">TIN TỨC</a></li>
-                            <li><a href="#!">CHƯƠNG TRÌNH KHÁCH HÀNG</a></li>
-                            <li><a href="#!">TÌM ĐIỂM BÁN</a></li>
+                            <li><a href="./news.html">TIN TỨC</a></li>
+                            <li><a href="./customer.html">CHƯƠNG TRÌNH KHÁCH HÀNG</a></li>
+                            <li><a href="./findStore.html">TÌM ĐIỂM BÁN</a></li>
                         </ul>
                     </div>
-                    <div class="features">
-                        <button class="login">
+                    <div class="features" >
+                        <button class="login" data-bs-toggle="modal"
+                        data-bs-target="#loginForm">
                             <img
                                 src="./assest/img/header_iconLogin.svg"
                                 alt=""
@@ -60,7 +61,7 @@
                             />
                         </button>
                         <div class="line"></div>
-                        <button class="bag">
+                        <button class="bag" onclick="window.location='./cart.html'">
                             <img
                                 src="./assest/img/header_iconBag.svg"
                                 alt=""
@@ -938,7 +939,210 @@
                     </div>
                 </section>
             </div>
+            
         </footer>
+        <div
+            class="modal fade"
+            id="loginForm"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content loginFrom">
+                    <button
+                        type="button"
+                        class="loginFrom-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    >
+                        <img
+                            src="./assest/img/loginForm-close.svg"
+                            alt=""
+                            class="icon"
+                        />
+                    </button>
+                    <div class="modal-body loginFrom-body">
+                        <div class="leftSide">
+                            <img src="./assest/img/loginForm-img2.png" alt="" />
+                            <img
+                                src="./assest/img/loginForm-img2.png"
+                                alt=""
+                                class="sub"
+                            />
+                        </div>
+                        <div class="rightSide">
+                            <p class="desc">
+                                Đăng nhập để nhận ưu đãi dành riêng cho Khách
+                                hàng thân thiết của 82X Nàng nhé!
+                            </p>
+                            <p class="desc" style="margin-bottom: 25px">
+                                Nếu Nàng chưa có tài khoản, vui lòng
+                                <a data-bs-toggle="modal"
+                                data-bs-target="#registerForm">đăng ký!</a>
+                            </p>
+                            <label for="username" class="desc"
+                                >Tên đăng nhập</label
+                            >
+                            <div class="inputButton">
+                                <div class="icon">
+                                    <img
+                                        src="./assest/img/loginForm-icon.svg"
+                                        alt=""
+                                    />
+                                </div>
+                                <input
+                                    type="text"
+                                    name=""
+                                    id="username"
+                                    placeholder="nhập tên đăng nhập *"
+                                />
+                            </div>
+                            <label for="username" class="desc">Mật khẩu</label>
+                            <div class="inputButton">
+                                <div class="icon">
+                                    <img
+                                        src="./assest/img/loginForm-icon2.svg"
+                                        alt=""
+                                    />
+                                </div>
+                                <input
+                                    type="password"
+                                    name=""
+                                    id="username"
+                                    placeholder="nhập mật khẩu *"
+                                />
+                            </div>
+                            <p class="desc noti">
+                                * là thông tin bắt buộc phải điển đầy đủ
+                            </p>
+
+                            <div class="btnGradient">Đăng nhập</div>
+                            <p class="desc" style="margin-top: 25px">
+                                Nếu Nàng chưa có tài khoản, vui lòng
+                                <a data-bs-toggle="modal"
+                                data-bs-target="#registerForm">đăng ký!</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="modal fade"
+            id="registerForm"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content registerFrom">
+                    <button
+                        type="button"
+                        class="registerFrom-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    >
+                        <img
+                            src="./assest/img/loginForm-close.svg"
+                            alt=""
+                            class="icon"
+                        />
+                    </button>
+                    <div class="modal-body registerFrom-body">
+                        <div class="rightSide">
+                            <p class="desc">
+                                Đăng ký để nhận được nhiều ưu đãi dành riêng cho Khách hàng thân thiết của 82X Nàng nhé!
+                            </p>
+                            <p class="desc" style="margin-bottom: 25px">
+                                Nếu Nàng đã có tài khoản, vui lòng 
+                                <a
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#loginForm"
+                                    >đăng nhập!</a
+                                >
+                            </p>
+                            <!-- ho va ten -->
+                            <label for="name" class="desc"
+                                >Họ và tên</label
+                            >
+                            <div class="inputButton">
+                                <div class="icon">
+                                    <img
+                                        src="./assest/img/loginForm-icon.svg"
+                                        alt=""
+                                    />
+                                </div>
+                                <input
+                                    type="text"
+                                    name=""
+                                    id="name"
+                                    placeholder="nhập Họ và tên *"
+                                />
+                            </div>
+                            <!-- so dien thoai -->
+                            <label for="sdt" class="desc"
+                                >Số điện thoại</label
+                            >
+                            <div class="inputButton">
+                                <div class="icon">
+                                    <img
+                                        src="./assest/img/loginForm-icon.svg"
+                                        alt=""
+                                    />
+                                </div>
+                                <input
+                                    type="text"
+                                    name=""
+                                    id="sdt"
+                                    placeholder="nhập số điện thoại *"
+                                />
+                            </div>
+
+                            <label for="password" class="desc">Mật khẩu</label>
+                            <div class="inputButton">
+                                <div class="icon">
+                                    <img
+                                        src="./assest/img/loginForm-icon2.svg"
+                                        alt=""
+                                    />
+                                </div>
+                                <input
+                                    type="password"
+                                    name=""
+                                    id="password"
+                                    placeholder="nhập mật khẩu *"
+                                />
+                            </div>
+                            <label for="password" class="desc">Nhập lại mật khẩu</label>
+                            <div class="inputButton">
+                                <div class="icon">
+                                    <img
+                                        src="./assest/img/loginForm-icon2.svg"
+                                        alt=""
+                                    />
+                                </div>
+                                <input
+                                    type="password"
+                                    name=""
+                                    id="password"
+                                    placeholder="nhập lại mật khẩu *"
+                                />
+                            </div>
+                            <p class="desc noti">
+                                * là thông tin bắt buộc phải điển đầy đủ
+                            </p>
+
+                            <div class="btnGradient">Đăng ký</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 

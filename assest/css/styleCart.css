@@ -1,0 +1,373 @@
+main {
+    position: relative;
+    overflow: hidden;
+}
+
+main .backgroundMainGroup {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.backgroundMainGroup .bg {
+    width: 100vw;
+}
+
+.backgroundMainGroup .object {
+    position: absolute;
+}
+
+.backgroundMainGroup .obj0 {
+    display: block;
+    width: 100%;
+    top: 300px;
+    left: 0;
+}
+.backgroundMainGroup .obj1 {
+    display: block;
+    width: 50%;
+    top: 0;
+    right: 2%;
+}
+.backgroundMainGroup .obj2 {
+    display: block;
+    width: 50%;
+    top: 200px;
+    left: -8%;
+}
+
+/* =================location================== */
+.location {
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+.location .contentBox {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 90px;
+}
+
+.location .contentBox .heading {
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 46px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.location .contentBox .localBox {
+    display: flex;
+    gap: 8px;
+}
+
+.location .contentBox .localBox .desc {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: var(--color-textDesc3);
+    text-decoration: none;
+}
+
+/* =================bangTinhTien================== */
+.bangTinhTien .boxContent {
+    display: flex;
+}
+
+.bangTinhTien .boxContent .leftSide {
+    width: 70%;
+}
+.bangTinhTien .boxContent .rightSide {
+    width: 28%;
+}
+
+.bangTinhTien .leftSide table {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+}
+
+.bangTinhTien .leftSide table input[type="checkbox"] {
+    border: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    border: 1px solid #b3b3b3;
+    background: #fff;
+}
+
+.bangTinhTien .leftSide table input[type="checkbox"]:checked {
+    background-color: var(--color-primary);
+    color: #000;
+}
+
+.bangTinhTien .leftSide .thead {
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.05);
+    color: #fff;
+    text-align: center;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.bangTinhTien .leftSide .thead th {
+    padding: 16px 19px 14px 19px;
+    background: #00009b;
+}
+
+.bangTinhTien .leftSide .thead th:first-child {
+    border-radius: 5px 0 0 0;
+}
+.bangTinhTien .leftSide .thead th:last-child {
+    border-radius: 0 5px 0 0;
+}
+
+.bangTinhTien .leftSide table td {
+    vertical-align: middle;
+    text-align: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #e3e3ff;
+}
+
+.bangTinhTien .leftSide table td .item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.bangTinhTien .leftSide table td .item .desc {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.bangTinhTien .leftSide table td .item .item_img {
+    position: relative;
+    width: 83px;
+    aspect-ratio: 1/1;
+    background-color: #f6f5f5;
+}
+.bangTinhTien .leftSide table td .item .item_img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bangTinhTien .leftSide table td .itemPrice_discount {
+    color: #000;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.bangTinhTien .leftSide table td .itemPrice_basis {
+    color: #888;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: line-through;
+}
+
+.bangTinhTien .leftSide table td .itemPrice_discount::after,
+.bangTinhTien .leftSide table td .itemPrice_basis::after,
+.bangTinhTien .leftSide table td .cost::after {
+    content: " vnđ";
+}
+
+.bangTinhTien .leftSide table td .boxCount {
+    display: flex;
+    justify-content: center;
+}
+
+.bangTinhTien .leftSide table td .boxCount div {
+    border: 1px solid #e3e3e3;
+    color: #000;
+    text-align: center;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.bangTinhTien .leftSide table td .boxCount .num {
+    padding: 6px 18px 8px 18px;
+    border-width: 1px 0 1px 0;
+}
+
+.bangTinhTien .leftSide table td .boxCount .decrease,
+.bangTinhTien .leftSide table td .boxCount .increase {
+    padding: 6px 10px 8px 10px;
+    width: 32px;
+}
+
+.bangTinhTien .leftSide table td .cost {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.bangTinhTien .leftSide table td .deleteItem svg path {
+    transition: all 0.3s ease;
+}
+
+.bangTinhTien .leftSide table td .deleteItem:hover svg path {
+    stroke: #fff;
+    fill: var(--color-primary);
+}
+/* ----- */
+.bangTinhTien .leftSide table tr.tfoot .boxHotline {
+    display: flex;
+    justify-content: center;
+    gap: 17px;
+    padding: 25px 19px;
+}
+
+.bangTinhTien .leftSide table tr.tfoot .boxHotline .boxIcon {
+    position: relative;
+    width: 55px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: #e14646;
+}
+
+.bangTinhTien .leftSide table tr.tfoot .boxHotline .boxIcon img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bangTinhTien .leftSide table tr.tfoot .boxHotline .desc {
+    color: #000;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+}
+
+.bangTinhTien .leftSide table tr.tfoot .boxHotline .desc strong {
+    color: #af1111;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.bangTinhTien .leftSide table tr.tfoot .buttonBox {
+    display: flex;
+    justify-content: space-around;
+}
+
+.bangTinhTien .leftSide table tr.tfoot .buttonBox .btnGioHang {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    height: 49px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    background: var(--gradient-color);
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
+    color: var(--color-primary);
+    text-align: center;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.bangTinhTien .leftSide table tr.tfoot .buttonBox .btnBack {
+    background: #fff;
+    border-color: var(--gradient-color);
+}
+/* =================quyenLoi================== */
+.quyenLoi {
+    margin-top: 62px;
+    margin-bottom: 62px;
+}
+
+.quyenLoi .heading {
+    color: var(--color-primary);
+    font-size: 4.5rem;
+    font-weight: 400;
+}
+
+.quyenLoi table {
+    margin-top: 28px;
+    width: 100%;
+    border-radius: 15px;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.51) 0%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    box-shadow: 0px 7.760000228881836px 14.65999984741211px 0px
+            rgba(100, 99, 99, 0.05),
+        0px 0px 15px 0px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(2.5799999237060547px);
+    overflow: hidden;
+}
+
+.quyenLoi table tr th,
+.quyenLoi table tr td {
+    width: 20%;
+    padding: 17px;
+    text-align: center;
+}
+
+.quyenLoi table tr td img {
+    margin: 0 auto;
+    background: transparent;
+    border: none;
+}
+
+.quyenLoi table tr th {
+    background-color: var(--color-primary);
+    color: #fff;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    border: 1px solid #000063;
+}
+
+.quyenLoi table tr td {
+    color: #000;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #e3e3ff;
+}
+
+.quyenLoi .btnGradient {
+    margin: 0 auto;
+    margin-top: 45px;
+    width: 48%;
+    text-align: center;
+    color: var(--color-primary);
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 500;
+    padding: 15px;
+}

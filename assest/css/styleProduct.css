@@ -164,7 +164,7 @@ main .backgroundMainGroup {
 }
 
 .sanPham .boxTable .listPage {
-    margin-top:  41px;
+    margin-top: 41px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -190,4 +190,73 @@ main .backgroundMainGroup {
 .sanPham .boxTable .listPage div.active {
     background-color: var(--color-primary);
     color: #fff;
+}
+
+.uuDai {
+    padding-bottom: 128px;
+}
+
+.uuDai .contentBox {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.uuDai .contentBox .heading {
+    text-align: center;
+}
+
+.uuDai .contentBox .banner {
+    width: 100%;
+    aspect-ratio: 1172 / 400;
+    border-radius: 12px;
+}
+
+.uuDai .contentBox .banner img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.uuDai .contentBox .quizTest {
+    display: flex;
+}
+
+.uuDai .contentBox .quizTest .leftSide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    gap: 24px;
+    padding-right: 50px;
+}
+
+.uuDai .quizTest .leftSide .title {
+    color: var(--color-primary);
+    font-family: Beaufort;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+
+}
+
+.uuDai .quizTest .leftSide .desc {
+    color: var(--color-textDesc3);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.uuDai .quizTest .leftSide .btnGradient {
+    width: 50%;
+    text-align: center;
+}
+
+.uuDai .quizTest .rightSide {
+    width: 60%;
+}
+
+.uuDai .quizTest .rightSide img {
+    width: 100%;
+    object-fit: cover;
 }

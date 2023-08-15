@@ -1,0 +1,344 @@
+main {
+    position: relative;
+    overflow: hidden;
+}
+
+main .backgroundMainGroup {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.backgroundMainGroup .bg {
+    width: 100vw;
+}
+
+.backgroundMainGroup .object {
+    position: absolute;
+}
+
+.backgroundMainGroup .obj0 {
+    display: block;
+    width: 100%;
+    top: 300px;
+    left: 0;
+}
+.backgroundMainGroup .obj1 {
+    display: block;
+    width: 50%;
+    top: 0;
+    right: 2%;
+}
+.backgroundMainGroup .obj2 {
+    display: block;
+    width: 50%;
+    top: 200px;
+    left: -8%;
+}
+
+/* =================location================== */
+.location {
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+.location .contentBox {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 90px;
+}
+
+.location .contentBox .heading {
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 46px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.location .contentBox .localBox {
+    display: flex;
+    gap: 8px;
+}
+
+.location .contentBox .localBox .desc {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: var(--color-textDesc3);
+    text-decoration: none;
+}
+
+/* =================banner================== */
+.banner img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* =================subbanner================== */
+.subBanner {
+    margin-top: 43px;
+    border-radius: 10px;
+}
+
+.subBanner .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subBanner .item .thumb {
+    width: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 10px -10px 0 0 rgba(34, 34, 136, 0.1),
+        20px -20px 0 0 rgba(34, 34, 136, 0.2);
+    transition: all 0.3s ease;
+}
+
+.subBanner .item:hover .thumb {
+    box-shadow: 5px -5px 0 0 rgba(34, 34, 136, 0.1),
+        10px -10px 0 0 rgba(34, 34, 136, 0.2);
+}
+
+/* =================heThongCuaHang================== */
+.heThongCuaHang {
+    margin-top: 62px;
+    margin-bottom: 81px;
+}
+
+.heThongCuaHang .contentBox {
+    display: flex;
+}
+
+.heThongCuaHang .contentBox .rightSide {
+    width: 60%;
+}
+
+.heThongCuaHang .contentBox .rightSide img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.heThongCuaHang .contentBox .leftSide {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    border-radius: 10px 0px 0px 10px;
+    background: #fff;
+    padding: 39px;
+}
+
+.heThongCuaHang .leftSide .heading {
+    color: var(--color-primary);
+    text-align: center;
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 19px;
+}
+
+.heThongCuaHang .leftSide .search {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 1px solid #cbcbff;
+    background: #fff;
+    box-shadow: 0px 4px 0px 0px #cbcbff;
+    padding: 16px 17px 18px 21px;
+}
+
+.heThongCuaHang .leftSide .search input {
+    width: 80%;
+    border: none;
+}
+
+.heThongCuaHang .leftSide .search input:focus {
+    outline: none;
+}
+
+.heThongCuaHang .leftSide .listItem {
+    margin-top: 28px;
+    width: 100%;
+    height: 550px;
+    overflow: scroll;
+}
+
+.heThongCuaHang .leftSide .listItem::-webkit-scrollbar {
+    width: 10px;
+}
+
+.heThongCuaHang .leftSide .listItem::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 10px;
+}
+
+.heThongCuaHang .item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-right: 15%;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed rgba(0, 0, 155, 0.2);
+    margin-top: 20px;
+}
+/* width */
+
+.heThongCuaHang .item .item_title {
+    color: var(--color-primary);
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.heThongCuaHang .item .sub {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.heThongCuaHang .item .desc {
+    color: #000;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* =================brandKhac================== */
+
+.brandKhac {
+    margin-bottom: 90px;
+}
+
+.brandKhac .itemList {
+    justify-content: center;
+}
+
+.brandKhac .itemList .item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    aspect-ratio: 292 / 234;
+    border-radius: 10px;
+}
+
+.brandKhac .itemList .item .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background: rgba(0, 0, 155, 0.95);
+    box-shadow: 0px 4px 56px 0px rgba(0, 0, 0, 0.6) inset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20%;
+    color: #fff;
+    text-align: center;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.brandKhac .itemList .item .label .icon {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+
+.brandKhac .itemList .item:hover .label {
+    opacity: 1;
+}
+
+.brandKhac .btnGradient {
+    margin: 0 auto;
+    margin-top: 62px;
+    padding: 15px;
+    width: 50%;
+    text-align: center;
+}
+
+/* =================tuVan================== */
+
+.tuVan {
+    padding: 60px 0 111px;
+    background: linear-gradient(
+        0deg,
+        #cedbff 0%,
+        rgba(255, 255, 255, 0.56) 100%
+    );
+    backdrop-filter: blur(4px);
+}
+
+.tuVan .heading {
+    color: var(--color-primary);
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.tuVan .formBox {
+    margin-top: 36px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tuVan .formBox .inputForm {
+    width: 85%;
+}
+
+.tuVan .formBox .inputForm .Name,
+.tuVan .formBox .inputForm .Sdt,
+.tuVan .formBox .inputForm .Info {
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    background: #fff;
+    box-shadow: 0px 4px 0px 0px #cbcbff;
+    padding: 16px 17px 18px 27px;
+}
+
+.tuVan .formBox .inputForm .Name:focus,
+.tuVan .formBox .inputForm .Sdt:focus,
+.tuVan .formBox .inputForm .Info :focus {
+    outline: none;
+}
+
+.tuVan .formBox .inputForm .Info {
+    margin-top: 14px;
+}
+
+.tuVan .formBox .buttonSend {
+    width: 13%;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    background: var(--gradient-color);
+    background-blend-mode: soft-light, normal, normal, normal, normal, normal,
+        normal, normal, normal, normal;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    text-align: center;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}

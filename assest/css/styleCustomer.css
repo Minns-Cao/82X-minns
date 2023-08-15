@@ -1,0 +1,189 @@
+main {
+    position: relative;
+    overflow: hidden;
+}
+
+main .backgroundMainGroup {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.backgroundMainGroup .bg {
+    width: 100vw;
+}
+
+.backgroundMainGroup .object {
+    position: absolute;
+}
+
+.backgroundMainGroup .obj0 {
+    display: block;
+    width: 100%;
+    top: 300px;
+    left: 0;
+}
+.backgroundMainGroup .obj1 {
+    display: block;
+    width: 50%;
+    top: 0;
+    right: 2%;
+}
+.backgroundMainGroup .obj2 {
+    display: block;
+    width: 50%;
+    top: 200px;
+    left: -8%;
+}
+
+/* =================location================== */
+.location {
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+.location .contentBox {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 90px;
+}
+
+.location .contentBox .heading {
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 46px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.location .contentBox .localBox {
+    display: flex;
+    gap: 8px;
+}
+
+.location .contentBox .localBox .desc {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: var(--color-textDesc3);
+    text-decoration: none;
+}
+
+/* =================banner================== */
+.banner img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* =================quyenLoi================== */
+.quyenLoi {
+    margin-top: 62px;
+    margin-bottom: 62px;
+}
+
+.quyenLoi .heading {
+    color: var(--color-primary);
+    font-size: 4.5rem;
+    font-weight: 400;
+}
+
+.quyenLoi table {
+    margin-top: 28px;
+    width: 100%;
+    border-radius: 15px;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.51) 0%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    box-shadow: 0px 7.760000228881836px 14.65999984741211px 0px
+            rgba(100, 99, 99, 0.05),
+        0px 0px 15px 0px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(2.5799999237060547px);
+    overflow: hidden;
+}
+
+.quyenLoi table tr th,
+.quyenLoi table tr td {
+
+
+    width: 20%;
+    padding: 17px;
+    text-align: center;
+}
+
+.quyenLoi table tr td img {
+    margin: 0 auto;
+    background: transparent;
+    border: none;
+}
+
+.quyenLoi table tr th {
+    background-color: var(--color-primary);
+    color: #fff;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    border: 1px solid #000063;
+}
+
+.quyenLoi table tr td {
+    color: #000;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #e3e3ff;
+}
+
+.quyenLoi .btnGradient {
+    margin: 0 auto;
+    margin-top: 45px;
+    width: 48%;
+    text-align: center;
+    color: var(--color-primary);
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 500;
+    padding: 15px;
+}
+
+/* =================chuongTrinhKhachHang================== */
+
+.chuongTrinhKhachHang {
+    margin-bottom: 57px;
+}
+
+.chuongTrinhKhachHang .heading {
+    margin-bottom: 38px;
+    color: var(--color-primary);
+
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+/* =================khamPhaThuongHieu================== */
+
+.khamPhaThuongHieu {
+    margin-bottom: 176px;
+}
+
+.khamPhaThuongHieu .heading {
+    margin-bottom: 38px;
+    color: var(--color-primary);
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
