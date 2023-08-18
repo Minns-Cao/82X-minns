@@ -79,6 +79,7 @@ main .backgroundMainGroup {
 /* =================bangTinhTien================== */
 .bangTinhTien .boxContent {
     display: flex;
+    justify-content: space-between;
 }
 
 .bangTinhTien .boxContent .leftSide {
@@ -298,76 +299,147 @@ main .backgroundMainGroup {
     background: #fff;
     border-color: var(--gradient-color);
 }
-/* =================quyenLoi================== */
-.quyenLoi {
-    margin-top: 62px;
-    margin-bottom: 62px;
+
+.bangTinhTien .rightSide {
+    display: flex;
+    flex-direction: column;
 }
 
-.quyenLoi .heading {
+.bangTinhTien .rightSide .tomTatDonHang {
+    padding: 19px;
+    padding-bottom: 34px;
+    border-radius: 5px;
+    background: linear-gradient(146deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.05),
+        0px 4px 0px 0px rgba(0, 0, 0, 0.05), 0px 8px 0px 0px rgba(0, 0, 0, 0.05);
+}
+
+.bangTinhTien .rightSide .tomTatDonHang .title {
     color: var(--color-primary);
-    font-size: 4.5rem;
-    font-weight: 400;
-}
-
-.quyenLoi table {
-    margin-top: 28px;
-    width: 100%;
-    border-radius: 15px;
-    background: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.51) 0%,
-        rgba(255, 255, 255, 0) 100%
-    );
-    box-shadow: 0px 7.760000228881836px 14.65999984741211px 0px
-            rgba(100, 99, 99, 0.05),
-        0px 0px 15px 0px rgba(0, 0, 0, 0.12);
-    backdrop-filter: blur(2.5799999237060547px);
-    overflow: hidden;
-}
-
-.quyenLoi table tr th,
-.quyenLoi table tr td {
-    width: 20%;
-    padding: 17px;
     text-align: center;
-}
-
-.quyenLoi table tr td img {
-    margin: 0 auto;
-    background: transparent;
-    border: none;
-}
-
-.quyenLoi table tr th {
-    background-color: var(--color-primary);
-    color: #fff;
     font-size: 1.6rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    text-transform: uppercase;
-    border: 1px solid #000063;
+    margin-bottom: 20px;
 }
 
-.quyenLoi table tr td {
+.bangTinhTien .rightSide .tomTatDonHang .tamTinh,
+.bangTinhTien .rightSide .tomTatDonHang .phiVanChuyen {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.bangTinhTien .rightSide .tomTatDonHang .phiVanChuyen {
+    margin-bottom: 26px;
+}
+
+.bangTinhTien .rightSide .tomTatDonHang .tongTien {
+    padding-top: 18px;
+    border-top: 1px solid #d8d8f1;
+}
+
+.bangTinhTien .rightSide .tomTatDonHang .tongTien .desc {
+    text-align: right;
+    margin-bottom: 8px;
+}
+
+.bangTinhTien .rightSide .tomTatDonHang .tongTien .money {
+    color: var(--color-primary);
+    text-align: right;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.bangTinhTien .rightSide .tomTatDonHang .tongTien .money::after,
+.bangTinhTien .rightSide .tomTatDonHang .tamTinh .money::after {
+    content: " vnđ";
+}
+
+.bangTinhTien .rightSide .tomTatDonHang .desc {
     color: #000;
     font-size: 1.5rem;
     font-style: normal;
-    font-weight: 500;
-    text-align: center;
-    vertical-align: middle;
-    border: 1px solid #e3e3ff;
+    font-weight: 400;
+    line-height: normal;
 }
 
-.quyenLoi .btnGradient {
-    margin: 0 auto;
-    margin-top: 45px;
-    width: 48%;
+.bangTinhTien .rightSide .thanhToanBox {
+    margin-top: 26px;
+}
+
+.bangTinhTien .rightSide .thanhToanBox .title {
+    color: #000;
     text-align: center;
-    color: var(--color-primary);
-    font-size: 2.2rem;
+    font-size: 1.6rem;
     font-style: normal;
-    font-weight: 500;
-    padding: 15px;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 11px;
+}
+
+.bangTinhTien .rightSide .thanhToanBox .boxImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* =================bestSeller================== */
+.bestSeller {
+    margin-top: 84px;
+    margin-bottom: 188px;
+}
+
+.bestSeller .headingBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 37px;
+}
+
+.bestSeller .headingBox .heading {
+    color: var(--color-primary);
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.bestSeller .headingBox .boxBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.bestSeller .headingBox .boxBtn .prev,
+.bestSeller .headingBox .boxBtn .next {
+    width: 32px;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.bestSeller .headingBox .boxBtn .prev svg,
+.bestSeller .headingBox .boxBtn .next svg {
+    width: 32px;
+    aspect-ratio: 1/1;
+}
+
+.slider {
+    width: 100%;
+    height: auto;
+}
+
+.slider .item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

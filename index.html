@@ -1019,7 +1019,8 @@
                                 * là thông tin bắt buộc phải điển đầy đủ
                             </p>
 
-                            <div class="btnGradient">Đăng nhập</div>
+                            <div class="btnGradient" data-bs-toggle="modal"
+                            data-bs-target="#succesLogin">Đăng nhập</div>
                             <p class="desc" style="margin-top: 25px">
                                 Nếu Nàng chưa có tài khoản, vui lòng
                                 <a data-bs-toggle="modal"
@@ -1138,6 +1139,111 @@
                             </p>
 
                             <div class="btnGradient">Đăng ký</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ===succesLogin== data-bs-toggle="modal"
+                            data-bs-target="#succesLogin" -->
+            <div
+            class="modal fade"
+            id="succesLogin"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content datHangTC">
+                    <button
+                        type="button"
+                        class="datHangTC-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    >
+                        <img
+                            src="./assest/img/loginForm-close.svg"
+                            alt=""
+                            class="icon"
+                        />
+                    </button>
+                    <div class="modal-body datHangTC-body">
+                        <div class="rightSide">
+                            <div class="succesIcon">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="110"
+                                    height="110"
+                                    viewBox="0 0 110 110"
+                                    fill="none"
+                                >
+                                    <mask
+                                        id="mask0_443_2594"
+                                        style="mask-type: alpha"
+                                        maskUnits="userSpaceOnUse"
+                                        x="0"
+                                        y="0"
+                                        width="110"
+                                        height="110"
+                                    >
+                                        <circle
+                                            cx="55"
+                                            cy="55"
+                                            r="55"
+                                            fill="#00009B"
+                                        />
+                                    </mask>
+                                    <g mask="url(#mask0_443_2594)">
+                                        <path
+                                            d="M134.5 105.5L88.5 31L81.5 36L65.5 54L48.5 68.5L36.5 54L21.5 47.5L65.5 136.5L134.5 105.5Z"
+                                            fill="url(#paint0_linear_443_2594)"
+                                        />
+                                    </g>
+                                    <defs>
+                                        <linearGradient
+                                            id="paint0_linear_443_2594"
+                                            x1="53.5"
+                                            y1="42"
+                                            x2="83"
+                                            y2="111"
+                                            gradientUnits="userSpaceOnUse"
+                                        >
+                                            <stop stop-color="#010164" />
+                                            <stop
+                                                offset="1"
+                                                stop-color="#010181"
+                                                stop-opacity="0"
+                                            />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="68"
+                                    height="50"
+                                    viewBox="0 0 68 50"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M0 16.75C14 14.87 22.13 22.3 29.61 31.75C40 18.28 50.36 5.28 66.89 0L67.89 1.07C67.3971 2.0028 66.8072 2.88099 66.13 3.69C54.45 15 45.5 28.36 37.81 42.62C37.011 44.265 36.0708 45.8375 35 47.32C32.28 50.75 29 50.7 26.33 47.26C25.3129 45.9459 24.3937 44.5589 23.58 43.11C18.11 33.44 11.34 24.94 1.77 19C1.29 18.65 1 18 0 16.75Z"
+                                        fill="white"
+                                    />
+                                </svg>
+                            </div>
+                            <p class="title">Đăng nhập thành công</p>
+                            <p class="desc">
+                                Cảm ơn
+                                <strong style="font-weight: 600"
+                                    >Quý khách</strong
+                                >
+                                đã quan tâm và đặt sản phẩm tại 82x
+                            </p>
+                            <p class="desc">
+                                Tổng đài tư vấn: <strong class="phone">1800.9232</strong>
+                            </p>
+                            <div class="btnGradient" onclick="window.location='./product.html'">Đến trang mua hàng</div>
                         </div>
                     </div>
                 </div>

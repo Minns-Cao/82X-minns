@@ -29,10 +29,10 @@
         />
         <!-- Style CSS -->
         <link rel="stylesheet" href="./assest/css/style.css" />
-        <link rel="stylesheet" href="./assest/css/styleNews.css" />
+        <link rel="stylesheet" href="./assest/css/stylePay.css" />
     </head>
     <body>
-        <!-- ============================PRODUCT PAGE================================ -->
+        <!-- ============================CART PAGE================================ -->
         <header>
             <section class="container">
                 <nav class="navbar">
@@ -51,11 +51,9 @@
                             <li><a href="./index.html">TRANG CHỦ</a></li>
                             <li><a href="./intro.html">GIỚI THIỆU</a></li>
                             <li><a href="./product.html">SẢN PHẨM</a></li>
-                            <li><a href="#!" class="active">TIN TỨC</a></li>
+                            <li><a href="./news.html">TIN TỨC</a></li>
                             <li>
-                                <a href="./customer.html"
-                                    >CHƯƠNG TRÌNH KHÁCH HÀNG</a
-                                >
+                                <a href="#!">CHƯƠNG TRÌNH KHÁCH HÀNG</a>
                             </li>
                             <li><a href="./findStore.html">TÌM ĐIỂM BÁN</a></li>
                         </ul>
@@ -74,7 +72,7 @@
                         </button>
                         <div class="line"></div>
                         <button
-                            class="bag"
+                            class="bag active"
                             onclick="window.location='./cart.html'"
                         >
                             <img
@@ -116,7 +114,7 @@
             <section class="location">
                 <div class="container">
                     <div class="contentBox">
-                        <div class="heading">Tin tức</div>
+                        <div class="heading">Thanh toán</div>
                         <div class="localBox">
                             <a href="./index.html" class="desc">Trang chủ</a>
                             <img
@@ -124,408 +122,321 @@
                                 alt=""
                                 class="vector"
                             />
-                            <a href="./news.html" class="desc">Tin tức</a>
+                            <a href="./cart.html" class="desc">Giỏ hàng</a>
+                            <img
+                                src="./assest/img/Vector.svg"
+                                alt=""
+                                class="vector"
+                            />
+                            <a href="./pay.html" class="desc">Thanh toán</a>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="banner container">
-                <img src="./assest/img/news_img/banner.png" alt="" />
-            </section>
-            <section class="subBanner">
+            <section class="pay">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-xl-4 item">
-                            <div class="boxThumb" onclick="window.location='./customer.html'">
-                                <img
-                                    src="./assest/img/findStore_img/imgCtkh.png"
-                                    alt=""
-                                    class="thumb"
-                                />
-                                <div class="subTitle">
-                                    <div class="icon">
-                                        <img
-                                            src="./assest/img/news_img/Frame.svg"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <p class="desc">Chương trình khách hàng</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 item">
-                            <div class="boxThumb" onclick="window.location='./news_thuongHieu.html'">
-                                <img
-                                    src="./assest/img/findStore_img/imgtth.png"
-                                    alt=""
-                                    class="thumb"
-                                />
-                                <div class="subTitle">
-                                    <div class="icon">
-                                        <img
-                                            src="./assest/img/news_img/Frame.svg"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <p class="desc">Tin thương hiệu</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 item">
-                            <div class="boxThumb" onclick="window.location='./news_sucKhoe.html'">
-                                <img
-                                    src="./assest/img/findStore_img/imgtsk.png"
-                                    alt=""
-                                    class="thumb"
-                                />
-                                <div class="subTitle">
-                                    <div class="icon">
-                                        <img
-                                            src="./assest/img/news_img/Frame.svg"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <p class="desc">Tin sức khoẻ và làm đẹp</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="baiVietMoiNhat">
-                <div class="container">
-                    <p class="headingNews">Bài viết mới nhất</p>
-                    <div class="news1">
+                    <div class="boxContent">
                         <div class="leftSide">
-                            <div
-                                class="boxThumb"
-                                onclick="window.location='#!'"
-                            >
-                                <img
-                                    src="./assest/img/news_img/thumb1.png"
-                                    alt=""
-                                    class="thumb"
-                                />
-                                <div class="subContent">
-                                    <p class="labelTop">
-                                        Tin sức khỏe và làm đẹp
-                                    </p>
-                                    <p class="title">
-                                        Mẹo chăm dáng, giữ da thời dịch của sao
-                                        Việt
-                                    </p>
-                                    <p class="desc line" style="--line: 4">
-                                        Nhiều người nổi tiếng tích cực chăm sóc
-                                        sức khỏe cơ thể và làn da nhờ sản phẩm
-                                        collagen dạng nước tiện dụng, giàu dinh
-                                        dưỡng. Trong những ngày qua, cộng đồng
-                                        chấp hành chỉ thị giãn cách xã hội và
-                                        hạn chế ra ngoài để đầy lùi Covid-19.
-                                        Các phòng tập thể dục, spa đóng cửa...
-                                    </p>
-                                    <a href="#!">Xem chi tiết</a>
+                            <div class="notLogin" style="margin-bottom: 24px">
+                                Bạn chưa có tài khoản?
+                                <a
+                                    style="color: #00009b"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#loginForm"
+                                    >Đăng nhập</a
+                                >
+                            </div>
+                            <div class="shipAdr">
+                                <div class="form_text">
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        id="name"
+                                        placeholder="Họ và tên *"
+                                    />
+                                </div>
+                                <div class="form_text">
+                                    <input
+                                        type="text"
+                                        name="phone"
+                                        id="phone"
+                                        placeholder="Số điện thoại *"
+                                    />
+                                </div>
+                                <div class="form_text">
+                                    <input
+                                        type="text"
+                                        name="adr"
+                                        id="adr"
+                                        placeholder="Địa chỉ *"
+                                    />
+                                </div>
+                                <div class="custom-select">
+                                    <select>
+                                        <option value="0">
+                                            Chọn Thành phố
+                                        </option>
+                                        <option value="1">TP.HCM</option>
+                                        <option value="2">Hà Nội</option>
+                                        <option value="3">Đà Nẵng</option>
+                                        <option value="4">option 4</option>
+                                        <option value="5">option 5</option>
+                                        <option value="6">option 6</option>
+                                        <option value="7">option 7</option>
+                                        <option value="7">option 7</option>
+                                    </select>
+                                </div>
+                                <div class="custom-select">
+                                    <select>
+                                        <option value="0">
+                                            Chọn Quận/Huyện
+                                        </option>
+                                        <option value="1">
+                                            Huyện Định Quán
+                                        </option>
+                                        <option value="2">
+                                            Huyện Trảng Bom
+                                        </option>
+                                        <option value="3">
+                                            Huyện Thống Nhất
+                                        </option>
+                                        <option value="4">option 4</option>
+                                        <option value="5">option 5</option>
+                                        <option value="6">option 6</option>
+                                        <option value="7">option 7</option>
+                                        <option value="7">option 7</option>
+                                    </select>
+                                </div>
+                                <div class="custom-select">
+                                    <select>
+                                        <option value="0">
+                                            Chọn Phường/Xã
+                                        </option>
+                                        <option value="1">Xã Ngọc Định</option>
+                                        <option value="2">Xã Phú Túc</option>
+                                        <option value="3">Xã Phú Cường</option>
+                                        <option value="4">option 4</option>
+                                        <option value="5">option 5</option>
+                                        <option value="6">option 6</option>
+                                        <option value="7">option 7</option>
+                                        <option value="7">option 7</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="phuongThucTT">
+                                <div class="title">Phương thức thanh toán</div>
+                                <div class="group-btn">
+                                    <div
+                                        class="form_check checked"
+                                        onclick="this.classList.toggle('checked');"
+                                    >
+                                        Thanh toán khi nhận hàng
+                                        <span class="checkmark"></span>
+                                        <div class="tickIcon">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="10"
+                                                height="8"
+                                                viewBox="0 0 10 8"
+                                                fill="none"
+                                            >
+                                                <path
+                                                    d="M9 1L3.5 7L1 4.27273"
+                                                    stroke="white"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="form_check"
+                                        onclick="this.classList.toggle('checked');"
+                                    >
+                                        Thanh toán qua VNPAY
+                                        <span class="checkmark"></span>
+                                        <div class="tickIcon">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="10"
+                                                height="8"
+                                                viewBox="0 0 10 8"
+                                                fill="none"
+                                            >
+                                                <path
+                                                    d="M9 1L3.5 7L1 4.27273"
+                                                    stroke="white"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="form_check"
+                                        onclick="this.classList.toggle('checked');"
+                                    >
+                                        Thanh toán qua MOMO
+                                        <span class="checkmark"></span>
+                                        <div class="tickIcon">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="10"
+                                                height="8"
+                                                viewBox="0 0 10 8"
+                                                fill="none"
+                                            >
+                                                <path
+                                                    d="M9 1L3.5 7L1 4.27273"
+                                                    stroke="white"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="form_check"
+                                        onclick="this.classList.toggle('checked');"
+                                    >
+                                        <div class="groupContent">
+                                            Online payment by Visa, Master Card,
+                                            ...
+                                            <img
+                                                src="./assest/img/pay_img/pic1.png"
+                                                alt=""
+                                                style="display: block"
+                                            />
+                                            <img
+                                                src="./assest/img/pay_img/pic2.png"
+                                                alt=""
+                                                style="display: block"
+                                            />
+                                        </div>
+                                        <span class="checkmark"></span>
+                                        <div class="tickIcon">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="10"
+                                                height="8"
+                                                viewBox="0 0 10 8"
+                                                fill="none"
+                                            >
+                                                <path
+                                                    d="M9 1L3.5 7L1 4.27273"
+                                                    stroke="white"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hoanTatDH">
+                                <a href="./cart.html" class="back">
+                                    <img
+                                        src="./assest/img/pay_img/muiTen.svg"
+                                        alt=""
+                                        class="icon"
+                                    />
+                                    <p class="desc">Trở về giỏ hàng</p>
+                                </a>
+                                <div
+                                    class="btnGradient"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#datHangTC"
+                                >
+                                    Hoàn tất đơn hàng
                                 </div>
                             </div>
                         </div>
                         <div class="rightSide">
-                            <div
-                                class="news2"
-                                style="--gap: 19px; --mgBottom: 27px"
-                                onclick="window.location='#!'"
-                            >
-                                <div class="boxThumb" style="--width: 35%">
-                                    <img
-                                        src="./assest/img/news_img/thumb2.png"
-                                        alt=""
-                                        class="thumb"
-                                    />
+                            <div class="groupRightSide">
+                                <div class="itemBuyGroup">
+                                    <div class="item">
+                                        <div class="item_img">
+                                            <img
+                                                src="./assest/img/cart_img/item1.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="descGroup">
+                                            <p class="desc">
+                                                82X Shiharu Collagen - Hộp 10
+                                                lon
+                                            </p>
+                                            <p class="amount">Số lượng: 2</p>
+                                        </div>
+                                        <div class="cost">1.580.000 vnđ</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item_img">
+                                            <img
+                                                src="./assest/img/cart_img/item1.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="descGroup">
+                                            <p class="desc">
+                                                82X Shiharu Collagen - Hộp 10
+                                                lon
+                                            </p>
+                                            <p class="amount">Số lượng: 2</p>
+                                        </div>
+                                        <div class="cost">1.580.000 vnđ</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item_img">
+                                            <img
+                                                src="./assest/img/cart_img/item1.png"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="descGroup">
+                                            <p class="desc">
+                                                82X Shiharu Collagen - Hộp 10
+                                                lon
+                                            </p>
+                                            <p class="amount">Số lượng: 2</p>
+                                        </div>
+                                        <div class="cost">1.580.000 vnđ</div>
+                                    </div>
                                 </div>
-                                <div class="groupDesc" style="--width: 60%" >
-                                    <p class="title line" style="--line: 3">
-                                        Công bố kết quả cuộc thi trưng bày
-                                        “TRUNG THU 2022 – OTSUKIMI”
-                                    </p>
-                                    <p class="desc line" style="--line: 3">
-                                        Công ty Lychee nổi tiếng trên thị trường
-                                        nước uống làm đẹp da Lorem, ipsum dolor
-                                        sit amet consectetur adipisicing elit.
-                                        Eius doloribus dicta in sunt minima
-                                        dolorem ipsa voluptatibus eveniet
-                                        nesciunt vel! Ab aspernatur ea aliquam,
-                                        sapiente dolor sed reprehenderit rem
-                                        voluptatibus.>
-                                    </p>
+                                <div class="tamTinhGroup">
+                                    <div class="line1">
+                                        <p>Tạm tính</p>
+                                        <p class="money">4.740.000 vnđ</p>
+                                    </div>
+                                    <div class="line2">
+                                        <div class="nhapMa">
+                                            <input
+                                                type="text"
+                                                name=""
+                                                id=""
+                                                placeholder="Nhập mã giảm giá"
+                                            />
+                                        </div>
+                                        <button class="apDung">Áp dụng</button>
+                                    </div>
+                                    <div class="line3">
+                                        <p>Phí vận chuyển</p>
+                                        <p class="money">Miễn phí</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div
-                                class="news2"
-                                style="--gap: 19px; --mgBottom: 27px"
-                                onclick="window.location='#!'"
-                            >
-                                <div class="boxThumb" style="--width: 35%">
-                                    <img
-                                        src="./assest/img/news_img/thumb2.png"
-                                        alt=""
-                                        class="thumb"
-                                    />
-                                </div>
-                                <div class="groupDesc" style="--width: 60%">
-                                    <p class="title line" style="--line: 3">
-                                        Công bố kết quả cuộc thi trưng bày
-                                        “TRUNG THU 2022 – OTSUKIMI”
-                                    </p>
-                                    <p class="desc line" style="--line: 3">
-                                        Công ty Lychee nổi tiếng trên thị trường
-                                        nước uống làm đẹp da Lorem, ipsum dolor
-                                        sit amet consectetur adipisicing elit.
-                                        Eius doloribus dicta in sunt minima
-                                        dolorem ipsa voluptatibus eveniet
-                                        nesciunt vel! Ab aspernatur ea aliquam,
-                                        sapiente dolor sed reprehenderit rem
-                                        voluptatibus.>
-                                    </p>
-                                </div>
-                            </div>
-                            <div
-                                class="news2"
-                                style="--gap: 19px; --mgBottom: 27px"
-                                onclick="window.location='#!'"
-                            >
-                                <div class="boxThumb" style="--width: 35%">
-                                    <img
-                                        src="./assest/img/news_img/thumb2.png"
-                                        alt=""
-                                        class="thumb"
-                                    />
-                                </div>
-                                <div class="groupDesc" style="--width: 60%">
-                                    <p class="title line" style="--line: 3">
-                                        Công bố kết quả cuộc thi trưng bày
-                                        “TRUNG THU 2022 – OTSUKIMI”
-                                    </p>
-                                    <p class="desc line" style="--line: 3">
-                                        Công ty Lychee nổi tiếng trên thị trường
-                                        nước uống làm đẹp da Lorem, ipsum dolor
-                                        sit amet consectetur adipisicing elit.
-                                        Eius doloribus dicta in sunt minima
-                                        dolorem ipsa voluptatibus eveniet
-                                        nesciunt vel! Ab aspernatur ea aliquam,
-                                        sapiente dolor sed reprehenderit rem
-                                        voluptatibus.>
-                                    </p>
+                                <div class="tongTien">
+                                    <p class="desc">Tổng tiền thanh toán</p>
+                                    <p class="money">4.740.000 vnđ</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <sectiom class="chuongTrinhKhachHang news3">
-                <div class="container">
-                    <p class="headingNews">Chương trình khách hàng</p>
-                    <div class="row">
-                        <div class="col-xl-6">
-                            <div
-                                class="news2"
-                                style="--gap: 29px; --mgBottom: 27px"
-                                onclick="window.location='#!'"
-                            >
-                                <div class="boxThumb" style="--width: 42%">
-                                    <img
-                                        src="./assest/img/news_img/thumb2.png"
-                                        alt=""
-                                        class="thumb"
-                                    />
-                                </div>
-                                <div class="groupDesc" style="--width: 42%">
-                                    <p class="title line" style="--line: 3; --fsize: 1.8rem"">
-                                        Công bố kết quả cuộc thi trưng bày
-                                        “TRUNG THU 2022 – OTSUKIMI”
-                                    </p>
-                                    <p class="desc line" style="--line: 6">
-                                        Nhiều người nổi tiếng tích cực chăm sóc sức khỏe cơ thể và làn da nhờ sản phẩm collagen dạng nước tiện dụng, giàu dinh dưỡng. Trong những ngày qua, cộng đồng chấp hành chỉ thị giãn cách xã hội và hạn chế ...
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-6">
-                            <div
-                                class="news2"
-                                style="--gap: 29px; --mgBottom: 27px"
-                                onclick="window.location='#!'"
-                            >
-                                <div class="boxThumb" style="--width: 42%">
-                                    <img
-                                        src="./assest/img/news_img/thumb2.png"
-                                        alt=""
-                                        class="thumb"
-                                    />
-                                </div>
-                                <div class="groupDesc" style="--width: 42%">
-                                    <p class="title line" style="--line: 3; --fsize: 1.8rem">
-                                        Công bố kết quả cuộc thi trưng bày
-                                        “TRUNG THU 2022 – OTSUKIMI”
-                                    </p>
-                                    <p class="desc line" style="--line: 6">
-                                        Nhiều người nổi tiếng tích cực chăm sóc sức khỏe cơ thể và làn da nhờ sản phẩm collagen dạng nước tiện dụng, giàu dinh dưỡng. Trong những ngày qua, cộng đồng chấp hành chỉ thị giãn cách xã hội và hạn chế ...
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row bottomRow">
-                        <div class="col-xl-4 itemBottom" onclick="window.location='#!'">
-                            <div class="dot"></div>
-                            <p class="title">Công bố kết quả cuộc thi trưng bày “TRUNG THU 2022 – OTSUKIMI”</p>
-                        </div>
-                        <div class="col-xl-4 itemBottom" onclick="window.location='#!'">
-                            <div class="dot"></div>
-                            <p class="title">Công bố kết quả cuộc thi trưng bày “TRUNG THU 2022 – OTSUKIMI”</p>
-                        </div>
-                        <div class="col-xl-4 itemBottom" onclick="window.location='#!'">
-                            <div class="dot"></div>
-                            <p class="title">Công bố kết quả cuộc thi trưng bày “TRUNG THU 2022 – OTSUKIMI”</p>
-                        </div>
-                    </div>
-                </div>
-            </sectiom>
-            <sectiom class="tinThuongHieu news3">
-                <div class="container">
-                    <p class="headingNews">Tin thương hiệu</p>
-                    <div class="row">
-                        <div class="col-xl-6">
-                            <div
-                                class="news2"
-                                style="--gap: 29px; --mgBottom: 27px"
-                                onclick="window.location='#!'"
-                            >
-                                <div class="boxThumb" style="--width: 42%">
-                                    <img
-                                        src="./assest/img/news_img/thumb2.png"
-                                        alt=""
-                                        class="thumb"
-                                    />
-                                </div>
-                                <div class="groupDesc" style="--width: 42%">
-                                    <p class="title line" style="--line: 3; --fsize: 1.8rem"">
-                                        Công bố kết quả cuộc thi trưng bày
-                                        “TRUNG THU 2022 – OTSUKIMI”
-                                    </p>
-                                    <p class="desc line" style="--line: 6">
-                                        Nhiều người nổi tiếng tích cực chăm sóc sức khỏe cơ thể và làn da nhờ sản phẩm collagen dạng nước tiện dụng, giàu dinh dưỡng. Trong những ngày qua, cộng đồng chấp hành chỉ thị giãn cách xã hội và hạn chế ...
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-6">
-                            <div
-                                class="news2"
-                                style="--gap: 29px; --mgBottom: 27px"
-                                onclick="window.location='#!'"
-                            >
-                                <div class="boxThumb" style="--width: 42%">
-                                    <img
-                                        src="./assest/img/news_img/thumb2.png"
-                                        alt=""
-                                        class="thumb"
-                                    />
-                                </div>
-                                <div class="groupDesc" style="--width: 42%">
-                                    <p class="title line" style="--line: 3; --fsize: 1.8rem">
-                                        Công bố kết quả cuộc thi trưng bày
-                                        “TRUNG THU 2022 – OTSUKIMI”
-                                    </p>
-                                    <p class="desc line" style="--line: 6">
-                                        Nhiều người nổi tiếng tích cực chăm sóc sức khỏe cơ thể và làn da nhờ sản phẩm collagen dạng nước tiện dụng, giàu dinh dưỡng. Trong những ngày qua, cộng đồng chấp hành chỉ thị giãn cách xã hội và hạn chế ...
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row bottomRow">
-                        <div class="col-xl-4 itemBottom" onclick="window.location='#!'">
-                            <div class="dot"></div>
-                            <p class="title">Công bố kết quả cuộc thi trưng bày “TRUNG THU 2022 – OTSUKIMI”</p>
-                        </div>
-                        <div class="col-xl-4 itemBottom" onclick="window.location='#!'">
-                            <div class="dot"></div>
-                            <p class="title">Công bố kết quả cuộc thi trưng bày “TRUNG THU 2022 – OTSUKIMI”</p>
-                        </div>
-                        <div class="col-xl-4 itemBottom" onclick="window.location='#!'">
-                            <div class="dot"></div>
-                            <p class="title">Công bố kết quả cuộc thi trưng bày “TRUNG THU 2022 – OTSUKIMI”</p>
-                        </div>
-                    </div>
-                </div>
-            </sectiom>
-            <sectiom class="tinSucKhoe news3">
-                <div class="container">
-                    <p class="headingNews">Tin sức khỏe và làm đẹp</p>
-                    <div class="row">
-                        <div class="col-xl-6">
-                            <div
-                                class="news2"
-                                style="--gap: 29px; --mgBottom: 27px"
-                                onclick="window.location='#!'"
-                            >
-                                <div class="boxThumb" style="--width: 42%">
-                                    <img
-                                        src="./assest/img/news_img/thumb2.png"
-                                        alt=""
-                                        class="thumb"
-                                    />
-                                </div>
-                                <div class="groupDesc" style="--width: 42%">
-                                    <p class="title line" style="--line: 3; --fsize: 1.8rem"">
-                                        Công bố kết quả cuộc thi trưng bày
-                                        “TRUNG THU 2022 – OTSUKIMI”
-                                    </p>
-                                    <p class="desc line" style="--line: 6">
-                                        Nhiều người nổi tiếng tích cực chăm sóc sức khỏe cơ thể và làn da nhờ sản phẩm collagen dạng nước tiện dụng, giàu dinh dưỡng. Trong những ngày qua, cộng đồng chấp hành chỉ thị giãn cách xã hội và hạn chế ...
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-6">
-                            <div
-                                class="news2"
-                                style="--gap: 29px; --mgBottom: 27px"
-                                onclick="window.location='#!'"
-                            >
-                                <div class="boxThumb" style="--width: 42%">
-                                    <img
-                                        src="./assest/img/news_img/thumb2.png"
-                                        alt=""
-                                        class="thumb"
-                                    />
-                                </div>
-                                <div class="groupDesc" style="--width: 42%">
-                                    <p class="title line" style="--line: 3; --fsize: 1.8rem">
-                                        Công bố kết quả cuộc thi trưng bày
-                                        “TRUNG THU 2022 – OTSUKIMI”
-                                    </p>
-                                    <p class="desc line" style="--line: 6">
-                                        Nhiều người nổi tiếng tích cực chăm sóc sức khỏe cơ thể và làn da nhờ sản phẩm collagen dạng nước tiện dụng, giàu dinh dưỡng. Trong những ngày qua, cộng đồng chấp hành chỉ thị giãn cách xã hội và hạn chế ...
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row bottomRow" style="margin-bottom: 127px;">
-                        <div class="col-xl-4 itemBottom" onclick="window.location='#!'">
-                            <div class="dot"></div>
-                            <p class="title">Công bố kết quả cuộc thi trưng bày “TRUNG THU 2022 – OTSUKIMI”</p>
-                        </div>
-                        <div class="col-xl-4 itemBottom" onclick="window.location='#!'">
-                            <div class="dot"></div>
-                            <p class="title">Công bố kết quả cuộc thi trưng bày “TRUNG THU 2022 – OTSUKIMI”</p>
-                        </div>
-                        <div class="col-xl-4 itemBottom" onclick="window.location='#!'">
-                            <div class="dot"></div>
-                            <p class="title">Công bố kết quả cuộc thi trưng bày “TRUNG THU 2022 – OTSUKIMI”</p>
-                        </div>
-                    </div>
-                </div>
-            </sectiom>
         </main>
         <!-- ============================FOOTER================================ -->
         <footer>
@@ -836,13 +747,8 @@
                                 * là thông tin bắt buộc phải điển đầy đủ
                             </p>
 
-                            <div
-                                class="btnGradient"
-                                data-bs-toggle="modal"
-                                data-bs-target="#succesLogin"
-                            >
-                                Đăng nhập
-                            </div>
+                            <div class="btnGradient" data-bs-toggle="modal"
+                            data-bs-target="#succesLogin">Đăng nhập</div>
                             <p class="desc" style="margin-top: 25px">
                                 Nếu Nàng chưa có tài khoản, vui lòng
                                 <a
@@ -968,11 +874,10 @@
                 </div>
             </div>
         </div>
-        <!-- ===succesLogin== data-bs-toggle="modal"
-                            data-bs-target="#succesLogin" -->
+        <!-- ===succces== -->
         <div
             class="modal fade"
-            id="succesLogin"
+            id="datHangTC"
             data-bs-backdrop="static"
             data-bs-keyboard="false"
             tabindex="-1"
@@ -1056,7 +961,7 @@
                                     />
                                 </svg>
                             </div>
-                            <p class="title">Đăng nhập thành công</p>
+                            <p class="title">Đặt hàng thành công</p>
                             <p class="desc">
                                 Cảm ơn
                                 <strong style="font-weight: 600"
@@ -1065,15 +970,16 @@
                                 đã quan tâm và đặt sản phẩm tại 82x
                             </p>
                             <p class="desc">
-                                Tổng đài tư vấn:
-                                <strong class="phone">1800.9232</strong>
+                                Đơn hàng số <strong id="idDh">82x1586</strong> đã được tạo thành công.
+                                
                             </p>
-                            <div
-                                class="btnGradient"
-                                onclick="window.location='./product.html'"
-                            >
-                                Đến trang mua hàng
-                            </div>
+                            <p class="desc">Chúng tôi sẽ liên hệ với bạn trong vòng 30 phút
+                                và cam kết giao hàng miễn phí các sản phẩm tại
+                                82x. </p>
+                            <p class="desc">
+                                Tổng đài tư vấn: <strong class="phone">1800.9232</strong>
+                            </p>
+                            <div class="btnGradient" onclick="window.location='./index.html'">Trở về trang chủ</div>
                         </div>
                     </div>
                 </div>

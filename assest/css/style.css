@@ -86,7 +86,7 @@ body {
     background: var(--gradient-color);
     color: #00009b;
     text-shadow: 2px 2px 2px #00000040;
-    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.10);
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
 }
 
 .myCard {
@@ -263,6 +263,190 @@ body {
 .articleItem .listItem .item:hover .title {
     transform: translateY(-15px);
 }
+
+.form_text {
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 4px 0px 0px #cbcbff;
+    margin-bottom: 9px;
+    padding: 13px 22px;
+}
+
+.form_text input {
+    width: 100%;
+    border: none;
+}
+.form_text input:focus {
+    outline: none;
+}
+
+/* ===== */
+.custom-select {
+    width: 100%;
+    position: relative;
+    font-family: Arial;
+}
+
+.custom-select select {
+    display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 4px 0px 0px #cbcbff;
+    margin-bottom: 9px;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #666 transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+    color: #666;
+    padding: 13px 22px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+    position: absolute;
+    background-color: #fff;
+    top: 100%;
+    height: 200px;
+    overflow: scroll;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+/* ===checbox=== */
+.form_check {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.05);
+    padding: 13px 22px;
+    padding-left: 55px;
+    color: #000;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: 1px solid transparent;
+    overflow: hidden;
+}
+
+.form_check.checked {
+    border: 1px solid var(--color-primary);
+}
+
+.form_check.checked::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    right: 0;
+    border: 10px solid;
+    border-color: transparent var(--color-primary) var(--color-primary)
+        transparent;
+}
+
+.form_check.checked .tickIcon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 12px;
+    aspect-ratio: 1/1;
+    z-index: 1;
+}
+
+.form_check .tickIcon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.form_check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 15px;
+    left: 22px;
+    height: 15px;
+    width: 15px;
+    border: 1px solid #666;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.form_check:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.form_check.checked .checkmark:after {
+    display: block;
+}
+
+.form_check .checkmark:after {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+}
+
+/* claim line  */
+.line {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line); /* Số dòng tối đa */
+    -webkit-box-orient: vertical;
+}
 /* =====================Header=========================== */
 header {
     width: 100%;
@@ -318,7 +502,7 @@ header {
 }
 
 .navbar .menu ul a.active,
-.navbar .features .bag.active{
+.navbar .features .bag.active {
     position: relative;
 }
 
@@ -850,4 +1034,107 @@ footer .copyright .boxContent .imgBox .img {
     text-transform: uppercase;
     padding: 13px;
 }
+/* ======= */
+.datHangTC {
+    width: 600px;
+    position: relative;
+    background-color: transparent;
+    border: none;
+}
 
+.datHangTC-close {
+    position: absolute;
+    top: -33px;
+    right: -33px;
+    border: none;
+    width: 33px;
+    aspect-ratio: 1/1;
+    background-color: transparent;
+}
+
+.datHangTC .datHangTC-body {
+    width: 600px;
+    display: flex;
+    padding: 0;
+}
+
+.datHangTC-body .rightSide {
+    width: 100%;
+}
+
+.datHangTC-body .rightSide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+    padding: 34px 48px 34px 48px;
+}
+
+.datHangTC-body .succesIcon {
+    position: relative;
+    width: 110px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    margin-bottom: 25px;
+}
+
+.datHangTC-body .title {
+    color: var(--color-primary);
+    text-align: center;
+
+    font-size: 2.6rem;
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.datHangTC-body .succesIcon svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.datHangTC-body .rightSide .desc {
+    color: #000;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.datHangTC-body .rightSide .desc #idDh {
+    color: var(--color-primary);
+}
+
+.datHangTC-body .rightSide .desc .phone {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #b90c0c;
+}
+
+.datHangTC-body .rightSide .desc a {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
+.datHangTC-body .btnGradient {
+    margin-top: 28px;
+    width: 229px;
+    text-align: center;
+    color: var(--color-primary);
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 13px;
+}

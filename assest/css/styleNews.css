@@ -1,0 +1,303 @@
+main {
+    position: relative;
+    overflow: hidden;
+}
+
+main .backgroundMainGroup {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.backgroundMainGroup .bg {
+    width: 100vw;
+}
+
+.backgroundMainGroup .object {
+    position: absolute;
+}
+
+.backgroundMainGroup .obj0 {
+    display: block;
+    width: 100%;
+    top: 300px;
+    left: 0;
+}
+.backgroundMainGroup .obj1 {
+    display: block;
+    width: 50%;
+    top: 0;
+    right: 2%;
+}
+.backgroundMainGroup .obj2 {
+    display: block;
+    width: 50%;
+    top: 200px;
+    left: -8%;
+}
+
+/* =================location================== */
+.location {
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+.location .contentBox {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 90px;
+}
+
+.location .contentBox .heading {
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 46px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.location .contentBox .localBox {
+    display: flex;
+    gap: 8px;
+}
+
+.location .contentBox .localBox .desc {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: var(--color-textDesc3);
+    text-decoration: none;
+}
+
+/* =================banner================== */
+.banner img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* =================subbanner================== */
+.subBanner {
+    margin-top: 43px;
+    border-radius: 10px;
+    margin-bottom: 72px;
+}
+
+.subBanner .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subBanner .item .boxThumb {
+    position: relative;
+    width: 100%;
+}
+
+.subBanner .item .thumb {
+    width: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 10px -10px 0 0 rgba(34, 34, 136, 0.1),
+        20px -20px 0 0 rgba(34, 34, 136, 0.2);
+    transition: all 0.3s ease;
+}
+
+.subBanner .item:hover .thumb {
+    box-shadow: 5px -5px 0 0 rgba(34, 34, 136, 0.1),
+        10px -10px 0 0 rgba(34, 34, 136, 0.2);
+}
+
+.subBanner .item .subTitle {
+    padding-top: 8px;
+    padding-left: 18px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    width: 90%;
+    height: 30%;
+    border-radius: 10px;
+    background: linear-gradient(0deg, #00009bf5 40%, rgba(255, 255, 255, 0)) 40%;
+}
+
+.subBanner .item .subTitle .desc {
+    color: #fff;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* =================baiVietMoiNhat================== */
+.headingNews {
+    font-family: Beaufort;
+    font-size: 4.5rem;
+    font-weight: 400;
+    text-align: left;
+    color: var(--color-primary);
+    margin-bottom: 34px;
+    margin-top: 42px;
+    transition: all 0.3s ease;
+}
+
+.headingNews:hover {
+    transform: translateX(10px);
+    text-decoration: underline;
+}
+
+.news1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news1 .leftSide {
+    width: 62%;
+}
+.news1 .rightSide {
+    width: 36%;
+}
+
+.news1 .leftSide .boxThumb {
+    position: relative;
+    width: 100%;
+}
+
+.news1 .leftSide .boxThumb .thumb {
+    width: 100%;
+}
+
+.news1 .leftSide .boxThumb .subContent {
+    position: absolute;
+    bottom: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    border-radius: 10px;
+    background: linear-gradient(132deg, #fff 0%, rgba(255, 255, 255, 0.4) 100%);
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.05);
+    padding: 23px;
+    backdrop-filter: blur(8px);
+}
+
+.news1 .leftSide .subContent .labelTop {
+    color: var(--color-primary);
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.news1 .leftSide .subContent .title {
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.news1 .leftSide .subContent .desc {
+    display: inline;
+    color: #000;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 148.5%; /* 20.79px */
+}
+
+.news1 .leftSide .subContent a {
+    text-decoration: none;
+}
+
+.news1 .leftSide .subContent::after {
+    position: absolute;
+    content: "";
+    top: 20px;
+    left: 0;
+    width: 5px;
+    height: 18px;
+    border-radius: 0px 3px 3px 0px;
+    background: #00009b;
+}
+
+/* ======news2 */
+.news2 {
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+    margin-bottom: var(--mgBottom);
+    width: 100%;
+}
+
+.news2 .boxThumb {
+    width: var(--width);
+    border-radius: 10px;
+
+}
+
+.news2 .groupDesc {
+    width: var(--width);
+}
+
+.news2 .boxThumb .thumb {
+    border-radius: 10px;
+
+    width: 100%;
+}
+
+.news2 .groupDesc .title {
+    color: #000;
+    font-size: 1.6rem;
+    font-size: var(--fsize);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 148.5%; /* 23.76px */
+    margin-bottom: 21px;
+}
+
+.news2 .groupDesc {
+    color: #000;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
+}
+/* ======news3 */
+
+.news3 .itemBottom {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+}
+.news3 .dot {
+    margin-top: 5px;
+    width: 7px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+}
+.news3 .title {
+    width: 80%;
+    color: #000;
+    font-size: 1.6rem;
+    font-size: var(--fsize);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 148.5%; 
+    margin-bottom: 21px;
+}
+.news3 .bottomRow {
+    padding: 23px 0;
+    border-top: 1px dashed rgba(0, 0, 155, 0.20);
+    border-bottom: 1px dashed rgba(0, 0, 155, 0.20);
+}

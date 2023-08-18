@@ -1,0 +1,280 @@
+main {
+    position: relative;
+    overflow: hidden;
+}
+
+main .backgroundMainGroup {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.backgroundMainGroup .bg {
+    width: 100vw;
+}
+
+.backgroundMainGroup .object {
+    position: absolute;
+}
+
+.backgroundMainGroup .obj0 {
+    display: block;
+    width: 100%;
+    top: 300px;
+    left: 0;
+}
+.backgroundMainGroup .obj1 {
+    display: block;
+    width: 50%;
+    top: 0;
+    right: 2%;
+}
+.backgroundMainGroup .obj2 {
+    display: block;
+    width: 50%;
+    top: 200px;
+    left: -8%;
+}
+
+/* =================location================== */
+.location {
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+.location .contentBox {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 90px;
+}
+
+.location .contentBox .heading {
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 46px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.location .contentBox .localBox {
+    display: flex;
+    gap: 8px;
+}
+
+.location .contentBox .localBox .desc {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: var(--color-textDesc3);
+    text-decoration: none;
+}
+
+/* =================pay================== */
+.pay .boxContent {
+    width: 100%;
+    display: flex;
+    margin-bottom: 160px;
+    gap: 22px;
+}
+
+.pay .leftSide,
+.pay .rightSide {
+    width: 50%;
+}
+/* ==leftside== */
+.pay .leftSide .phuongThucTT {
+    margin-top: 41px;
+}
+.pay .leftSide .phuongThucTT .title {
+    color: #000;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 15px;
+}
+
+.pay .leftSide .form_check {
+    margin-bottom: 2px;
+}
+
+.pay .leftSide .hoanTatDH {
+    margin-top: 31px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pay .leftSide .hoanTatDH .back {
+    display: flex;
+    gap: 10px;
+    color: #000;
+    text-decoration: none;
+}
+.pay .leftSide .hoanTatDH .btnGradient {
+    color: var(--color-primary);
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    text-shadow: none;
+    padding: 13px 39px;
+}
+
+/* ========rightSide====== */
+
+.pay .rightSide .groupRightSide {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background: linear-gradient(146deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.05);
+    padding: 0 34px 27px 24px;
+}
+
+.pay .rightSide .item {
+    display: flex;
+    gap: 16px;
+    padding: 27px 0;
+    border-bottom: 1px solid #d8d8f1;
+}
+
+.pay .rightSide .item .cost {
+    margin-left: auto;
+    color: #000;
+    text-align: right;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.pay .rightSide .item .descGroup {
+    display: flex;
+    gap: 26px;
+    height: 100%;
+    flex-direction: column;
+}
+
+.pay .rightSide .item .desc {
+    max-width: 160px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.pay .rightSide .item .amount {
+    color: #666;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 400;
+}
+.pay .rightSide .item .item_img {
+    position: relative;
+    width: 83px;
+    aspect-ratio: 1/1;
+    background-color: #f6f5f5;
+}
+.pay .rightSide .item .item_img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pay .rightSide .tamTinhGroup {
+    display: flex;
+    flex-direction: column;
+    padding: 27px 0;
+    border-bottom: 1px solid #d8d8f1;
+}
+
+.pay .rightSide .tamTinhGroup .line1,
+.pay .rightSide .tamTinhGroup .line2,
+.pay .rightSide .tamTinhGroup .line3 {
+    display: flex;
+    justify-content: space-between;
+    color: #000;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.pay .rightSide .tamTinhGroup .money {
+    color: #000;
+    text-align: right;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.pay .rightSide .tamTinhGroup .line2 {
+    margin-top: 13px;
+    margin-bottom: 26px;
+}
+
+.pay .rightSide .tamTinhGroup .line2 .nhapMa {
+    width: 80%;
+    border-radius: 10px;
+    border: 1px solid #c2a6f1;
+    background: #fff;
+    padding: 13px 22px;
+}
+
+.pay .rightSide .tamTinhGroup .line2 .nhapMa input {
+    border: none;
+    color: #666;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.pay .rightSide .tamTinhGroup .line2 .nhapMa input:focus {
+    outline: none;
+}
+
+.pay .rightSide .tamTinhGroup .line2 .apDung {
+    width: 18%;
+    border-radius: 10px;
+    background: var(--gradient-color);
+    background-blend-mode: soft-light, normal, normal, normal, normal, normal,
+        normal, normal, normal, normal;
+    border: none;
+    color: var(--color-primary);
+    text-align: center;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.pay .rightSide .tongTien {
+    display: block;
+    text-align: right;
+    padding-top: 27px;
+}
+
+.pay .rightSide .tongTien .desc {
+    color: #000;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.pay .rightSide .tongTien .money {
+    color: var(--color-primary);
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+}
