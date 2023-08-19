@@ -111,6 +111,19 @@ const swiper = new Swiper(".slider", {
         prevEl: ".prev",
     },
 });
+const swiper2 = new Swiper(".slider2", {
+    // Optional parameters
+    direction: "horizontal",
+    loop: false,
+    slidesPerView: 3,
+    spaceBetween: 30,
+
+    // Navigation arrows
+    navigation: {
+        nextEl: ".next2",
+        prevEl: ".prev2",
+    },
+});
 
 // =============
 var x, i, j, l, ll, selElmnt, a, b, c;

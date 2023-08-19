@@ -187,3 +187,64 @@ main .backgroundMainGroup {
     font-weight: 400;
     line-height: normal;
 }
+
+/* =================chuongTrinhKhachHang================== */
+.ctkh {
+    margin-top: 84px;
+    margin-bottom: 188px;
+}
+
+.ctkh .headingBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 37px;
+}
+
+.ctkh .headingBox .heading {
+    color: var(--color-primary);
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.ctkh .headingBox .boxBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.ctkh .headingBox .boxBtn .prev,
+.ctkh .headingBox .boxBtn .prev2,
+.ctkh .headingBox .boxBtn .next2,
+.ctkh .headingBox .boxBtn .next {
+    width: 32px;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.ctkh .headingBox .boxBtn .prev svg,
+.ctkh .headingBox .boxBtn .prev2 svg,
+.ctkh .headingBox .boxBtn .next2 svg,
+.ctkh .headingBox .boxBtn .next svg {
+    width: 32px;
+    aspect-ratio: 1/1;
+}
+
+.slider {
+    width: 100%;
+    height: auto;
+}
+
+.slider .item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

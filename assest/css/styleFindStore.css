@@ -86,12 +86,18 @@ main .backgroundMainGroup {
 .subBanner {
     margin-top: 43px;
     border-radius: 10px;
+    margin-bottom: 72px;
 }
 
 .subBanner .item {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.subBanner .item .boxThumb {
+    position: relative;
+    width: 100%;
 }
 
 .subBanner .item .thumb {
@@ -106,6 +112,29 @@ main .backgroundMainGroup {
 .subBanner .item:hover .thumb {
     box-shadow: 5px -5px 0 0 rgba(34, 34, 136, 0.1),
         10px -10px 0 0 rgba(34, 34, 136, 0.2);
+}
+
+.subBanner .item .subTitle {
+    padding-top: 8px;
+    padding-left: 18px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    width: 90%;
+    height: 30%;
+    border-radius: 10px;
+    background: linear-gradient(0deg, #00009bf5 40%, rgba(255, 255, 255, 0)) 40%;
+}
+
+.subBanner .item .subTitle .desc {
+    color: #fff;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 /* =================heThongCuaHang================== */
