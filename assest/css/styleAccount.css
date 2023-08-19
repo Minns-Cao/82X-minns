@@ -1,0 +1,176 @@
+main {
+    position: relative;
+    overflow: hidden;
+}
+
+main .backgroundMainGroup {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.backgroundMainGroup .bg {
+    width: 100vw;
+}
+
+.backgroundMainGroup .object {
+    position: absolute;
+}
+
+.backgroundMainGroup .obj0 {
+    display: block;
+    width: 100%;
+    top: 300px;
+    left: 0;
+}
+.backgroundMainGroup .obj1 {
+    display: block;
+    width: 50%;
+    top: 0;
+    right: 2%;
+}
+.backgroundMainGroup .obj2 {
+    display: block;
+    width: 50%;
+    top: 200px;
+    left: -8%;
+}
+
+/* =================location================== */
+.location {
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+.location .contentBox {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 90px;
+}
+
+.location .contentBox .heading {
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 46px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.location .contentBox .localBox {
+    display: flex;
+    gap: 8px;
+}
+
+.location .contentBox .localBox .desc {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: var(--color-textDesc3);
+    text-decoration: none;
+}
+
+/* =================================== */
+.boxContent {
+    display: flex;
+    margin-bottom: 188px;
+}
+
+.boxContent .myTabs {
+    width: 32%;
+    border-radius: 5px 0px 0px 5px;
+    background: linear-gradient(146deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.boxContent .myTabs_content {
+    width: 68%;
+    border-radius: 0px 5px 5px 0px;
+    background: #fff;
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.05);
+}
+
+/* .codeBox */
+.codeBox {
+    background-color: var(--color-primary);
+    border-radius: 5px 0px 0px 0px;
+    color: #fff;
+    padding: 16px;
+}
+
+.codeBox .line1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.codeBox .line1 div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.codeBox .line1 .desc {
+    color: #fff;
+    font-size: 1.4rem;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 185.714% */
+}
+
+.codeBox .line1 .num {
+    color: #fff;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px;
+}
+
+.codeBox .line2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+}
+
+.codeBox .line2 .border {
+    border-radius: 10px;
+    border: 1px solid #3636ff;
+    padding: 10px;
+}
+
+.codeBox .line2 .boxImg {
+    position: relative;
+    border-radius: 10px;
+    background: #fff;
+    width: 322px;
+    height: 110px;
+}
+
+.codeBox .line2 .boxImg img {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.codeBox .line2 .boxImg .numcode {
+    position: absolute;
+    top: 83%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 15px;
+    color: #000;
+}
+/* =================banner================== */
+.banner img {
+    width: 100%;
+    object-fit: cover;
+}

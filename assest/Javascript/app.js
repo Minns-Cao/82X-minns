@@ -204,3 +204,29 @@ function closeAllSelect(elmnt) {
 }
 
 document.addEventListener("click", closeAllSelect);
+
+// ====login====
+let loginBtn = document.querySelector("#loginBtn");
+if (loginBtn) {
+    loginBtn.addEventListener("click",()=>{
+        //valid here
+        localStorage.setItem("login", "true");
+    })
+}
+//=====logOut=====
+let logOut = document.querySelector("#logOut");
+if (logOut) {
+    logOut.addEventListener("click",()=>{
+        localStorage.setItem("login", "false");
+    });
+}
+
+console.log(localStorage.getItem("login"));
+if (localStorage.getItem("login") === "true"){
+    let loginIcon = document.querySelector("#loginIcon");
+    loginIcon.removeAttribute("data-bs-toggle");
+    loginIcon.removeAttribute("data-bs-target");
+    document.body.classList.add("login");
+}
+
+

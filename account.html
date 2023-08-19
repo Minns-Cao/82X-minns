@@ -29,7 +29,7 @@
         />
         <!-- Style CSS -->
         <link rel="stylesheet" href="./assest/css/style.css" />
-        <link rel="stylesheet" href="./assest/css/styleFindStore.css" />
+        <link rel="stylesheet" href="./assest/css/styleAccount.css" />
     </head>
     <body>
         <!-- ============================PRODUCT PAGE================================ -->
@@ -51,15 +51,13 @@
                             <li><a href="./index.html">TRANG CHỦ</a></li>
                             <li><a href="./intro.html">GIỚI THIỆU</a></li>
                             <li><a href="./product.html">SẢN PHẨM</a></li>
-                            <li><a href="./news.html">TIN TỨC</a></li>
+                            <li><a href="#!" class="active">TIN TỨC</a></li>
                             <li>
                                 <a href="./customer.html"
                                     >CHƯƠNG TRÌNH KHÁCH HÀNG</a
                                 >
                             </li>
-                            <li>
-                                <a href="#!" class="active">TÌM ĐIỂM BÁN</a>
-                            </li>
+                            <li><a href="./findStore.html">TÌM ĐIỂM BÁN</a></li>
                         </ul>
                     </div>
                     <div class="features">
@@ -74,9 +72,33 @@
                                 alt=""
                                 class="loginIcon"
                             />
+                            <div class="listSub">
+                                <ul>
+                                    <li>
+                                        <a href="./account.html"
+                                            >Đơn hàng của tôi</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="./account.html">Tài khoản</a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#!"
+                                            id="logOut"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#succesLogOut"
+                                            >Đăng xuất</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
                         </button>
                         <div class="line"></div>
-                        <button class="bag" onclick="window.location='./cart.html'">
+                        <button
+                            class="bag"
+                            onclick="window.location='./cart.html'"
+                        >
                             <img
                                 src="./assest/img/header_iconBag.svg"
                                 alt=""
@@ -116,7 +138,7 @@
             <section class="location">
                 <div class="container">
                     <div class="contentBox">
-                        <div class="heading">Tìm điểm bán</div>
+                        <div class="heading">Thông tin tài khoản</div>
                         <div class="localBox">
                             <a href="./index.html" class="desc">Trang chủ</a>
                             <img
@@ -124,535 +146,64 @@
                                 alt=""
                                 class="vector"
                             />
-                            <a href="./findStore.html" class="desc"
-                                >Tìm điểm bán</a
-                            >
+                            <a href="./news.html" class="desc">Tài khoản</a>
                         </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container">
+                    <div class="boxContent">
+                        <div class="myTabs">
+                            <div class="codeBox">
+                                <div class="line1">
+                                    <div class="lPoints">
+                                        <p class="desc">L-points</p>
+                                        <p class="num">1000</p>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="2" height="14" viewBox="0 0 2 14" fill="none">
+                                        <line x1="1.5" y1="2.81003e-08" x2="1.5" y2="14" stroke="#000062"/>
+                                        <line x1="0.5" y1="2.81003e-08" x2="0.499999" y2="14" stroke="#0000D3"/>
+                                      </svg>
+                                    <div class="diemKhtt">
+                                        <p class="desc">Điểm KHTT</p>
+                                        <p class="num">500</p>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="2" height="14" viewBox="0 0 2 14" fill="none">
+                                        <line x1="1.5" y1="2.81003e-08" x2="1.5" y2="14" stroke="#000062"/>
+                                        <line x1="0.5" y1="2.81003e-08" x2="0.499999" y2="14" stroke="#0000D3"/>
+                                      </svg>
+                                    <div class="hangThe">
+                                        <p class="desc">Hạng Thẻ</p>
+                                        <p class="num">KOHARU</p>
+                                    </div>
+                                </div>
+                                <div class="line2">
+                                    <div class="border">
+                                        <div class="boxImg">
+                                            <img
+                                                src="./assest/img/account_img/codeImg.svg"
+                                                alt=""
+                                                class="codeImg"
+                                            />
+                                            <div class="numcode">
+                                                <p>6666</p>
+                                                <p>6666</p>
+                                                <p>6666</p>
+                                                <p>6666</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum praesentium est voluptatibus esse eligendi illum quas soluta incidunt quia, nemo reprehenderit quidem sunt aliquid iusto repellendus odio quasi aperiam cum?
+                        </div>
+                        <div class="myTabs_content tab-content"></div>
                     </div>
                 </div>
             </section>
             <section class="banner container">
-                <img src="./assest/img/findStore_img/bannerTop.jpeg" alt="" />
-            </section>
-            <section class="subBanner">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-4 item">
-                            <div class="boxThumb" onclick="window.location='./customer.html'">
-                                <img
-                                    src="./assest/img/findStore_img/imgCtkh.png"
-                                    alt=""
-                                    class="thumb"
-                                />
-                                <div class="subTitle">
-                                    <div class="icon">
-                                        <img
-                                            src="./assest/img/news_img/Frame.svg"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <p class="desc">Chương trình khách hàng</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 item">
-                            <div class="boxThumb" onclick="window.location='./news_thuongHieu.html'">
-                                <img
-                                    src="./assest/img/findStore_img/imgtth.png"
-                                    alt=""
-                                    class="thumb"
-                                />
-                                <div class="subTitle">
-                                    <div class="icon">
-                                        <img
-                                            src="./assest/img/news_img/Frame.svg"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <p class="desc">Tin thương hiệu</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 item">
-                            <div class="boxThumb" onclick="window.location='./news_sucKhoe.html'">
-                                <img
-                                    src="./assest/img/findStore_img/imgtsk.png"
-                                    alt=""
-                                    class="thumb"
-                                />
-                                <div class="subTitle">
-                                    <div class="icon">
-                                        <img
-                                            src="./assest/img/news_img/Frame.svg"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <p class="desc">Tin sức khoẻ và làm đẹp</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="heThongCuaHang">
-                <div class="container">
-                    <div class="contentBox">
-                        <div class="leftSide">
-                            <p class="heading">Hệ thống cửa hàng</p>
-                            <div class="search">
-                                <input
-                                    type="text"
-                                    placeholder="Nhập địa chỉ, quận, thành phố, ..."
-                                />
-                                <img
-                                    src="./assest/img/findStore_img/searchIcon.svg"
-                                    alt=""
-                                    class="icon"
-                                />
-                            </div>
-                            <div class="listItem">
-                                <div class="item">
-                                    <p class="item_title">
-                                        Cửa hàng 82x chi nhánh 01
-                                    </p>
-                                    <div class="item_diaChi sub">
-                                        <img
-                                            src="./assest/img/findStore_img/iconDiaChi.svg"
-                                            alt=""
-                                            class="icon"
-                                        />
-                                        <p class="desc">
-                                            19 Lê Văn Lương, phường Nhân Chính,
-                                            quận Thanh Xuân, Hà Nội
-                                        </p>
-                                    </div>
-                                    <div class="item_sdt sub">
-                                        <img
-                                            src="./assest/img/findStore_img/iconPhone.svg"
-                                            alt=""
-                                            class="icon"
-                                        />
-                                        <p class="desc">02899989993</p>
-                                    </div>
-                                    <div class="item_time sub">
-                                        <img
-                                            src="./assest/img/findStore_img/icon_clock.svg"
-                                            alt=""
-                                            class="icon"
-                                        />
-                                        <p class="desc">8AM - 5PM</p>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <p class="item_title">
-                                        Cửa hàng 82x chi nhánh 01
-                                    </p>
-                                    <div class="item_diaChi sub">
-                                        <img
-                                            src="./assest/img/findStore_img/iconDiaChi.svg"
-                                            alt=""
-                                            class="icon"
-                                        />
-                                        <p class="desc">
-                                            19 Lê Văn Lương, phường Nhân Chính,
-                                            quận Thanh Xuân, Hà Nội
-                                        </p>
-                                    </div>
-                                    <div class="item_sdt sub">
-                                        <img
-                                            src="./assest/img/findStore_img/iconPhone.svg"
-                                            alt=""
-                                            class="icon"
-                                        />
-                                        <p class="desc">02899989993</p>
-                                    </div>
-                                    <div class="item_time sub">
-                                        <img
-                                            src="./assest/img/findStore_img/icon_clock.svg"
-                                            alt=""
-                                            class="icon"
-                                        />
-                                        <p class="desc">8AM - 5PM</p>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <p class="item_title">
-                                        Cửa hàng 82x chi nhánh 01
-                                    </p>
-                                    <div class="item_diaChi sub">
-                                        <img
-                                            src="./assest/img/findStore_img/iconDiaChi.svg"
-                                            alt=""
-                                            class="icon"
-                                        />
-                                        <p class="desc">
-                                            19 Lê Văn Lương, phường Nhân Chính,
-                                            quận Thanh Xuân, Hà Nội
-                                        </p>
-                                    </div>
-                                    <div class="item_sdt sub">
-                                        <img
-                                            src="./assest/img/findStore_img/iconPhone.svg"
-                                            alt=""
-                                            class="icon"
-                                        />
-                                        <p class="desc">02899989993</p>
-                                    </div>
-                                    <div class="item_time sub">
-                                        <img
-                                            src="./assest/img/findStore_img/icon_clock.svg"
-                                            alt=""
-                                            class="icon"
-                                        />
-                                        <p class="desc">8AM - 5PM</p>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <p class="item_title">
-                                        Cửa hàng 82x chi nhánh 01
-                                    </p>
-                                    <div class="item_diaChi sub">
-                                        <img
-                                            src="./assest/img/findStore_img/iconDiaChi.svg"
-                                            alt=""
-                                            class="icon"
-                                        />
-                                        <p class="desc">
-                                            19 Lê Văn Lương, phường Nhân Chính,
-                                            quận Thanh Xuân, Hà Nội
-                                        </p>
-                                    </div>
-                                    <div class="item_sdt sub">
-                                        <img
-                                            src="./assest/img/findStore_img/iconPhone.svg"
-                                            alt=""
-                                            class="icon"
-                                        />
-                                        <p class="desc">02899989993</p>
-                                    </div>
-                                    <div class="item_time sub">
-                                        <img
-                                            src="./assest/img/findStore_img/icon_clock.svg"
-                                            alt=""
-                                            class="icon"
-                                        />
-                                        <p class="desc">8AM - 5PM</p>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <p class="item_title">
-                                        Cửa hàng 82x chi nhánh 01
-                                    </p>
-                                    <div class="item_diaChi sub">
-                                        <img
-                                            src="./assest/img/findStore_img/iconDiaChi.svg"
-                                            alt=""
-                                            class="icon"
-                                        />
-                                        <p class="desc">
-                                            19 Lê Văn Lương, phường Nhân Chính,
-                                            quận Thanh Xuân, Hà Nội
-                                        </p>
-                                    </div>
-                                    <div class="item_sdt sub">
-                                        <img
-                                            src="./assest/img/findStore_img/iconPhone.svg"
-                                            alt=""
-                                            class="icon"
-                                        />
-                                        <p class="desc">02899989993</p>
-                                    </div>
-                                    <div class="item_time sub">
-                                        <img
-                                            src="./assest/img/findStore_img/icon_clock.svg"
-                                            alt=""
-                                            class="icon"
-                                        />
-                                        <p class="desc">8AM - 5PM</p>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <p class="item_title">
-                                        Cửa hàng 82x chi nhánh 01
-                                    </p>
-                                    <div class="item_diaChi sub">
-                                        <img
-                                            src="./assest/img/findStore_img/iconDiaChi.svg"
-                                            alt=""
-                                            class="icon"
-                                        />
-                                        <p class="desc">
-                                            19 Lê Văn Lương, phường Nhân Chính,
-                                            quận Thanh Xuân, Hà Nội
-                                        </p>
-                                    </div>
-                                    <div class="item_sdt sub">
-                                        <img
-                                            src="./assest/img/findStore_img/iconPhone.svg"
-                                            alt=""
-                                            class="icon"
-                                        />
-                                        <p class="desc">02899989993</p>
-                                    </div>
-                                    <div class="item_time sub">
-                                        <img
-                                            src="./assest/img/findStore_img/icon_clock.svg"
-                                            alt=""
-                                            class="icon"
-                                        />
-                                        <p class="desc">8AM - 5PM</p>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <p class="item_title">
-                                        Cửa hàng 82x chi nhánh 01
-                                    </p>
-                                    <div class="item_diaChi sub">
-                                        <img
-                                            src="./assest/img/findStore_img/iconDiaChi.svg"
-                                            alt=""
-                                            class="icon"
-                                        />
-                                        <p class="desc">
-                                            19 Lê Văn Lương, phường Nhân Chính,
-                                            quận Thanh Xuân, Hà Nội
-                                        </p>
-                                    </div>
-                                    <div class="item_sdt sub">
-                                        <img
-                                            src="./assest/img/findStore_img/iconPhone.svg"
-                                            alt=""
-                                            class="icon"
-                                        />
-                                        <p class="desc">02899989993</p>
-                                    </div>
-                                    <div class="item_time sub">
-                                        <img
-                                            src="./assest/img/findStore_img/icon_clock.svg"
-                                            alt=""
-                                            class="icon"
-                                        />
-                                        <p class="desc">8AM - 5PM</p>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <p class="item_title">
-                                        Cửa hàng 82x chi nhánh 01
-                                    </p>
-                                    <div class="item_diaChi sub">
-                                        <img
-                                            src="./assest/img/findStore_img/iconDiaChi.svg"
-                                            alt=""
-                                            class="icon"
-                                        />
-                                        <p class="desc">
-                                            19 Lê Văn Lương, phường Nhân Chính,
-                                            quận Thanh Xuân, Hà Nội
-                                        </p>
-                                    </div>
-                                    <div class="item_sdt sub">
-                                        <img
-                                            src="./assest/img/findStore_img/iconPhone.svg"
-                                            alt=""
-                                            class="icon"
-                                        />
-                                        <p class="desc">02899989993</p>
-                                    </div>
-                                    <div class="item_time sub">
-                                        <img
-                                            src="./assest/img/findStore_img/icon_clock.svg"
-                                            alt=""
-                                            class="icon"
-                                        />
-                                        <p class="desc">8AM - 5PM</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="rightSide">
-                            <img
-                                src="./assest/img/findStore_img/bando.png"
-                                alt=""
-                                class="bando"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="brandKhac">
-                <div class="container">
-                    <div class="row itemList">
-                        <div class="col-xl-3 item">
-                            <img
-                                src="./assest/img/findStore_img/chanel.svg"
-                                alt=""
-                                class="thumb"
-                            />
-                            <div class="label">
-                                <div class="desc">
-                                    Hãng thời trang<br />
-                                    Chanel
-                                </div>
-                                <img
-                                    src="./assest/img/findStore_img/muiTen.svg"
-                                    alt=""
-                                    class="icon"
-                                />
-                            </div>
-                        </div>
-                        <div class="col-xl-3 item">
-                            <img
-                                src="./assest/img/findStore_img/gucci.svg"
-                                alt=""
-                                class="thumb"
-                            />
-                            <div class="label">
-                                <div class="desc">
-                                    Hãng thời trang<br />
-                                    Gucci
-                                </div>
-                                <img
-                                    src="./assest/img/findStore_img/muiTen.svg"
-                                    alt=""
-                                    class="icon"
-                                />
-                            </div>
-                        </div>
-                        <div class="col-xl-3 item">
-                            <img
-                                src="./assest/img/findStore_img/louis vuitton.svg"
-                                alt=""
-                                class="thumb"
-                            />
-                            <div class="label">
-                                <div class="desc">
-                                    Hãng thời trang <br />
-                                    Louis Vuitton
-                                </div>
-                                <img
-                                    src="./assest/img/findStore_img/muiTen.svg"
-                                    alt=""
-                                    class="icon"
-                                />
-                            </div>
-                        </div>
-                        <div class="col-xl-3 item">
-                            <img
-                                src="./assest/img/findStore_img/Christian Dior.svg"
-                                alt=""
-                                class="thumb"
-                            />
-                            <div class="label">
-                                <div class="desc">
-                                    Hãng thời trang<br />
-                                    Christian Dior
-                                </div>
-                                <img
-                                    src="./assest/img/findStore_img/muiTen.svg"
-                                    alt=""
-                                    class="icon"
-                                />
-                            </div>
-                        </div>
-                        <div class="col-xl-3 item">
-                            <img
-                                src="./assest/img/findStore_img/Versace.svg"
-                                alt=""
-                                class="thumb"
-                            />
-                            <div class="label">
-                                <div class="desc">
-                                    Hãng thời trang<br />
-                                    Versace
-                                </div>
-                                <img
-                                    src="./assest/img/findStore_img/muiTen.svg"
-                                    alt=""
-                                    class="icon"
-                                />
-                            </div>
-                        </div>
-                        <div class="col-xl-3 item">
-                            <img
-                                src="./assest/img/findStore_img/Valentino.svg"
-                                alt=""
-                                class="thumb"
-                            />
-                            <div class="label">
-                                <div class="desc">
-                                    Hãng thời trang<br />
-                                    Valentino
-                                </div>
-                                <img
-                                    src="./assest/img/findStore_img/muiTen.svg"
-                                    alt=""
-                                    class="icon"
-                                />
-                            </div>
-                        </div>
-                        <div class="col-xl-3 item">
-                            <img
-                                src="./assest/img/findStore_img/Bvlgari.svg"
-                                alt=""
-                                class="thumb"
-                            />
-                            <div class="label">
-                                <div class="desc">
-                                    Hãng thời trang<br />
-                                    Bvlgari
-                                </div>
-                                <img
-                                    src="./assest/img/findStore_img/muiTen.svg"
-                                    alt=""
-                                    class="icon"
-                                />
-                            </div>
-                        </div>
-                        <div class="col-xl-3 item">
-                            <img
-                                src="./assest/img/findStore_img/Hugo Boss.svg"
-                                alt=""
-                                class="thumb"
-                            />
-                            <div class="label">
-                                <div class="desc">
-                                    Hãng thời trang Hugo Boss
-                                </div>
-                                <img
-                                    src="./assest/img/findStore_img/muiTen.svg"
-                                    alt=""
-                                    class="icon"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="btnGradient">
-                        Xem thêm các đại lý của 82X trên cả nước
-                    </div>
-                </div>
-            </section>
-            <section class="tuVan">
-                <div class="container">
-                    <p class="heading">Nhận tư vấn sản phẩm từ 82X</p>
-                    <div class="formBox">
-                        <div class="inputForm">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <input type="text" name="" id=""  class="Name" placeholder="Họ và tên *"/>
-                                </div>
-                                <div class="col-sm-6">
-                                    <input type="text" name="" id="" class="Sdt" placeholder="Số điện thoại *"/>
-                                </div>
-                            </div>
-                            <input type="text" name="" id="" class="Info" placeholder="Thông tin cần tư vấn..."/>
-                        </div>
-                        <div class="buttonSend" data-bs-toggle="modal"
-                        data-bs-target="#datHangTC">
-                            <img src="./assest/img/findStore_img/iconSend.svg" alt="">
-                            <p class="label">Gửi yêu cầu</p>
-                        </div>
-                    </div>
-                </div>
+                <img src="./assest/img/news_img/banner.png" alt="" />
             </section>
         </main>
         <!-- ============================FOOTER================================ -->
@@ -883,6 +434,7 @@
                 </section>
             </div>
         </footer>
+        <!-- ======login====== -->
         <div
             class="modal fade"
             id="loginForm"
@@ -922,8 +474,11 @@
                             </p>
                             <p class="desc" style="margin-bottom: 25px">
                                 Nếu Nàng chưa có tài khoản, vui lòng
-                                <a data-bs-toggle="modal"
-                                data-bs-target="#registerForm">đăng ký!</a>
+                                <a
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#registerForm"
+                                    >đăng ký!</a
+                                >
                             </p>
                             <label for="username" class="desc"
                                 >Tên đăng nhập</label
@@ -961,18 +516,28 @@
                                 * là thông tin bắt buộc phải điển đầy đủ
                             </p>
 
-                            <div class="btnGradient" data-bs-toggle="modal"
-                            data-bs-target="#succesLogin">Đăng nhập</div>
+                            <div
+                                id="loginBtn"
+                                class="btnGradient"
+                                data-bs-toggle="modal"
+                                data-bs-target="#succesLogin"
+                            >
+                                Đăng nhập
+                            </div>
                             <p class="desc" style="margin-top: 25px">
                                 Nếu Nàng chưa có tài khoản, vui lòng
-                                <a data-bs-toggle="modal"
-                                data-bs-target="#registerForm">đăng ký!</a>
+                                <a
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#registerForm"
+                                    >đăng ký!</a
+                                >
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- ===register== -->
         <div
             class="modal fade"
             id="registerForm"
@@ -999,10 +564,11 @@
                     <div class="modal-body registerFrom-body">
                         <div class="rightSide">
                             <p class="desc">
-                                Đăng ký để nhận được nhiều ưu đãi dành riêng cho Khách hàng thân thiết của 82X Nàng nhé!
+                                Đăng ký để nhận được nhiều ưu đãi dành riêng cho
+                                Khách hàng thân thiết của 82X Nàng nhé!
                             </p>
                             <p class="desc" style="margin-bottom: 25px">
-                                Nếu Nàng đã có tài khoản, vui lòng 
+                                Nếu Nàng đã có tài khoản, vui lòng
                                 <a
                                     data-bs-toggle="modal"
                                     data-bs-target="#loginForm"
@@ -1010,9 +576,7 @@
                                 >
                             </p>
                             <!-- ho va ten -->
-                            <label for="name" class="desc"
-                                >Họ và tên</label
-                            >
+                            <label for="name" class="desc">Họ và tên</label>
                             <div class="inputButton">
                                 <div class="icon">
                                     <img
@@ -1028,9 +592,7 @@
                                 />
                             </div>
                             <!-- so dien thoai -->
-                            <label for="sdt" class="desc"
-                                >Số điện thoại</label
-                            >
+                            <label for="sdt" class="desc">Số điện thoại</label>
                             <div class="inputButton">
                                 <div class="icon">
                                     <img
@@ -1061,7 +623,9 @@
                                     placeholder="nhập mật khẩu *"
                                 />
                             </div>
-                            <label for="password" class="desc">Nhập lại mật khẩu</label>
+                            <label for="password" class="desc"
+                                >Nhập lại mật khẩu</label
+                            >
                             <div class="inputButton">
                                 <div class="icon">
                                     <img
@@ -1104,6 +668,7 @@
                         class="datHangTC-close"
                         data-bs-dismiss="modal"
                         aria-label="Close"
+                        onclick="window.location.reload()"
                     >
                         <img
                             src="./assest/img/loginForm-close.svg"
@@ -1183,19 +748,25 @@
                                 đã quan tâm và đặt sản phẩm tại 82x
                             </p>
                             <p class="desc">
-                                Tổng đài tư vấn: <strong class="phone">1800.9232</strong>
+                                Tổng đài tư vấn:
+                                <strong class="phone">1800.9232</strong>
                             </p>
-                            <div class="btnGradient" onclick="window.location='./product.html'">Đến trang mua hàng</div>
+                            <div
+                                class="btnGradient"
+                                onclick="window.location='./product.html'"
+                            >
+                                Đến trang mua hàng
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- ===succces== data-bs-toggle="modal"
-                            data-bs-target="#datHangTC" -->
+        <!-- ===successLogOut== data-bs-toggle="modal"
+                            data-bs-target="#succesLogOut" -->
         <div
             class="modal fade"
-            id="datHangTC"
+            id="succesLogOut"
             data-bs-backdrop="static"
             data-bs-keyboard="false"
             tabindex="-1"
@@ -1209,6 +780,7 @@
                         class="datHangTC-close"
                         data-bs-dismiss="modal"
                         aria-label="Close"
+                        onclick="window.location.reload()"
                     >
                         <img
                             src="./assest/img/loginForm-close.svg"
@@ -1279,21 +851,24 @@
                                     />
                                 </svg>
                             </div>
-                            <p class="title">Gửi yêu cầu thành công</p>
+                            <p class="title">Đăng xuất thành công</p>
                             <p class="desc">
                                 Cảm ơn
                                 <strong style="font-weight: 600"
                                     >Quý khách</strong
                                 >
-                                đã quan tâm và đặt sản phẩm tại 82x
+                                đã quan tâm phẩm tại 82x
                             </p>
-                            
-                            <p class="desc">Chúng tôi sẽ liên hệ với bạn trong vòng 30 phút
-                                </p>
                             <p class="desc">
-                                Tổng đài tư vấn: <strong class="phone">1800.9232</strong>
+                                Tổng đài tư vấn:
+                                <strong class="phone">1800.9232</strong>
                             </p>
-                            <div class="btnGradient" onclick="window.location='./index.html'">Trở về trang chủ</div>
+                            <div
+                                class="btnGradient"
+                                onclick="window.location='./index.html'"
+                            >
+                                về trang chủ
+                            </div>
                         </div>
                     </div>
                 </div>
