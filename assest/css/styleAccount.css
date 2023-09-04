@@ -169,6 +169,370 @@ main .backgroundMainGroup {
     gap: 15px;
     color: #000;
 }
+
+/* ===tabs== */
+.tabs {
+    padding-top: 20px;
+    flex-direction: column;
+}
+.tabs .tab {
+    display: flex;
+    border: none;
+    align-items: center;
+    gap: 11px;
+    padding: 23px 0;
+    padding-left: 27px;
+    background-color: transparent;
+    color: #000;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.tabs .tab.active {
+    color: var(--color-primary);
+    background-color: #fff;
+}
+
+/* contentTab */
+.myTabs_content {
+    padding: 51px 48px 51px 56px;
+}
+/* =================CONTENT-Donhang================== */
+#donhang .headingBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#donhang .headingBox .title {
+    color: #000;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+#donhang .headingBox .filterBox {
+    display: flex;
+    gap: 20px;
+}
+#donhang .headingBox a {
+    color: #000;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+}
+#donhang .headingBox a.active {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+#donhang .line1,
+#donhang .line1 .maDonHangBox,
+#donhang .line1 .ngayMuaBox {
+    display: flex;
+    gap: 8px;
+}
+
+#donhang .itemGroup {
+    margin-top: 26px;
+    border-radius: 5px;
+    border: 1px solid #e3e3ff;
+    background: #fff;
+}
+
+#donhang .line1 {
+    padding: 14px 27px;
+    border-bottom: 1px solid #e3e3ff;
+}
+
+#donhang strong {
+    color: var(--color-primary);
+}
+
+#donhang .cate {
+    text-transform: uppercase;
+    margin-left: auto;
+}
+
+#donhang .line1 .maDonHangBox,
+#donhang .line1 .ngayMuaBox {
+}
+
+#donhang .line1 .ngayMuaBox {
+    margin-left: 44px;
+}
+
+#donhang .line2 .item {
+    align-items: center;
+    display: flex;
+    gap: 16px;
+    padding: 27px;
+    border-bottom: 1px solid #d8d8f1;
+}
+
+#donhang .line2 .item .cost {
+    margin-left: auto;
+    color: #000;
+    text-align: right;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+#donhang .line2 .item .cost .subCost {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#donhang .line2 .item .descGroup {
+    display: flex;
+    gap: 26px;
+    height: 100%;
+    flex-direction: column;
+}
+
+#donhang .line2 .item .desc {
+    max-width: 160px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-align: left;
+}
+#donhang .line2 .item .amount {
+    color: #666;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 400;
+}
+#donhang .line2 .item .item_img {
+    position: relative;
+    width: 83px;
+    aspect-ratio: 1/1;
+    background-color: #f6f5f5;
+}
+#donhang .line2 .item .item_img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#donhang .line3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 27px;
+    border-radius: 0px 0px 5px 5px;
+    border: 1px solid #e3e3ff;
+    background: #f4f4ff;
+}
+
+#donhang .line3 .xemChiTiet {
+    min-width: 237px;
+    height: 43px;
+    border-radius: 5px;
+    background: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: all 0.2s ease;
+}
+
+#donhang .line3 .xemChiTiet:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+#donhang .line3 .tongTien {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #000;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#donhang .line3 .tongTien .money {
+    color: var(--color-primary);
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+/* =================CONTENT-lpoints================== */
+#lPoins .title {
+    color: #000;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+#lPoins .line1 {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+#lPoins .line1 .label {
+    width: 160px;
+    color: #000;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+/* =================CONTENT-thekhtt================== */
+#thekhtt .title {
+    color: #000;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+#thekhtt .line1 {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+#thekhtt .line1 .label {
+    color: #000;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 200px;
+}
+#thekhtt .line1 .num {
+    width: 200px;
+    line-height: normal;
+}
+#thekhtt {
+    position: relative;
+}
+#thekhtt .card {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+}
+
+#thekhtt .btnGradient {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: none;
+}
+/* =================CONTENT-diachi================== */
+#diachi .title {
+    color: #000;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+#diachi .label {
+    color: #000;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+#diachi .btnGradient {
+    margin-top: 36px;
+    text-shadow: none;
+    text-align: center;
+}
+/* =================CONTENT-diachi================== */
+#taiKhoan .title {
+    color: #000;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+#taiKhoan .label {
+    color: #000;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+#taiKhoan .btnGradient {
+    margin-top: 36px;
+    text-shadow: none;
+    text-align: center;
+}
+
+#taiKhoan .boxNgaySinh {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.checkBox {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.checkBox .box {
+    display: block;
+    position: relative;
+    width: 30px;
+    aspect-ratio: 1/1;
+    border-radius: 4px;
+    border: 1px solid #9393ff;
+    background: #fff;
+}
+
+.checkBox.active .box .subBox{
+    display: flex;
+}
+
+.checkBox .box .subBox {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 30px;
+    border-radius: 3px;
+    aspect-ratio: 1/1;
+    background-color: var(--color-primary);
+}
 /* =================banner================== */
 .banner img {
     width: 100%;

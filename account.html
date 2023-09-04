@@ -51,7 +51,7 @@
                             <li><a href="./index.html">TRANG CHỦ</a></li>
                             <li><a href="./intro.html">GIỚI THIỆU</a></li>
                             <li><a href="./product.html">SẢN PHẨM</a></li>
-                            <li><a href="#!" class="active">TIN TỨC</a></li>
+                            <li><a href="./news.html">TIN TỨC</a></li>
                             <li>
                                 <a href="./customer.html"
                                     >CHƯƠNG TRÌNH KHÁCH HÀNG</a
@@ -63,7 +63,7 @@
                     <div class="features">
                         <button
                             id="loginIcon"
-                            class="login"
+                            class="login active"
                             data-bs-toggle="modal"
                             data-bs-target="#loginForm"
                         >
@@ -75,12 +75,14 @@
                             <div class="listSub">
                                 <ul>
                                     <li>
-                                        <a href="./account.html"
+                                        <a href="./account.html?t=donhang"
                                             >Đơn hàng của tôi</a
                                         >
                                     </li>
                                     <li>
-                                        <a href="./account.html">Tài khoản</a>
+                                        <a href="./account.html?t=taiKhoan"
+                                            >Tài khoản</a
+                                        >
                                     </li>
                                     <li>
                                         <a
@@ -138,7 +140,9 @@
             <section class="location">
                 <div class="container">
                     <div class="contentBox">
-                        <div class="heading">Thông tin tài khoản</div>
+                        <div class="heading" id="fillHeading">
+                            Thông tin tài khoản
+                        </div>
                         <div class="localBox">
                             <a href="./index.html" class="desc">Trang chủ</a>
                             <img
@@ -147,6 +151,14 @@
                                 class="vector"
                             />
                             <a href="./news.html" class="desc">Tài khoản</a>
+                            <img
+                                src="./assest/img/Vector.svg"
+                                alt=""
+                                class="vector"
+                            />
+                            <a href="/#!" class="desc" id="fillDesc"
+                                >Thông tin tài khoản</a
+                            >
                         </div>
                     </div>
                 </div>
@@ -161,18 +173,54 @@
                                         <p class="desc">L-points</p>
                                         <p class="num">1000</p>
                                     </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="2" height="14" viewBox="0 0 2 14" fill="none">
-                                        <line x1="1.5" y1="2.81003e-08" x2="1.5" y2="14" stroke="#000062"/>
-                                        <line x1="0.5" y1="2.81003e-08" x2="0.499999" y2="14" stroke="#0000D3"/>
-                                      </svg>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="2"
+                                        height="14"
+                                        viewBox="0 0 2 14"
+                                        fill="none"
+                                    >
+                                        <line
+                                            x1="1.5"
+                                            y1="2.81003e-08"
+                                            x2="1.5"
+                                            y2="14"
+                                            stroke="#000062"
+                                        />
+                                        <line
+                                            x1="0.5"
+                                            y1="2.81003e-08"
+                                            x2="0.499999"
+                                            y2="14"
+                                            stroke="#0000D3"
+                                        />
+                                    </svg>
                                     <div class="diemKhtt">
                                         <p class="desc">Điểm KHTT</p>
                                         <p class="num">500</p>
                                     </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="2" height="14" viewBox="0 0 2 14" fill="none">
-                                        <line x1="1.5" y1="2.81003e-08" x2="1.5" y2="14" stroke="#000062"/>
-                                        <line x1="0.5" y1="2.81003e-08" x2="0.499999" y2="14" stroke="#0000D3"/>
-                                      </svg>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="2"
+                                        height="14"
+                                        viewBox="0 0 2 14"
+                                        fill="none"
+                                    >
+                                        <line
+                                            x1="1.5"
+                                            y1="2.81003e-08"
+                                            x2="1.5"
+                                            y2="14"
+                                            stroke="#000062"
+                                        />
+                                        <line
+                                            x1="0.5"
+                                            y1="2.81003e-08"
+                                            x2="0.499999"
+                                            y2="14"
+                                            stroke="#0000D3"
+                                        />
+                                    </svg>
                                     <div class="hangThe">
                                         <p class="desc">Hạng Thẻ</p>
                                         <p class="num">KOHARU</p>
@@ -196,14 +244,793 @@
                                     </div>
                                 </div>
                             </div>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum praesentium est voluptatibus esse eligendi illum quas soluta incidunt quia, nemo reprehenderit quidem sunt aliquid iusto repellendus odio quasi aperiam cum?
+                            <div class="tabs nav" role="tablist">
+                                <!-- tab-donhang -->
+                                <button
+                                    class="nav-link active tab"
+                                    id="tab-donhang"
+                                    data-bs-toggle="pill"
+                                    data-bs-target="#donhang"
+                                >
+                                    <img
+                                        src="./assest/img/account_img/donHangIcon.svg"
+                                        alt=""
+                                        class="icon"
+                                    />
+                                    <p class="desc">Đơn hàng của tôi</p>
+                                </button>
+                                <!-- tab-khuyenmai -->
+                                <button
+                                    class="nav-link tab"
+                                    id="tab-khuyenmai"
+                                    data-bs-toggle="pill"
+                                    data-bs-target="#khuyenmai"
+                                >
+                                    <img
+                                        src="./assest/img/account_img/khuyenmai.svg"
+                                        alt=""
+                                        class="icon"
+                                    />
+                                    <p class="desc">Khuyến mãi</p>
+                                </button>
+                                <!-- tab-lPoints -->
+                                <button
+                                    class="nav-link tab"
+                                    id="tab-lPoins"
+                                    data-bs-toggle="pill"
+                                    data-bs-target="#lPoins"
+                                >
+                                    <img
+                                        src="./assest/img/account_img/lpoints.svg"
+                                        alt=""
+                                        class="icon"
+                                    />
+                                    <p class="desc">L - poins</p>
+                                </button>
+                                <!-- tab-diachi -->
+                                <button
+                                    class="nav-link tab"
+                                    id="tab-diachi"
+                                    data-bs-toggle="pill"
+                                    data-bs-target="#diachi"
+                                >
+                                    <img
+                                        src="./assest/img/account_img/sodiachi.svg"
+                                        alt=""
+                                        class="icon"
+                                    />
+                                    <p class="desc">Sổ địa chỉ</p>
+                                </button>
+                                <!-- tab-thekhtt -->
+                                <button
+                                    class="nav-link tab"
+                                    id="tab-thekhtt"
+                                    data-bs-toggle="pill"
+                                    data-bs-target="#thekhtt"
+                                >
+                                    <img
+                                        src="./assest/img/account_img/thekhtt.svg"
+                                        alt=""
+                                        class="icon"
+                                    />
+                                    <p class="desc">Thẻ KHTT</p>
+                                </button>
+                                <!-- tab-tài khoản -->
+                                <button
+                                    class="nav-link tab"
+                                    id="tab-taiKhoan"
+                                    data-bs-toggle="pill"
+                                    data-bs-target="#taiKhoan"
+                                >
+                                    <img
+                                        src="./assest/img/account_img/taiKhoan.svg"
+                                        alt=""
+                                        class="icon"
+                                    />
+                                    <p class="desc">Tài khoản</p>
+                                </button>
+                                <!-- dangxuat -->
+                                <button
+                                    class="tab"
+                                    id="tab-logOut"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#succesLogOut"
+                                >
+                                    <img
+                                        src="./assest/img/account_img/logout.svg"
+                                        alt=""
+                                        class="icon"
+                                    />
+                                    <p class="desc">Đăng xuất</p>
+                                </button>
+                            </div>
                         </div>
-                        <div class="myTabs_content tab-content"></div>
+                        <div class="myTabs_content tab-content">
+                            <!-- CONTENT-Đơn hàng -->
+                            <div
+                                class="tab-pane fade show active"
+                                id="donhang"
+                                role="tabpanel"
+                                tabindex="0"
+                            >
+                                <div class="headingBox">
+                                    <p class="title">Đơn hàng của tôi</p>
+                                    <div class="filterBox">
+                                        <a
+                                            id="all"
+                                            href="./account.html?t=donhang"
+                                            >Tất cả</a
+                                        >
+                                        <a
+                                            id="daDatHang"
+                                            href="./account.html?t=donhang&cate=daDatHang"
+                                            >Đã đặt hàng</a
+                                        >
+                                        <a
+                                            id="dangVanChuyen"
+                                            href="./account.html?t=donhang&cate=dangVanChuyen"
+                                            >Đang vận chuyển</a
+                                        >
+                                        <a
+                                            id="daGiaoHang"
+                                            href="./account.html?t=donhang&cate=daGiaoHang"
+                                            >Đã giao hàng</a
+                                        >
+                                        <a
+                                            id="daHuy"
+                                            href="./account.html?t=donhang&cate=daHuy"
+                                            >Đã huỷ</a
+                                        >
+                                    </div>
+                                </div>
+                                <div class="itemGroup" data-cate="daDatHang">
+                                    <div class="line1">
+                                        <div class="maDonHangBox">
+                                            <p class="label">Mã đơn hàng:</p>
+                                            <strong class="maDonHang"
+                                                >82x1586</strong
+                                            >
+                                        </div>
+                                        <div class="ngayMuaBox">
+                                            <p class="label">Ngày mua:</p>
+                                            <strong class="ngayMua"
+                                                >20/02/2023</strong
+                                            >
+                                        </div>
+                                        <strong class="cate"
+                                            >Đã đặt hàng</strong
+                                        >
+                                    </div>
+                                    <div class="line2">
+                                        <div class="item">
+                                            <div class="item_img">
+                                                <img
+                                                    src="./assest/img/cart_img/item1.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="descGroup">
+                                                <p class="desc">
+                                                    82X Shiharu Collagen - Hộp
+                                                    10 lon
+                                                </p>
+                                                <p class="amount">X1</p>
+                                            </div>
+                                            <div class="cost">
+                                                790.000 vnđ
+                                                <div class="subCost">
+                                                    1.100.000 vnđ
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="item_img">
+                                                <img
+                                                    src="./assest/img/cart_img/item1.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="descGroup">
+                                                <p class="desc">
+                                                    82X Shiharu Collagen - Hộp
+                                                    10 lon
+                                                </p>
+                                                <p class="amount">X1</p>
+                                            </div>
+                                            <div class="cost">
+                                                790.000 vnđ
+                                                <div class="subCost">
+                                                    1.100.000 vnđ
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="line3">
+                                        <a href="#!" class="xemChiTiet"
+                                            >Xem chi tiết đơn hàng</a
+                                        >
+                                        <div class="tongTien">
+                                            <p class="label">Tổng tiền:</p>
+                                            <p class="money">1.580.000 vnđ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="itemGroup"
+                                    data-cate="dangVanChuyen"
+                                >
+                                    <div class="line1">
+                                        <div class="maDonHangBox">
+                                            <p class="label">Mã đơn hàng:</p>
+                                            <strong class="maDonHang"
+                                                >82x1586</strong
+                                            >
+                                        </div>
+                                        <div class="ngayMuaBox">
+                                            <p class="label">Ngày mua:</p>
+                                            <strong class="ngayMua"
+                                                >20/02/2023</strong
+                                            >
+                                        </div>
+                                        <strong class="cate"
+                                            >Đang vận chuyển</strong
+                                        >
+                                    </div>
+                                    <div class="line2">
+                                        <div class="item">
+                                            <div class="item_img">
+                                                <img
+                                                    src="./assest/img/cart_img/item1.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="descGroup">
+                                                <p class="desc">
+                                                    82X Shiharu Collagen - Hộp
+                                                    10 lon
+                                                </p>
+                                                <p class="amount">X1</p>
+                                            </div>
+                                            <div class="cost">
+                                                790.000 vnđ
+                                                <div class="subCost">
+                                                    1.100.000 vnđ
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="item_img">
+                                                <img
+                                                    src="./assest/img/cart_img/item1.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="descGroup">
+                                                <p class="desc">
+                                                    82X Shiharu Collagen - Hộp
+                                                    10 lon
+                                                </p>
+                                                <p class="amount">X1</p>
+                                            </div>
+                                            <div class="cost">
+                                                790.000 vnđ
+                                                <div class="subCost">
+                                                    1.100.000 vnđ
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="line3">
+                                        <a href="#!" class="xemChiTiet"
+                                            >Xem chi tiết đơn hàng</a
+                                        >
+                                        <div class="tongTien">
+                                            <p class="label">Tổng tiền:</p>
+                                            <p class="money">1.580.000 vnđ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="itemGroup" data-cate="daGiaoHang">
+                                    <div class="line1">
+                                        <div class="maDonHangBox">
+                                            <p class="label">Mã đơn hàng:</p>
+                                            <strong class="maDonHang"
+                                                >82x1586</strong
+                                            >
+                                        </div>
+                                        <div class="ngayMuaBox">
+                                            <p class="label">Ngày mua:</p>
+                                            <strong class="ngayMua"
+                                                >20/02/2023</strong
+                                            >
+                                        </div>
+                                        <strong class="cate"
+                                            >Đã giao hàng</strong
+                                        >
+                                    </div>
+                                    <div class="line2">
+                                        <div class="item">
+                                            <div class="item_img">
+                                                <img
+                                                    src="./assest/img/cart_img/item1.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="descGroup">
+                                                <p class="desc">
+                                                    82X Shiharu Collagen - Hộp
+                                                    10 lon
+                                                </p>
+                                                <p class="amount">X1</p>
+                                            </div>
+                                            <div class="cost">
+                                                790.000 vnđ
+                                                <div class="subCost">
+                                                    1.100.000 vnđ
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="item_img">
+                                                <img
+                                                    src="./assest/img/cart_img/item1.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="descGroup">
+                                                <p class="desc">
+                                                    82X Shiharu Collagen - Hộp
+                                                    10 lon
+                                                </p>
+                                                <p class="amount">X1</p>
+                                            </div>
+                                            <div class="cost">
+                                                790.000 vnđ
+                                                <div class="subCost">
+                                                    1.100.000 vnđ
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="line3">
+                                        <a href="#!" class="xemChiTiet"
+                                            >Xem chi tiết đơn hàng</a
+                                        >
+                                        <div class="tongTien">
+                                            <p class="label">Tổng tiền:</p>
+                                            <p class="money">1.580.000 vnđ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="itemGroup"
+                                    data-cate="dangVanChuyen"
+                                >
+                                    <div class="line1">
+                                        <div class="maDonHangBox">
+                                            <p class="label">Mã đơn hàng:</p>
+                                            <strong class="maDonHang"
+                                                >82x1586</strong
+                                            >
+                                        </div>
+                                        <div class="ngayMuaBox">
+                                            <p class="label">Ngày mua:</p>
+                                            <strong class="ngayMua"
+                                                >20/02/2023</strong
+                                            >
+                                        </div>
+                                        <strong class="cate"
+                                            >Đang vận chuyển</strong
+                                        >
+                                    </div>
+                                    <div class="line2">
+                                        <div class="item">
+                                            <div class="item_img">
+                                                <img
+                                                    src="./assest/img/cart_img/item1.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="descGroup">
+                                                <p class="desc">
+                                                    82X Shiharu Collagen - Hộp
+                                                    10 lon
+                                                </p>
+                                                <p class="amount">X1</p>
+                                            </div>
+                                            <div class="cost">
+                                                790.000 vnđ
+                                                <div class="subCost">
+                                                    1.100.000 vnđ
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="item_img">
+                                                <img
+                                                    src="./assest/img/cart_img/item1.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="descGroup">
+                                                <p class="desc">
+                                                    82X Shiharu Collagen - Hộp
+                                                    10 lon
+                                                </p>
+                                                <p class="amount">X1</p>
+                                            </div>
+                                            <div class="cost">
+                                                790.000 vnđ
+                                                <div class="subCost">
+                                                    1.100.000 vnđ
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="line3">
+                                        <a href="#!" class="xemChiTiet"
+                                            >Xem chi tiết đơn hàng</a
+                                        >
+                                        <div class="tongTien">
+                                            <p class="label">Tổng tiền:</p>
+                                            <p class="money">1.580.000 vnđ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- CONTENT-Khuyến mãi -->
+                            <div
+                                class="tab-pane fade"
+                                id="khuyenmai"
+                                role="tabpanel"
+                                tabindex="0"
+                            >
+                                <div style="display: flex; justify-content: center; align-items: center;font-weight: 800;font-size: 30px;">Không có chương trình khuyến mãi nào đang diễn ra</div>
+                            </div>
+                            <!-- CONTENT-L Points -->
+                            <div
+                                class="tab-pane fade"
+                                id="lPoins"
+                                role="tabpanel"
+                                tabindex="0"
+                            >
+                                <p class="title">L-poins</p>
+                                <div class="line1">
+                                    <p class="label">Tổng số L-poins</p>
+                                    <p class="dot">:</p>
+                                    <p class="num">0</p>
+                                </div>
+                                <div class="line1">
+                                    <p class="label">L-poins khả dụng</p>
+                                    <p class="dot">:</p>
+                                    <p class="num">0</p>
+                                </div>
+                                <div class="line1">
+                                    <p class="label">L-poins chưa nhận</p>
+                                    <p class="dot">:</p>
+                                    <p class="num" style="color: red">0</p>
+                                </div>
+                                <div class="line1">
+                                    <p class="label">L-poins chờ</p>
+                                    <p class="dot">:</p>
+                                    <p class="num" style="color: red">0</p>
+                                </div>
+                            </div>
+                            <!-- CONTENT-Sổ địa chỉ -->
+                            <div
+                                class="tab-pane fade"
+                                id="diachi"
+                                role="tabpanel"
+                                tabindex="0"
+                            >
+                                <p class="title">Sổ địa chỉ</p>
+                                <!-- name -->
+                                <label class="label" for="name"
+                                    >Họ và tên</label
+                                >
+                                <div class="form_text">
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        id="name"
+                                        placeholder="Cao Nguyễn Hoàng Minh"
+                                    />
+                                </div>
+                                <!-- sdt -->
+                                <label class="label" for="sdt"
+                                    >Số điện thoại</label
+                                >
+                                <div class="form_text">
+                                    <input
+                                        type="text"
+                                        name="sdt"
+                                        id="sdt"
+                                        placeholder="0562720899"
+                                    />
+                                </div>
+                                <!-- thanh pho -->
+                                <label class="label">Tỉnh/Thành phố</label>
+                                <div class="custom-select">
+                                    <select>
+                                        <option value="0">
+                                            Chọn Tỉnh/Thành phố
+                                        </option>
+                                        <option value="1">TP.HCM</option>
+                                        <option value="2">Hà Nội</option>
+                                        <option value="3">Đà Nẵng</option>
+                                        <option value="4">option 4</option>
+                                        <option value="5">option 5</option>
+                                        <option value="6">option 6</option>
+                                        <option value="7">option 7</option>
+                                        <option value="7">option 7</option>
+                                    </select>
+                                </div>
+                                <!-- quan huyen -->
+                                <label class="label">Quận/Huyện</label>
+                                <div class="custom-select">
+                                    <select>
+                                        <option value="0">
+                                            Chọn Quận/Huyện
+                                        </option>
+                                        <option value="1">
+                                            Huyện Định Quán
+                                        </option>
+                                        <option value="2">
+                                            Huyện Trảng Bom
+                                        </option>
+                                        <option value="3">
+                                            Huyện Thống Nhất
+                                        </option>
+                                        <option value="4">option 4</option>
+                                        <option value="5">option 5</option>
+                                        <option value="6">option 6</option>
+                                        <option value="7">option 7</option>
+                                        <option value="7">option 7</option>
+                                    </select>
+                                </div>
+                                <!-- Phuong xa -->
+                                <label class="label">Phường/Xã</label>
+                                <div class="custom-select">
+                                    <select>
+                                        <option value="0">
+                                            Chọn Phường/Xã
+                                        </option>
+                                        <option value="1">Xã Ngọc Định</option>
+                                        <option value="2">Xã Phú Túc</option>
+                                        <option value="3">Xã Phú Cường</option>
+                                        <option value="4">option 4</option>
+                                        <option value="5">option 5</option>
+                                        <option value="6">option 6</option>
+                                        <option value="7">option 7</option>
+                                        <option value="7">option 7</option>
+                                    </select>
+                                </div>
+                                <!-- Địa chỉ cụ thể -->
+                                <label class="label" for="diachicuthe"
+                                    >Địa chỉ cụ thể</label
+                                >
+                                <div class="form_text" style="height: 160px">
+                                    <input
+                                        type="text"
+                                        name="diachicuthe"
+                                        id="diachicuthe"
+                                        placeholder="Nhập mô tả địa chỉ cụ thể"
+                                    />
+                                </div>
+                                <div class="checkBox" onclick="this.classList.toggle('active');">
+                                    <div class="box">
+                                        <div class="subBox">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="15"
+                                                height="12"
+                                                viewBox="0 0 15 12"
+                                                fill="none"
+                                            >
+                                                <path
+                                                    d="M14 1L5.0625 11L1 6.45455"
+                                                    stroke="white"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <p class="desc">Đặt làm địa chỉ mặc định</p>
+                                </div>
+                                <div class="btnGradient">Cập nhật</div>
+                            </div>
+                            <!-- CONTENT-Sổ KHTT -->
+                            <div
+                                class="tab-pane fade"
+                                id="thekhtt"
+                                role="tabpanel"
+                                tabindex="0"
+                            >
+                                <p class="title">Thẻ Khách Hàng Thân Thiết</p>
+                                <div class="line1">
+                                    <p class="label">Hạng thẻ</p>
+                                    <p class="dot">:</p>
+                                    <p class="num">KOHARU</p>
+                                </div>
+                                <div class="line1">
+                                    <p class="label">Điểm hiện tại</p>
+                                    <p class="dot">:</p>
+                                    <p class="num">500</p>
+                                </div>
+                                <div class="line1">
+                                    <p class="label">Ngày bắt đầu chu kỳ</p>
+                                    <p class="dot">:</p>
+                                    <p class="num">18/4/2023</p>
+                                </div>
+                                <div class="line1">
+                                    <p class="label">Ngày kết thúc chu kỳ</p>
+                                    <p class="dot">:</p>
+                                    <p class="num">18/4/2023</p>
+                                </div>
+                                <div class="line1">
+                                    <p class="label">Ưu đãi sinh nhật</p>
+                                    <p class="dot">:</p>
+                                    <p class="num">
+                                        Ưu đãi sinh nhật của bạn vào tháng 7
+                                    </p>
+                                </div>
+                                <div class="card">
+                                    <img
+                                        src="./assest/img/account_img/card.png"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="btnGradient">Lịch sử tích điểm</div>
+                            </div>
+                            <!-- CONTENT-TaiKhoan -->
+                            <div
+                                class="tab-pane fade"
+                                id="taiKhoan"
+                                role="tabpanel"
+                                tabindex="0"
+                            >
+                                <p class="title">Thông tin tài khoản</p>
+                                <!-- name -->
+                                <label class="label" for="name"
+                                    >Họ và tên</label
+                                >
+                                <div class="form_text">
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        id="name"
+                                        placeholder="Cao Nguyễn Hoàng Minh"
+                                    />
+                                </div>
+                                <!-- sdt -->
+                                <label class="label" for="sdt"
+                                    >Số điện thoại</label
+                                >
+                                <div class="form_text">
+                                    <input
+                                        type="text"
+                                        name="sdt"
+                                        id="sdt"
+                                        placeholder="0562720899"
+                                    />
+                                </div>
+                                <!-- email -->
+                                <label class="label" for="email">Email</label>
+                                <div class="form_text">
+                                    <input
+                                        type="text"
+                                        name="email"
+                                        id="email"
+                                        placeholder="caom900@gmail.com"
+                                    />
+                                </div>
+                                <!-- mk -->
+                                <label class="label" for="mk">Mật khẩu</label>
+                                <div class="form_text">
+                                    <input
+                                        type="text"
+                                        name="mk"
+                                        id="mk"
+                                        placeholder="***********"
+                                        disabled
+                                    />
+                                </div>
+                                <!-- ngaysinh -->
+                                <label class="label">Ngày sinh</label>
+                                <div class="boxNgaySinh">
+                                    <!-- ngay -->
+                                    <div class="form_text">
+                                        <input
+                                            type="text"
+                                            name="ngay"
+                                            id="ngay"
+                                            placeholder="Ngày"
+                                        />
+                                    </div>
+                                    <!-- thang -->
+                                    <div class="form_text">
+                                        <input
+                                            type="text"
+                                            name="thang"
+                                            id="thang"
+                                            placeholder="Tháng"
+                                        />
+                                    </div>
+                                    <!-- nam -->
+                                    <div class="form_text">
+                                        <input
+                                            type="text"
+                                            name="nam"
+                                            id="nam"
+                                            placeholder="Năm"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="checkBox" onclick="this.classList.toggle('active');">
+                                    <div class="box">
+                                        <div class="subBox">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="15"
+                                                height="12"
+                                                viewBox="0 0 15 12"
+                                                fill="none"
+                                            >
+                                                <path
+                                                    d="M14 1L5.0625 11L1 6.45455"
+                                                    stroke="white"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <p class="desc">Thay đổi mật khẩu</p>
+                                </div>
+                                <!-- mkc -->
+                                <label class="label" for="mkc"
+                                    >Mật khẩu cũ</label
+                                >
+                                <div class="form_text">
+                                    <input
+                                        type="text"
+                                        name="mkc"
+                                        id="mkc"
+                                        placeholder="Nhập mật khẩu cũ"
+                                    />
+                                </div>
+                                <!-- mkm -->
+                                <label class="label" for="mkm"
+                                    >Mật khẩu mới</label
+                                >
+                                <div class="form_text">
+                                    <input
+                                        type="text"
+                                        name="mkm"
+                                        id="mkm"
+                                        placeholder="Nhập mật khẩu từ 6 đến 32 ký tự"
+                                    />
+                                </div>
+                                <!-- nhaplai -->
+                                <label class="label" for="nhaplai"
+                                    >Nhập lại</label
+                                >
+                                <div class="form_text">
+                                    <input
+                                        type="text"
+                                        name="nhaplai"
+                                        id="nhaplai"
+                                        placeholder="Nhập lại mật khẩu mới"
+                                    />
+                                </div>
+                                <div class="btnGradient">Cập nhật</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section>
-            <section class="banner container">
-                <img src="./assest/img/news_img/banner.png" alt="" />
             </section>
         </main>
         <!-- ============================FOOTER================================ -->
@@ -447,7 +1274,6 @@
             <div class="modal-dialog">
                 <div class="modal-content loginFrom">
                     <button
-                        type="button"
                         class="loginFrom-close"
                         data-bs-dismiss="modal"
                         aria-label="Close"

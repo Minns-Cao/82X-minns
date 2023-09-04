@@ -208,25 +208,170 @@ document.addEventListener("click", closeAllSelect);
 // ====login====
 let loginBtn = document.querySelector("#loginBtn");
 if (loginBtn) {
-    loginBtn.addEventListener("click",()=>{
+    loginBtn.addEventListener("click", () => {
         //valid here
         localStorage.setItem("login", "true");
-    })
+    });
 }
 //=====logOut=====
 let logOut = document.querySelector("#logOut");
 if (logOut) {
-    logOut.addEventListener("click",()=>{
+    logOut.addEventListener("click", () => {
         localStorage.setItem("login", "false");
     });
 }
 
-console.log(localStorage.getItem("login"));
-if (localStorage.getItem("login") === "true"){
+if (localStorage.getItem("login") === "true") {
     let loginIcon = document.querySelector("#loginIcon");
-    loginIcon.removeAttribute("data-bs-toggle");
-    loginIcon.removeAttribute("data-bs-target");
+    if (loginIcon) {
+        loginIcon.removeAttribute("data-bs-toggle");
+        loginIcon.removeAttribute("data-bs-target");
+    }
     document.body.classList.add("login");
 }
 
+// ===========
+let urlParam = new URLSearchParams(window.location.search);
+let tabs = document.querySelectorAll(".tab");
+let tabContents = document.querySelectorAll(".tab-pane");
+let fillHeading = document.querySelector("#fillHeading");
+let fillDesc = document.querySelector("#fillDesc");
 
+const tabID = urlParam.get("t");
+
+if (tabID) {
+    let tabElm = document.querySelector(`#tab-${tabID}`);
+    let tabContent = document.querySelector(`#${tabID}`);
+
+    tabs.forEach((elm) => {
+        elm.classList.remove("active");
+    });
+    tabContents.forEach((elm) => {
+        elm.classList.remove("active");
+        elm.classList.remove("show");
+    });
+    tabElm.classList.add("active");
+    tabContent.classList.add("active");
+    tabContent.classList.add("show");
+}
+
+function changeContent() {
+    tabs.forEach((tab) => {
+        if (Array.from(tab.classList).includes("active")) {
+            let text =
+                tab.textContent.trim() === "Tài khoản"
+                    ? `Thông tin ${tab.textContent.trim()}`
+                    : tab.textContent.trim();
+            fillHeading.textContent = text;
+            fillDesc.textContent = text;
+        }
+    });
+}
+
+changeContent();
+
+tabs.forEach((elm) => {
+    elm.addEventListener("click", changeContent);
+});
+
+// =====Donhang filter
+function renderItemGroup() {
+    if (!cate) return;
+    let itemGroupList = document.querySelectorAll(".itemGroup");
+    if (itemGroupList) {
+        itemGroupList.forEach((itemGroup) => {
+            let cateOfitemGroup = itemGroup.dataset.cate;
+            if (cateOfitemGroup !== cate) {
+                itemGroup.style.display = "none";
+            } else {
+                itemGroup.style.display = "block";
+            }
+        });
+    }
+}
+
+const cate = urlParam.get("cate");
+if (cate) {
+    let filter = document.querySelector(`#${cate}`);
+    filter.classList.add("active");
+    console.log(filter);
+    renderItemGroup();
+} else {
+    let filter = document.querySelector(`#all`);
+    if (filter) {
+        filter.classList.add("active");
+        renderItemGroup();
+    }
+}
+
+// ======= tinh tien
+function tinhTienItem() {
+    let itemInCartList = document.querySelectorAll(".itemInCart");
+    let totalCost = 0;
+    let countTotal = 1;
+    itemInCartList.forEach((itemInCart) => {
+        let itemPrice_discount = itemInCart.querySelector(
+            ".itemPrice_discount"
+        );
+        let checkBoxItem = itemInCart.querySelector(".checkBoxItem");
+        let price = Number(itemPrice_discount.textContent.trim());
+        let num = itemInCart.querySelector(".num");
+        let amount = Number(num.textContent.trim());
+        let costElm = itemInCart.querySelector(".cost");
+        stringCost = (price * amount * 1000).toString();
+        let count = 1;
+        let trueFormatCost = stringCost
+            .split("")
+            .reverse()
+            .map((item, key, array) => {
+                if (count === 3) {
+                    if (item !== array[array.length - 1]) {
+                        item = "." + item;
+                    }
+                    count = 0;
+                }
+                count++;
+                return item;
+            })
+            .reverse()
+            .join("");
+        costElm.textContent = trueFormatCost;
+        //Tổng tiền
+        if (checkBoxItem.checked) {
+            totalCost += price * amount * 1000;
+        }
+    });
+    let trueFormatTotalCost = totalCost
+        .toString()
+        .split("")
+        .reverse()
+        .map((item, key, array) => {
+            if (countTotal === 3) {
+                if (item !== array[array.length - 1]) {
+                    item = "." + item;
+                }
+                countTotal = 0;
+            }
+            countTotal++;
+            return item;
+        })
+        .reverse()
+        .join("");
+    let totalCostElm1 = document.querySelector("#totalCost1");
+    let totalCostElm2 = document.querySelector("#totalCost2");
+    totalCostElm1.textContent = trueFormatTotalCost;
+    totalCostElm2.textContent = trueFormatTotalCost;
+    console.log(trueFormatTotalCost);
+}
+
+tinhTienItem();
+
+function changeAmount(elm) {
+    let parentElement = elm.parentNode;
+    let num = parentElement.querySelector(".num");
+    if (Array.from(elm.classList).includes("increase")) {
+        num.textContent = 1 + Number(num.textContent);
+    } else {
+        num.textContent = -1 + Number(num.textContent);
+    }
+}

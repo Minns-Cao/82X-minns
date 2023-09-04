@@ -134,7 +134,7 @@
                             <table>
                                 <tr class="thead">
                                     <th>
-                                        <input type="checkbox" name="" id="" />
+                                        <input type="checkbox" name="" id="" style="opacity: 0;"/>
                                     </th>
                                     <th style="text-align: left">
                                         Thông tin sản phẩm
@@ -145,9 +145,9 @@
                                     <th>Xoá</th>
                                 </tr>
                                 <!-- item1 -->
-                                <tr>
+                                <tr class="itemInCart" onclick="tinhTienItem()">
                                     <td>
-                                        <input type="checkbox" name="" id="" />
+                                        <input type="checkbox" class="checkBoxItem" name="" id="" />
                                     </td>
                                     <td>
                                         <div class="item">
@@ -175,9 +175,9 @@
                                     </td>
                                     <td>
                                         <div class="boxCount">
-                                            <div class="decrease">-</div>
+                                            <div class="decrease" onclick="changeAmount(this)">-</div>
                                             <div class="num">2</div>
-                                            <div class="increase">+</div>
+                                            <div class="increase" onclick="changeAmount(this)" >+</div>
                                         </div>
                                     </td>
                                     <td>
@@ -215,9 +215,9 @@
                                     </td>
                                 </tr>
                                 <!-- item2 -->
-                                <tr>
+                                <tr class="itemInCart" onclick="tinhTienItem()">
                                     <td>
-                                        <input type="checkbox" name="" id="" />
+                                        <input type="checkbox" class="checkBoxItem" name="" id="" />
                                     </td>
                                     <td>
                                         <div class="item">
@@ -245,9 +245,9 @@
                                     </td>
                                     <td>
                                         <div class="boxCount">
-                                            <div class="decrease">-</div>
+                                            <div class="decrease" onclick="changeAmount(this)">-</div>
                                             <div class="num">2</div>
-                                            <div class="increase">+</div>
+                                            <div class="increase" onclick="changeAmount(this)" >+</div>
                                         </div>
                                     </td>
                                     <td>
@@ -285,9 +285,9 @@
                                     </td>
                                 </tr>
                                 <!-- item3 -->
-                                <tr>
+                                <tr class="itemInCart" onclick="tinhTienItem()">
                                     <td>
-                                        <input type="checkbox" name="" id="" />
+                                        <input type="checkbox" class="checkBoxItem" name="" id="" />
                                     </td>
                                     <td>
                                         <div class="item">
@@ -315,9 +315,9 @@
                                     </td>
                                     <td>
                                         <div class="boxCount">
-                                            <div class="decrease">-</div>
+                                            <div class="decrease" onclick="changeAmount(this)">-</div>
                                             <div class="num">2</div>
-                                            <div class="increase">+</div>
+                                            <div class="increase" onclick="changeAmount(this)" >+</div>
                                         </div>
                                     </td>
                                     <td>
@@ -389,7 +389,7 @@
                                 <p class="title">Tóm tắt đơn hàng</p>
                                 <div class="tamTinh">
                                     <p class="desc">Tạm tính</p>
-                                    <p class="money">4.740.000</p>
+                                    <p class="money" id="totalCost1">4.740.000</p>
                                 </div>
                                 <div class="phiVanChuyen">
                                     <p class="desc">Phí vận chuyển</p>
@@ -397,7 +397,7 @@
                                 </div>
                                 <div class="tongTien">
                                     <p class="desc">Tổng tiền thanh toán</p>
-                                    <p class="money">4.740.000</p>
+                                    <p class="money" id="totalCost2">4.740.000</p>
                                 </div>
                             </div>
                             <div class="thanhToanBox">
