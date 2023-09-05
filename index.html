@@ -514,18 +514,42 @@
                         <div class="contentBox">
                             <h2 class="heading">Tin Tức - Sự Kiện</h2>
                             <div class="filterBtnArea">
-                                <div class="btn">Tất cả</div>
-                                <div class="btn">
+                                <div class="btn filterBtn" data-id="All">Tất cả</div>
+                                <div class="btn filterBtn" data-id="CTKHThanThiet">
                                     Chương trình khách hàng thân thiết
                                 </div>
-                                <div class="btn">Tin thương hiệu</div>
-                                <div class="btn">Tin sức khoẻ và làm đẹp</div>
+                                <div class="btn filterBtn" data-id="TinThuongHieu">Tin thương hiệu</div>
+                                <div class="btn filterBtn" data-id="SucKhoe">Tin sức khoẻ và làm đẹp</div>
                             </div>
                         </div>
                         <div class="slideHome">
-                            <div class="listItem slideHomeWapper">
-                                <div class="row gy-4">
-                                    <div class="col-xl-4 col-sm-6">
+                            <!-- Swiper -->
+                            <div class="swiper tinTucSilder">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="item" type="SucKhoe">
+                                            <img
+                                                src="./assest/img/home_img/tintuc_Luxury1.png"
+                                                alt=""
+                                                class="bg"
+                                            />
+                                            <div class="categoryBox">
+                                                <img
+                                                    src="./assest/img/home_img/tinTuc_icon.svg"
+                                                    alt=""
+                                                    class="icon"
+                                                />
+                                                <p class="category">
+                                                    Tin sức khoẻ và làm đẹp
+                                                </p>
+                                            </div>
+                                            <p class="title">
+                                                Làm sao để trở thành đại lý
+                                                Collagen 82X Sài Gòn?
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
                                         <div class="item" type="CTKHThanThiet">
                                             <img
                                                 src="./assest/img/home_img/tintuc_Luxury1.png"
@@ -549,7 +573,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="col-xl-4 col-sm-6">
+                                    <div class="swiper-slide">
                                         <div class="item" type="TinThuongHieu">
                                             <img
                                                 src="./assest/img/home_img/tintuc_Luxury2.png"
@@ -572,56 +596,10 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="col-xl-4 col-sm-6">
-                                        <div class="item" type="TinThuongHieu">
-                                            <img
-                                                src="./assest/img/home_img/tintuc_Luxury2.png"
-                                                alt=""
-                                                class="bg"
-                                            />
-                                            <div class="categoryBox">
-                                                <img
-                                                    src="./assest/img/home_img/tinTuc_icon.svg"
-                                                    alt=""
-                                                    class="icon"
-                                                />
-                                                <p class="category">
-                                                    Tin thương hiệu
-                                                </p>
-                                            </div>
-                                            <p class="title">
-                                                Làm sao để trở thành đại lý
-                                                Collagen 82X Sài Gòn?
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-sm-6">
-                                        <div class="item" type="TinThuongHieu">
-                                            <img
-                                                src="./assest/img/home_img/tintuc_Luxury2.png"
-                                                alt=""
-                                                class="bg"
-                                            />
-                                            <div class="categoryBox">
-                                                <img
-                                                    src="./assest/img/home_img/tinTuc_icon.svg"
-                                                    alt=""
-                                                    class="icon"
-                                                />
-                                                <p class="category">
-                                                    Tin thương hiệu
-                                                </p>
-                                            </div>
-                                            <p class="title">
-                                                Làm sao để trở thành đại lý
-                                                Collagen 82X Sài Gòn?
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-sm-6">
+                                    <div class="swiper-slide">
                                         <div class="item" type="CTKHThanThiet">
                                             <img
-                                                src="./assest/img/home_img/tintuc_Luxury3.png"
+                                                src="./assest/img/home_img/tintuc_Luxury1.png"
                                                 alt=""
                                                 class="bg"
                                             />
@@ -642,7 +620,147 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="col-xl-4 col-sm-6">
+                                    <div class="swiper-slide">
+                                        <div class="item" type="SucKhoe">
+                                            <img
+                                                src="./assest/img/home_img/tintuc_Luxury1.png"
+                                                alt=""
+                                                class="bg"
+                                            />
+                                            <div class="categoryBox">
+                                                <img
+                                                    src="./assest/img/home_img/tinTuc_icon.svg"
+                                                    alt=""
+                                                    class="icon"
+                                                />
+                                                <p class="category">
+                                                    Tin sức khoẻ và làm đẹp
+                                                </p>
+                                            </div>
+                                            <p class="title">
+                                                Làm sao để trở thành đại lý
+                                                Collagen 82X Sài Gòn?
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item" type="TinThuongHieu">
+                                            <img
+                                                src="./assest/img/home_img/tintuc_Luxury2.png"
+                                                alt=""
+                                                class="bg"
+                                            />
+                                            <div class="categoryBox">
+                                                <img
+                                                    src="./assest/img/home_img/tinTuc_icon.svg"
+                                                    alt=""
+                                                    class="icon"
+                                                />
+                                                <p class="category">
+                                                    Tin thương hiệu
+                                                </p>
+                                            </div>
+                                            <p class="title">
+                                                Làm sao để trở thành đại lý
+                                                Collagen 82X Sài Gòn?
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item" type="SucKhoe">
+                                            <img
+                                                src="./assest/img/home_img/tintuc_Luxury1.png"
+                                                alt=""
+                                                class="bg"
+                                            />
+                                            <div class="categoryBox">
+                                                <img
+                                                    src="./assest/img/home_img/tinTuc_icon.svg"
+                                                    alt=""
+                                                    class="icon"
+                                                />
+                                                <p class="category">
+                                                    Tin sức khoẻ và làm đẹp
+                                                </p>
+                                            </div>
+                                            <p class="title">
+                                                Làm sao để trở thành đại lý
+                                                Collagen 82X Sài Gòn?
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item" type="CTKHThanThiet">
+                                            <img
+                                                src="./assest/img/home_img/tintuc_Luxury1.png"
+                                                alt=""
+                                                class="bg"
+                                            />
+                                            <div class="categoryBox">
+                                                <img
+                                                    src="./assest/img/home_img/tinTuc_icon.svg"
+                                                    alt=""
+                                                    class="icon"
+                                                />
+                                                <p class="category">
+                                                    Chương trình khách hàng thân
+                                                    thiết
+                                                </p>
+                                            </div>
+                                            <p class="title">
+                                                Làm sao để trở thành đại lý
+                                                Collagen 82X Sài Gòn?
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item" type="TinThuongHieu">
+                                            <img
+                                                src="./assest/img/home_img/tintuc_Luxury2.png"
+                                                alt=""
+                                                class="bg"
+                                            />
+                                            <div class="categoryBox">
+                                                <img
+                                                    src="./assest/img/home_img/tinTuc_icon.svg"
+                                                    alt=""
+                                                    class="icon"
+                                                />
+                                                <p class="category">
+                                                    Tin thương hiệu
+                                                </p>
+                                            </div>
+                                            <p class="title">
+                                                Làm sao để trở thành đại lý
+                                                Collagen 82X Sài Gòn?
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item" type="CTKHThanThiet">
+                                            <img
+                                                src="./assest/img/home_img/tintuc_Luxury1.png"
+                                                alt=""
+                                                class="bg"
+                                            />
+                                            <div class="categoryBox">
+                                                <img
+                                                    src="./assest/img/home_img/tinTuc_icon.svg"
+                                                    alt=""
+                                                    class="icon"
+                                                />
+                                                <p class="category">
+                                                    Chương trình khách hàng thân
+                                                    thiết
+                                                </p>
+                                            </div>
+                                            <p class="title">
+                                                Làm sao để trở thành đại lý
+                                                Collagen 82X Sài Gòn?
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
                                         <div class="item" type="SucKhoe">
                                             <img
                                                 src="./assest/img/home_img/tintuc_Luxury1.png"
@@ -683,10 +801,9 @@
                                 </svg>
 
                                 <div class="pageNum">
-                                    <div class="thisPage">01</div>
-                                    <div class="line">/</div>
-                                    <div class="endPage">05</div>
+                                    <div class="swiper-pagination"></div>
                                 </div>
+                                
                                 <svg
                                     width="36"
                                     height="24"

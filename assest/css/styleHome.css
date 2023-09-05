@@ -430,20 +430,31 @@
     transition: 0.2s ease;
 }
 
+.tinTuc .contentBox .btn.active {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
 .tinTuc .contentBox .btn:hover {
     color: #fff;
     background-color: var(--color-primary);
 }
 
-.tinTuc .listItem {
+.tinTuc .tinTucSilder {
+    height: 810px;
     margin-top: 44px;
-    display: flex;
-    justify-content: center;
 }
 
-.tinTuc .listItem .item {
+.tinTuc .tinTucSilder .swiper-slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 395px;
+}
+
+.tinTuc .tinTucSilder .item {
     position: relative;
-    width: 100%;
+    width: 385px;
     aspect-ratio: 1/1;
     border-radius: 12px;
     background: linear-gradient(
@@ -458,7 +469,14 @@
     padding: 30px;
     transition: var(--transition-1);
 }
-.tinTuc .listItem .item .bg {
+
+.tinTuc .tinTucSilder .item.noActive {
+    transform: scale(0.9);
+    filter: blur(2px) contrast(5%);
+
+}
+
+.tinTuc .tinTucSilder .item .bg {
     position: absolute;
     width: 100%;
     object-fit: cover;
@@ -468,14 +486,14 @@
     z-index: -1;
 }
 
-.tinTuc .listItem .item .categoryBox {
+.tinTuc .tinTucSilder .item .categoryBox {
     display: flex;
     gap: 8px;
     margin-bottom: 16px;
     transition: var(--transition-1);
 }
 
-.tinTuc .listItem .item .categoryBox .category {
+.tinTuc .tinTucSilder .item .categoryBox .category {
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 18px;
@@ -483,7 +501,7 @@
     text-align: left;
 }
 
-.tinTuc .listItem .item .title {
+.tinTuc .tinTucSilder .item .title {
     width: 85%;
     font-size: 1.8rem;
     font-weight: 600;
@@ -493,38 +511,50 @@
     transition: all 0.3s ease 0.1s;
 }
 
-.tinTuc .listItem .item:hover {
+.tinTuc .tinTucSilder .item:hover {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.tinTuc .listItem .item:hover .categoryBox {
+.tinTuc .tinTucSilder .item:hover .categoryBox {
     transform: translateY(-15px);
 }
-.tinTuc .listItem .item:hover .title {
+.tinTuc .tinTucSilder .item:hover .title {
     transform: translateY(-15px);
 }
 
 .tinTuc .pageList {
+    position: relative;
     margin-top: 33px;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 42px;
 }
 
 .tinTuc .pageList .pageNum {
+    position: relative;
     display: flex;
+    align-items: center;
+    width: 50px;
+    height: 40px;
     font-size: 1.8rem;
     font-weight: 600;
     line-height: 23px;
     letter-spacing: 0em;
     text-align: left;
     color: #646464;
+    user-select: none;
 }
 
-.tinTuc .pageList .pageNum .thisPage {
+.tinTuc .pageList .pageNum .swiper-pagination {
+    width: 100%;
+}
+
+.tinTuc .pageList .pageNum .swiper-pagination-current {
     font-size: 3rem;
     color: var(--color-primary);
 }
+
 
 .tinTuc .pageList .nextBtn path,
 .tinTuc .pageList .backBtn path {
