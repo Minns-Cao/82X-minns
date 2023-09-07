@@ -1297,7 +1297,7 @@ footer .copyright .boxContent .imgBox .img {
     }
 
     footer .navFooter {
-        justify-content: center
+        justify-content: center;
     }
     footer .navFooter .midSide {
         height: 25px;
@@ -1306,12 +1306,13 @@ footer .copyright .boxContent .imgBox .img {
     footer .navFooter .rightSide {
         display: none;
     }
-    .navbar .menu ul a.active::after, .navbar .features .bag.active::after {
+    .navbar .menu ul a.active::after,
+    .navbar .features .bag.active::after {
         display: none;
     }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     .datHangTC-close {
         top: -11px;
         right: -0px;
@@ -1325,5 +1326,30 @@ footer .copyright .boxContent .imgBox .img {
 @media screen and (max-width: 520px) {
     header .menuMb .menuMb_item {
         margin-top: 15px;
+    }
+    .loginFrom .loginFrom-body {
+        transform: translateX(20px);
+        width: 330px;
+    }
+    .loginFrom-body .rightSide {
+        padding: 25px;
+    }
+    .loginFrom-close {
+        top: -37px;
+        right: 19px;
+    }
+    .registerFrom .registerFrom-body {
+        transform: translateX(20px);
+        width: 330px;
+    }
+    .registerFrom-body .rightSide {
+        padding: 25px;
+    }
+    .datHangTC-close {
+        top: 19px;
+        right: 51px;
+    }
+    .datHangTC .datHangTC-body {
+        transform: scale(0.7);
     }
 }
