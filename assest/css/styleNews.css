@@ -567,3 +567,43 @@ main .backgroundMainGroup {
     align-items: center;
     justify-content: center;
 }
+
+@media screen and (max-width: 1024px){
+    .location {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .news2 .boxThumb {
+        width: 200px;
+    }
+    .baiVietMoiNhat .rightSide .news2:nth-child(3){
+        display: none;
+    }
+    .news2 .groupDesc {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .subBanner .item {
+        margin-bottom: 30px;
+    }
+    .subBanner .item .subTitle .desc {
+        font-size: 1.3rem;
+    }
+    .baiVietMoiNhat .rightSide .news2:nth-child(3),
+    .baiVietMoiNhat .rightSide .news2:nth-child(2){
+        display: none;
+    }
+    .baiVietMoiNhat .news1 {
+        flex-direction: column;
+    }
+    .baiVietMoiNhat .news1 .leftSide, 
+    .baiVietMoiNhat .news1 .rightSide{
+        width: 100%;
+    }
+
+    .baiVietMoiNhat .news1 .rightSide{
+        margin-top: 80px;
+    }
+ }

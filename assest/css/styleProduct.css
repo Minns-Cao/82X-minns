@@ -237,7 +237,6 @@ main .backgroundMainGroup {
     font-size: 60px;
     font-style: normal;
     font-weight: 400;
-
 }
 
 .uuDai .quizTest .leftSide .desc {
@@ -259,4 +258,38 @@ main .backgroundMainGroup {
 .uuDai .quizTest .rightSide img {
     width: 100%;
     object-fit: cover;
+}
+
+@media screen and (max-width: 1024px) {
+    .sanPham {
+        margin-top: 30px;
+    }
+    .sanPham .contentBox {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sanPham .nav-tabs .nav-link {
+        margin-bottom: 6px;
+        margin-left: 10px;
+    }
+    .uuDai .contentBox .quizTest {
+        flex-direction: column;
+    }
+    .uuDai .contentBox .quizTest .leftSide {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+    }
+    .uuDai .quizTest .rightSide {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .sanPham .boxTable .rowHeading .heading {
+        font-size: 34px;
+        padding-right: 20px;
+    }
 }

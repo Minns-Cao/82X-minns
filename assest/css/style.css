@@ -1253,6 +1253,17 @@ footer .copyright .boxContent .imgBox .img {
 }
 
 @media screen and (max-width: 1024px) {
+    .loginFrom-body .leftSide {
+        display: none;
+    }
+    .loginFrom .loginFrom-body {
+        transform: translateX(+30px);
+        width: 450px;
+    }
+    .loginFrom-body .rightSide {
+        width: 100%;
+        border-radius: 15px;
+    }
     header {
         top: -12px;
         position: sticky;
