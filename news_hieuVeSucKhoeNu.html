@@ -37,6 +37,17 @@
                 <nav class="navbar">
                     <img src="./assest/img/bgNav.png" alt="" class="bgNav" />
                     <div class="logo">
+                        <div class="iconNavMb">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                height="1em"
+                                viewBox="0 0 448 512"
+                            >
+                                <path
+                                    d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                                />
+                            </svg>
+                        </div>
                         <a href="./index.html">
                             <img
                                 src="./assest/img/logo82X.png"
@@ -48,19 +59,16 @@
                     <div class="menu">
                         <ul>
                             <li><a href="./index.html">TRANG CHỦ</a></li>
-                            <li><a href="./intro.html">GIỚI THIỆU</a></li>
-                            <li><a href="./product.html">SẢN PHẨM</a></li>
-                            <li><a href="#!" class="active">TIN TỨC</a></li>
-                            <li>
-                                <a href="./customer.html"
-                                    >CHƯƠNG TRÌNH KHÁCH HÀNG</a
-                                >
-                            </li>
+                            <li><a href="./intro.html" >GIỚI THIỆU</a></li>
+                            <li><a href="./product.html" >SẢN PHẨM</a></li>
+                            <li><a href="./news.html" class="active">TIN TỨC</a></li>
+                            <li><a href="./customer.html">CHƯƠNG TRÌNH KHÁCH HÀNG</a></li>
                             <li><a href="./findStore.html">TÌM ĐIỂM BÁN</a></li>
                         </ul>
                     </div>
                     <div class="features">
                         <button
+                            id="loginIcon"
                             class="login"
                             data-bs-toggle="modal"
                             data-bs-target="#loginForm"
@@ -70,6 +78,20 @@
                                 alt=""
                                 class="loginIcon"
                             />
+                            <div class="listSub">
+                                <ul>
+                                    <li>
+                                        <a href="./account.html?t=donhang">Đơn hàng của tôi</a>
+                                    </li>
+                                    <li>
+                                        <a href="./account.html?t=taiKhoan">Tài khoản</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" id="logOut" data-bs-toggle="modal"
+                                        data-bs-target="#succesLogOut">Đăng xuất</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </button>
                         <div class="line"></div>
                         <button
@@ -86,6 +108,164 @@
                     </div>
                 </nav>
             </section>
+            <div class="navMb">
+                <div class="container">
+                    <div class="contentBox">
+                        <div class="closeBox">
+                            <div class="leftSide">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="1em"
+                                    viewBox="0 0 384 512"
+                                    class="iconMb"
+                                    id="closeBtn"
+                                >
+                                    <path
+                                        d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="rightSide">
+                                <a href="#!">
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="1em"
+                                    viewBox="0 0 512 512"
+                                    class="iconMb"
+                                >
+                                    <path
+                                        d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
+                                    />
+                                </svg>
+                                </a>
+                                <a href="#!">
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="1em"
+                                    viewBox="0 0 448 512"
+                                    class="iconMb"
+                                >
+                                    <path
+                                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                                    />
+                                </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="menuMb">
+                            <ul class="row">
+                                <li class="col-lg-4 col-sm-6 menuMb_item">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        height="1em"
+                                        viewBox="0 0 576 512"
+                                        class="iconMenuMb"
+                                    >
+                                        <path
+                                            d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                        />
+                                    </svg>
+                                    <a href="./index.html" class="active"
+                                        >TRANG CHỦ</a
+                                    >
+                                </li>
+                                <li class="col-lg-4 col-sm-6 menuMb_item">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        height="1em"
+                                        viewBox="0 0 576 512"
+                                        class="iconMenuMb"
+                                    >
+                                        <path
+                                            d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                        />
+                                    </svg>
+                                    <a href="./intro.html">GIỚI THIỆU</a>
+                                </li>
+                                <li class="col-lg-4 col-sm-6 menuMb_item">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        height="1em"
+                                        viewBox="0 0 576 512"
+                                        class="iconMenuMb"
+                                    >
+                                        <path
+                                            d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                        />
+                                    </svg>
+                                    <a href="./product.html">SẢN PHẨM</a>
+                                </li>
+                                <li class="col-lg-4 col-sm-6 menuMb_item">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        height="1em"
+                                        viewBox="0 0 576 512"
+                                        class="iconMenuMb"
+                                    >
+                                        <path
+                                            d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                        />
+                                    </svg>
+                                    <a href="./news.html">TIN TỨC</a>
+                                </li>
+                                <li class="col-lg-4 col-sm-6 menuMb_item">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        height="1em"
+                                        viewBox="0 0 576 512"
+                                        class="iconMenuMb"
+                                    >
+                                        <path
+                                            d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                        />
+                                    </svg>
+                                    <a href="./customer.html"
+                                        >CHƯƠNG TRÌNH KHÁCH HÀNG</a
+                                    >
+                                </li>
+                                <li class="col-lg-4 col-sm-6 menuMb_item">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        height="1em"
+                                        viewBox="0 0 576 512"
+                                        class="iconMenuMb"
+                                    >
+                                        <path
+                                            d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                        />
+                                    </svg>
+                                    <a href="./findStore.html">TÌM ĐIỂM BÁN</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <section class="copyright mt-5">
+                            <div class="container">
+                                <div class="boxContent text-center" style="color: var(--color-primary);">
+                                    <p class="noti mb-4">
+                                        *Sản phẩm không phải là thuốc và không có tác
+                                        dụng thay thế thuốc chữa bệnh
+                                    </p>
+                                    <div class="imgBox mb-4 d-flex justify-content-center gap-4">
+                                        <img
+                                            src="./assest/img/dathongbao.png"
+                                            alt=""
+                                            class="img"
+                                        />
+                                        <img
+                                            src="./assest/img/protected.png"
+                                            alt=""
+                                            class="img"
+                                        />
+                                    </div>
+                                    <p class="cpyright">
+                                        Copyright 2022 © 82x All rights reserved.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
         </header>
         <!-- ============================Main================================ -->
         <main>
@@ -617,329 +797,557 @@
                 </section>
             </div>
         </footer>
+        <!-- modal -->
+        
+        <div>
+            <!-- =====login== -->
         <div
-            class="modal fade"
-            id="loginForm"
-            data-bs-backdrop="static"
-            data-bs-keyboard="false"
-            tabindex="-1"
-            aria-labelledby="staticBackdropLabel"
-            aria-hidden="true"
-        >
-            <div class="modal-dialog">
-                <div class="modal-content loginFrom">
-                    <button
-                        type="button"
-                        class="loginFrom-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                    >
+        class="modal fade"
+        id="loginForm"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog">
+            <div class="modal-content loginFrom">
+                <button
+                    type="button"
+                    class="loginFrom-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                >
+                    <img
+                        src="./assest/img/loginForm-close.svg"
+                        alt=""
+                        class="icon"
+                    />
+                </button>
+                <div class="modal-body loginFrom-body">
+                    <div class="leftSide">
+                        <img src="./assest/img/loginForm-img2.png" alt="" />
                         <img
-                            src="./assest/img/loginForm-close.svg"
+                            src="./assest/img/loginForm-img2.png"
                             alt=""
-                            class="icon"
+                            class="sub"
                         />
-                    </button>
-                    <div class="modal-body loginFrom-body">
-                        <div class="leftSide">
-                            <img src="./assest/img/loginForm-img2.png" alt="" />
-                            <img
-                                src="./assest/img/loginForm-img2.png"
-                                alt=""
-                                class="sub"
+                    </div>
+                    <div class="rightSide">
+                        <p class="desc">
+                            Đăng nhập để nhận ưu đãi dành riêng cho Khách
+                            hàng thân thiết của 82X Nàng nhé!
+                        </p>
+                        <p class="desc" style="margin-bottom: 25px">
+                            Nếu Nàng chưa có tài khoản, vui lòng
+                            <a
+                                data-bs-toggle="modal"
+                                data-bs-target="#registerForm"
+                                >đăng ký!</a
+                            >
+                        </p>
+                        <label for="username" class="desc"
+                            >Tên đăng nhập</label
+                        >
+                        <div class="inputButton">
+                            <div class="icon">
+                                <img
+                                    src="./assest/img/loginForm-icon.svg"
+                                    alt=""
+                                />
+                            </div>
+                            <input
+                                type="text"
+                                name=""
+                                id="username"
+                                placeholder="nhập tên đăng nhập *"
                             />
                         </div>
-                        <div class="rightSide">
-                            <p class="desc">
-                                Đăng nhập để nhận ưu đãi dành riêng cho Khách
-                                hàng thân thiết của 82X Nàng nhé!
-                            </p>
-                            <p class="desc" style="margin-bottom: 25px">
-                                Nếu Nàng chưa có tài khoản, vui lòng
-                                <a
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#registerForm"
-                                    >đăng ký!</a
-                                >
-                            </p>
-                            <label for="username" class="desc"
-                                >Tên đăng nhập</label
-                            >
-                            <div class="inputButton">
-                                <div class="icon">
-                                    <img
-                                        src="./assest/img/loginForm-icon.svg"
-                                        alt=""
-                                    />
-                                </div>
-                                <input
-                                    type="text"
-                                    name=""
-                                    id="username"
-                                    placeholder="nhập tên đăng nhập *"
+                        <label for="username" class="desc">Mật khẩu</label>
+                        <div class="inputButton">
+                            <div class="icon">
+                                <img
+                                    src="./assest/img/loginForm-icon2.svg"
+                                    alt=""
                                 />
                             </div>
-                            <label for="username" class="desc">Mật khẩu</label>
-                            <div class="inputButton">
-                                <div class="icon">
-                                    <img
-                                        src="./assest/img/loginForm-icon2.svg"
-                                        alt=""
-                                    />
-                                </div>
-                                <input
-                                    type="password"
-                                    name=""
-                                    id="username"
-                                    placeholder="nhập mật khẩu *"
-                                />
-                            </div>
-                            <p class="desc noti">
-                                * là thông tin bắt buộc phải điển đầy đủ
-                            </p>
+                            <input
+                                type="password"
+                                name=""
+                                id="username"
+                                placeholder="nhập mật khẩu *"
+                            />
+                        </div>
+                        <p class="desc noti">
+                            * là thông tin bắt buộc phải điển đầy đủ
+                        </p>
 
-                            <div
-                                class="btnGradient"
+                        <div
+                            id="loginBtn"
+                            class="btnGradient"
+                            data-bs-toggle="modal"
+                            data-bs-target="#succesLogin"
+                        >
+                            Đăng nhập
+                        </div>
+                        <p class="desc" style="margin-top: 25px">
+                            Nếu Nàng chưa có tài khoản, vui lòng
+                            <a
                                 data-bs-toggle="modal"
-                                data-bs-target="#succesLogin"
+                                data-bs-target="#registerForm"
+                                >đăng ký!</a
                             >
-                                Đăng nhập
-                            </div>
-                            <p class="desc" style="margin-top: 25px">
-                                Nếu Nàng chưa có tài khoản, vui lòng
-                                <a
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#registerForm"
-                                    >đăng ký!</a
-                                >
-                            </p>
-                        </div>
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-        <div
-            class="modal fade"
-            id="registerForm"
-            data-bs-backdrop="static"
-            data-bs-keyboard="false"
-            tabindex="-1"
-            aria-labelledby="staticBackdropLabel"
-            aria-hidden="true"
-        >
-            <div class="modal-dialog">
-                <div class="modal-content registerFrom">
-                    <button
-                        type="button"
-                        class="registerFrom-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                    >
-                        <img
-                            src="./assest/img/loginForm-close.svg"
-                            alt=""
-                            class="icon"
-                        />
-                    </button>
-                    <div class="modal-body registerFrom-body">
-                        <div class="rightSide">
-                            <p class="desc">
-                                Đăng ký để nhận được nhiều ưu đãi dành riêng cho
-                                Khách hàng thân thiết của 82X Nàng nhé!
-                            </p>
-                            <p class="desc" style="margin-bottom: 25px">
-                                Nếu Nàng đã có tài khoản, vui lòng
-                                <a
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#loginForm"
-                                    >đăng nhập!</a
-                                >
-                            </p>
-                            <!-- ho va ten -->
-                            <label for="name" class="desc">Họ và tên</label>
-                            <div class="inputButton">
-                                <div class="icon">
-                                    <img
-                                        src="./assest/img/loginForm-icon.svg"
-                                        alt=""
-                                    />
-                                </div>
-                                <input
-                                    type="text"
-                                    name=""
-                                    id="name"
-                                    placeholder="nhập Họ và tên *"
-                                />
-                            </div>
-                            <!-- so dien thoai -->
-                            <label for="sdt" class="desc">Số điện thoại</label>
-                            <div class="inputButton">
-                                <div class="icon">
-                                    <img
-                                        src="./assest/img/loginForm-icon.svg"
-                                        alt=""
-                                    />
-                                </div>
-                                <input
-                                    type="text"
-                                    name=""
-                                    id="sdt"
-                                    placeholder="nhập số điện thoại *"
-                                />
-                            </div>
-
-                            <label for="password" class="desc">Mật khẩu</label>
-                            <div class="inputButton">
-                                <div class="icon">
-                                    <img
-                                        src="./assest/img/loginForm-icon2.svg"
-                                        alt=""
-                                    />
-                                </div>
-                                <input
-                                    type="password"
-                                    name=""
-                                    id="password"
-                                    placeholder="nhập mật khẩu *"
-                                />
-                            </div>
-                            <label for="password" class="desc"
-                                >Nhập lại mật khẩu</label
+    </div>
+    <!-- ===register== -->
+    <div
+        class="modal fade"
+        id="registerForm"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog">
+            <div class="modal-content registerFrom">
+                <button
+                    type="button"
+                    class="registerFrom-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                >
+                    <img
+                        src="./assest/img/loginForm-close.svg"
+                        alt=""
+                        class="icon"
+                    />
+                </button>
+                <div class="modal-body registerFrom-body">
+                    <div class="rightSide">
+                        <p class="desc">
+                            Đăng ký để nhận được nhiều ưu đãi dành riêng cho
+                            Khách hàng thân thiết của 82X Nàng nhé!
+                        </p>
+                        <p class="desc" style="margin-bottom: 25px">
+                            Nếu Nàng đã có tài khoản, vui lòng
+                            <a
+                                data-bs-toggle="modal"
+                                data-bs-target="#loginForm"
+                                >đăng nhập!</a
                             >
-                            <div class="inputButton">
-                                <div class="icon">
-                                    <img
-                                        src="./assest/img/loginForm-icon2.svg"
-                                        alt=""
-                                    />
-                                </div>
-                                <input
-                                    type="password"
-                                    name=""
-                                    id="password"
-                                    placeholder="nhập lại mật khẩu *"
+                        </p>
+                        <!-- ho va ten -->
+                        <label for="name" class="desc">Họ và tên</label>
+                        <div class="inputButton">
+                            <div class="icon">
+                                <img
+                                    src="./assest/img/loginForm-icon.svg"
+                                    alt=""
                                 />
                             </div>
-                            <p class="desc noti">
-                                * là thông tin bắt buộc phải điển đầy đủ
-                            </p>
-
-                            <div class="btnGradient">Đăng ký</div>
+                            <input
+                                type="text"
+                                name=""
+                                id="name"
+                                placeholder="nhập Họ và tên *"
+                            />
                         </div>
+                        <!-- so dien thoai -->
+                        <label for="sdt" class="desc">Số điện thoại</label>
+                        <div class="inputButton">
+                            <div class="icon">
+                                <img
+                                    src="./assest/img/loginForm-icon.svg"
+                                    alt=""
+                                />
+                            </div>
+                            <input
+                                type="text"
+                                name=""
+                                id="sdt"
+                                placeholder="nhập số điện thoại *"
+                            />
+                        </div>
+
+                        <label for="password" class="desc">Mật khẩu</label>
+                        <div class="inputButton">
+                            <div class="icon">
+                                <img
+                                    src="./assest/img/loginForm-icon2.svg"
+                                    alt=""
+                                />
+                            </div>
+                            <input
+                                type="password"
+                                name=""
+                                id="password"
+                                placeholder="nhập mật khẩu *"
+                            />
+                        </div>
+                        <label for="password" class="desc"
+                            >Nhập lại mật khẩu</label
+                        >
+                        <div class="inputButton">
+                            <div class="icon">
+                                <img
+                                    src="./assest/img/loginForm-icon2.svg"
+                                    alt=""
+                                />
+                            </div>
+                            <input
+                                type="password"
+                                name=""
+                                id="password"
+                                placeholder="nhập lại mật khẩu *"
+                            />
+                        </div>
+                        <p class="desc noti">
+                            * là thông tin bắt buộc phải điển đầy đủ
+                        </p>
+
+                        <div class="btnGradient">Đăng ký</div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- ===succesLogin== data-bs-toggle="modal"
-                            data-bs-target="#succesLogin" -->
-        <div
-            class="modal fade"
-            id="succesLogin"
-            data-bs-backdrop="static"
-            data-bs-keyboard="false"
-            tabindex="-1"
-            aria-labelledby="staticBackdropLabel"
-            aria-hidden="true"
-        >
-            <div class="modal-dialog">
-                <div class="modal-content datHangTC">
-                    <button
-                        type="button"
-                        class="datHangTC-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                    >
-                        <img
-                            src="./assest/img/loginForm-close.svg"
-                            alt=""
-                            class="icon"
-                        />
-                    </button>
-                    <div class="modal-body datHangTC-body">
-                        <div class="rightSide">
-                            <div class="succesIcon">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
+    </div>
+    <!-- ===succesLogin== data-bs-toggle="modal"
+                        data-bs-target="#succesLogin" -->
+    <div
+        class="modal fade"
+        id="succesLogin"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog">
+            <div class="modal-content datHangTC">
+                <button
+                    type="button"
+                    class="datHangTC-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    onclick="window.location.reload()"
+                >
+                    <img
+                        src="./assest/img/loginForm-close.svg"
+                        alt=""
+                        class="icon"
+                    />
+                </button>
+                <div class="modal-body datHangTC-body">
+                    <div class="rightSide">
+                        <div class="succesIcon">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="110"
+                                height="110"
+                                viewBox="0 0 110 110"
+                                fill="none"
+                            >
+                                <mask
+                                    id="mask0_443_2594"
+                                    style="mask-type: alpha"
+                                    maskUnits="userSpaceOnUse"
+                                    x="0"
+                                    y="0"
                                     width="110"
                                     height="110"
-                                    viewBox="0 0 110 110"
-                                    fill="none"
                                 >
-                                    <mask
-                                        id="mask0_443_2594"
-                                        style="mask-type: alpha"
-                                        maskUnits="userSpaceOnUse"
-                                        x="0"
-                                        y="0"
-                                        width="110"
-                                        height="110"
-                                    >
-                                        <circle
-                                            cx="55"
-                                            cy="55"
-                                            r="55"
-                                            fill="#00009B"
-                                        />
-                                    </mask>
-                                    <g mask="url(#mask0_443_2594)">
-                                        <path
-                                            d="M134.5 105.5L88.5 31L81.5 36L65.5 54L48.5 68.5L36.5 54L21.5 47.5L65.5 136.5L134.5 105.5Z"
-                                            fill="url(#paint0_linear_443_2594)"
-                                        />
-                                    </g>
-                                    <defs>
-                                        <linearGradient
-                                            id="paint0_linear_443_2594"
-                                            x1="53.5"
-                                            y1="42"
-                                            x2="83"
-                                            y2="111"
-                                            gradientUnits="userSpaceOnUse"
-                                        >
-                                            <stop stop-color="#010164" />
-                                            <stop
-                                                offset="1"
-                                                stop-color="#010181"
-                                                stop-opacity="0"
-                                            />
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="68"
-                                    height="50"
-                                    viewBox="0 0 68 50"
-                                    fill="none"
-                                >
-                                    <path
-                                        d="M0 16.75C14 14.87 22.13 22.3 29.61 31.75C40 18.28 50.36 5.28 66.89 0L67.89 1.07C67.3971 2.0028 66.8072 2.88099 66.13 3.69C54.45 15 45.5 28.36 37.81 42.62C37.011 44.265 36.0708 45.8375 35 47.32C32.28 50.75 29 50.7 26.33 47.26C25.3129 45.9459 24.3937 44.5589 23.58 43.11C18.11 33.44 11.34 24.94 1.77 19C1.29 18.65 1 18 0 16.75Z"
-                                        fill="white"
+                                    <circle
+                                        cx="55"
+                                        cy="55"
+                                        r="55"
+                                        fill="#00009B"
                                     />
-                                </svg>
-                            </div>
-                            <p class="title">Đăng nhập thành công</p>
-                            <p class="desc">
-                                Cảm ơn
-                                <strong style="font-weight: 600"
-                                    >Quý khách</strong
-                                >
-                                đã quan tâm và đặt sản phẩm tại 82x
-                            </p>
-                            <p class="desc">
-                                Tổng đài tư vấn:
-                                <strong class="phone">1800.9232</strong>
-                            </p>
-                            <div
-                                class="btnGradient"
-                                onclick="window.location='./product.html'"
+                                </mask>
+                                <g mask="url(#mask0_443_2594)">
+                                    <path
+                                        d="M134.5 105.5L88.5 31L81.5 36L65.5 54L48.5 68.5L36.5 54L21.5 47.5L65.5 136.5L134.5 105.5Z"
+                                        fill="url(#paint0_linear_443_2594)"
+                                    />
+                                </g>
+                                <defs>
+                                    <linearGradient
+                                        id="paint0_linear_443_2594"
+                                        x1="53.5"
+                                        y1="42"
+                                        x2="83"
+                                        y2="111"
+                                        gradientUnits="userSpaceOnUse"
+                                    >
+                                        <stop stop-color="#010164" />
+                                        <stop
+                                            offset="1"
+                                            stop-color="#010181"
+                                            stop-opacity="0"
+                                        />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="68"
+                                height="50"
+                                viewBox="0 0 68 50"
+                                fill="none"
                             >
-                                Đến trang mua hàng
-                            </div>
+                                <path
+                                    d="M0 16.75C14 14.87 22.13 22.3 29.61 31.75C40 18.28 50.36 5.28 66.89 0L67.89 1.07C67.3971 2.0028 66.8072 2.88099 66.13 3.69C54.45 15 45.5 28.36 37.81 42.62C37.011 44.265 36.0708 45.8375 35 47.32C32.28 50.75 29 50.7 26.33 47.26C25.3129 45.9459 24.3937 44.5589 23.58 43.11C18.11 33.44 11.34 24.94 1.77 19C1.29 18.65 1 18 0 16.75Z"
+                                    fill="white"
+                                />
+                            </svg>
+                        </div>
+                        <p class="title">Đăng nhập thành công</p>
+                        <p class="desc">
+                            Cảm ơn
+                            <strong style="font-weight: 600"
+                                >Quý khách</strong
+                            >
+                            đã quan tâm và đặt sản phẩm tại 82x
+                        </p>
+                        <p class="desc">
+                            Tổng đài tư vấn:
+                            <strong class="phone">1800.9232</strong>
+                        </p>
+                        <div
+                            class="btnGradient"
+                            onclick="window.location='./product.html'"
+                        >
+                            Đến trang mua hàng
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <!-- ===successLogOut== data-bs-toggle="modal"
+                        data-bs-target="#succesLogOut" -->
+    <div
+        class="modal fade"
+        id="succesLogOut"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog">
+            <div class="modal-content datHangTC">
+                <button
+                    type="button"
+                    class="datHangTC-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    onclick="window.location.reload()"
+                >
+                    <img
+                        src="./assest/img/loginForm-close.svg"
+                        alt=""
+                        class="icon"
+                    />
+                </button>
+                <div class="modal-body datHangTC-body">
+                    <div class="rightSide">
+                        <div class="succesIcon">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="110"
+                                height="110"
+                                viewBox="0 0 110 110"
+                                fill="none"
+                            >
+                                <mask
+                                    id="mask0_443_2594"
+                                    style="mask-type: alpha"
+                                    maskUnits="userSpaceOnUse"
+                                    x="0"
+                                    y="0"
+                                    width="110"
+                                    height="110"
+                                >
+                                    <circle
+                                        cx="55"
+                                        cy="55"
+                                        r="55"
+                                        fill="#00009B"
+                                    />
+                                </mask>
+                                <g mask="url(#mask0_443_2594)">
+                                    <path
+                                        d="M134.5 105.5L88.5 31L81.5 36L65.5 54L48.5 68.5L36.5 54L21.5 47.5L65.5 136.5L134.5 105.5Z"
+                                        fill="url(#paint0_linear_443_2594)"
+                                    />
+                                </g>
+                                <defs>
+                                    <linearGradient
+                                        id="paint0_linear_443_2594"
+                                        x1="53.5"
+                                        y1="42"
+                                        x2="83"
+                                        y2="111"
+                                        gradientUnits="userSpaceOnUse"
+                                    >
+                                        <stop stop-color="#010164" />
+                                        <stop
+                                            offset="1"
+                                            stop-color="#010181"
+                                            stop-opacity="0"
+                                        />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="68"
+                                height="50"
+                                viewBox="0 0 68 50"
+                                fill="none"
+                            >
+                                <path
+                                    d="M0 16.75C14 14.87 22.13 22.3 29.61 31.75C40 18.28 50.36 5.28 66.89 0L67.89 1.07C67.3971 2.0028 66.8072 2.88099 66.13 3.69C54.45 15 45.5 28.36 37.81 42.62C37.011 44.265 36.0708 45.8375 35 47.32C32.28 50.75 29 50.7 26.33 47.26C25.3129 45.9459 24.3937 44.5589 23.58 43.11C18.11 33.44 11.34 24.94 1.77 19C1.29 18.65 1 18 0 16.75Z"
+                                    fill="white"
+                                />
+                            </svg>
+                        </div>
+                        <p class="title">Đăng xuất thành công</p>
+                        <p class="desc">
+                            Cảm ơn
+                            <strong style="font-weight: 600"
+                                >Quý khách</strong
+                            >
+                            đã quan tâm phẩm tại 82x
+                        </p>
+                        <p class="desc">
+                            Tổng đài tư vấn:
+                            <strong class="phone">1800.9232</strong>
+                        </p>
+                        <div
+                            class="btnGradient"
+                            onclick="window.location='./index.html'"
+                        >
+                            về trang chủ
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ===succces== data-bs-toggle="modal"
+                        data-bs-target="#datHangTC" -->
+        <div
+        class="modal fade"
+        id="datHangTC"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog">
+            <div class="modal-content datHangTC">
+                <button
+                    type="button"
+                    class="datHangTC-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                >
+                    <img
+                        src="./assest/img/loginForm-close.svg"
+                        alt=""
+                        class="icon"
+                    />
+                </button>
+                <div class="modal-body datHangTC-body">
+                    <div class="rightSide">
+                        <div class="succesIcon">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="110"
+                                height="110"
+                                viewBox="0 0 110 110"
+                                fill="none"
+                            >
+                                <mask
+                                    id="mask0_443_2594"
+                                    style="mask-type: alpha"
+                                    maskUnits="userSpaceOnUse"
+                                    x="0"
+                                    y="0"
+                                    width="110"
+                                    height="110"
+                                >
+                                    <circle
+                                        cx="55"
+                                        cy="55"
+                                        r="55"
+                                        fill="#00009B"
+                                    />
+                                </mask>
+                                <g mask="url(#mask0_443_2594)">
+                                    <path
+                                        d="M134.5 105.5L88.5 31L81.5 36L65.5 54L48.5 68.5L36.5 54L21.5 47.5L65.5 136.5L134.5 105.5Z"
+                                        fill="url(#paint0_linear_443_2594)"
+                                    />
+                                </g>
+                                <defs>
+                                    <linearGradient
+                                        id="paint0_linear_443_2594"
+                                        x1="53.5"
+                                        y1="42"
+                                        x2="83"
+                                        y2="111"
+                                        gradientUnits="userSpaceOnUse"
+                                    >
+                                        <stop stop-color="#010164" />
+                                        <stop
+                                            offset="1"
+                                            stop-color="#010181"
+                                            stop-opacity="0"
+                                        />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="68"
+                                height="50"
+                                viewBox="0 0 68 50"
+                                fill="none"
+                            >
+                                <path
+                                    d="M0 16.75C14 14.87 22.13 22.3 29.61 31.75C40 18.28 50.36 5.28 66.89 0L67.89 1.07C67.3971 2.0028 66.8072 2.88099 66.13 3.69C54.45 15 45.5 28.36 37.81 42.62C37.011 44.265 36.0708 45.8375 35 47.32C32.28 50.75 29 50.7 26.33 47.26C25.3129 45.9459 24.3937 44.5589 23.58 43.11C18.11 33.44 11.34 24.94 1.77 19C1.29 18.65 1 18 0 16.75Z"
+                                    fill="white"
+                                />
+                            </svg>
+                        </div>
+                        <p class="title">Gửi yêu cầu thành công</p>
+                        <p class="desc">
+                            Cảm ơn
+                            <strong style="font-weight: 600"
+                                >Quý khách</strong
+                            >
+                            đã quan tâm và đặt sản phẩm tại 82x
+                        </p>
+                        
+                        <p class="desc">Chúng tôi sẽ liên hệ với bạn trong vòng 30 phút
+                            </p>
+                        <p class="desc">
+                            Tổng đài tư vấn: <strong class="phone">1800.9232</strong>
+                        </p>
+                        <div class="btnGradient" onclick="window.location='./index.html'">Trở về trang chủ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
         </div>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

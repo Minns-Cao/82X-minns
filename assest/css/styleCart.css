@@ -443,3 +443,40 @@ main .backgroundMainGroup {
     align-items: center;
     justify-content: center;
 }
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+@media screen and (max-width: 1024px) {
+    .location {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .location .contentBox {
+        margin-bottom: 30px;
+    }
+    .bangTinhTien .boxContent {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .bangTinhTien .boxContent .leftSide {
+        width: 100%;
+    }
+    .bangTinhTien .boxContent .rightSide {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    tr th:nth-child(3), 
+    tr td:nth-child(3) {
+        display: none;
+    }
+    .bangTinhTien .leftSide {
+        overflow: scroll;
+    }
+    .bangTinhTien .leftSide table tr.tfoot .boxHotline .boxIcon {
+        display: none;
+    }
+}

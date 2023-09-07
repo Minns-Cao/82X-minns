@@ -1306,6 +1306,20 @@ footer .copyright .boxContent .imgBox .img {
     footer .navFooter .rightSide {
         display: none;
     }
+    .navbar .menu ul a.active::after, .navbar .features .bag.active::after {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .datHangTC-close {
+        top: -11px;
+        right: -0px;
+    }
+    .datHangTC .datHangTC-body {
+        width: 400px;
+        transform: translateX(13%);
+    }
 }
 
 @media screen and (max-width: 520px) {

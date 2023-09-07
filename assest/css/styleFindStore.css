@@ -371,3 +371,46 @@ main .backgroundMainGroup {
     font-weight: 600;
     line-height: normal;
 }
+
+@media screen and (max-width: 1024px){
+    .location {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .location .contentBox {
+        margin-bottom: 30px;
+    }
+    .heThongCuaHang .contentBox .leftSide {
+        width: 100%;
+        border-radius: 15px;
+    }
+    .heThongCuaHang .contentBox .rightSide {
+        display: none;
+    }
+    .tuVan .formBox {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+    .tuVan .formBox .inputForm .Name {
+        margin-bottom: 15px;
+    }
+    .tuVan .formBox .buttonSend {
+        width: 200px;
+        padding: 10px 0;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .subBanner .item {
+        margin-bottom: 30px;
+    }
+    .subBanner .item .subTitle .desc {
+        font-size: 1.3rem;
+    }
+    .brandKhac .btnGradient {
+        width: 80%;
+    }
+
+ }

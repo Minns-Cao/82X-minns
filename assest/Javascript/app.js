@@ -441,6 +441,30 @@ const swiper = new Swiper(".slider", {
     slidesPerView: 3,
     spaceBetween: 30,
 
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+
+            spaceBetween: 20,
+        },
+        420: {
+            slidesPerView: 1,
+
+            spaceBetween: 20,
+        },
+
+        640: {
+            slidesPerView: 2,
+
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 3,
+
+            spaceBetween: 20,
+        },
+    },
+
     // Navigation arrows
     navigation: {
         nextEl: ".next",
@@ -453,10 +477,64 @@ const swiper2 = new Swiper(".slider2", {
     loop: false,
     slidesPerView: 3,
     spaceBetween: 30,
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+
+            spaceBetween: 20,
+        },
+        420: {
+            slidesPerView: 1,
+
+            spaceBetween: 20,
+        },
+
+        640: {
+            slidesPerView: 2,
+
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 3,
+
+            spaceBetween: 20,
+        },
+    },
 
     // Navigation arrows
     navigation: {
         nextEl: ".next2",
         prevEl: ".prev2",
+    },
+});
+
+const swiper3 = new Swiper(".sliderCart", {
+    // Optional parameters
+    direction: "horizontal",
+    loop: false,
+    slidesPerView: 3,
+    spaceBetween: 30,
+
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+
+            spaceBetween: 10,
+        },
+        768: {
+            slidesPerView: 2,
+
+            spaceBetween: 20,
+        },
+        1200: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+        }
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: ".next",
+        prevEl: ".prev",
     },
 });
