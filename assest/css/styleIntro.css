@@ -370,11 +370,11 @@ main .backgroundMainGroup {
 }
 
 .congNghe .boxContent .heading {
+    text-align: center;
     font-family: Beaufort;
     font-size: 7rem;
     font-weight: 400;
     letter-spacing: 0em;
-    text-align: left;
     margin-bottom: 20px;
 }
 
@@ -538,4 +538,78 @@ main .backgroundMainGroup {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+}
+
+@media screen and (max-width: 1024px) {
+    .introduction .slide {
+        height: auto;
+        min-height: 465px;
+    }
+    
+    .thuongHieu .contentBox {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .thuongHieu .contentBox .leftSide{
+        width: 80%;
+    }
+    .thuongHieu .contentBox .rightSide{
+        margin-top: 0;
+        padding: 0;
+        padding-bottom: 35px;
+        width: 80%;
+    }
+    .thanhPhan .itemList {
+        flex-wrap: wrap;
+    }
+    .congNghe .boxContent .bigObject {
+        transform: scale(0.75);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .introduction .slide {
+        height: auto;
+        min-height: 355px;
+    }
+    .heading {
+        font-size: 30px;
+    }
+    .congNghe .boxContent .bigObject {
+        transform: scale(0.55);
+    }
+
+    .tuVan .formBox {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+    .tuVan .formBox .inputForm .Name {
+        margin-bottom: 15px;
+    }
+    .tuVan .formBox .buttonSend {
+        width: 200px;
+        padding: 10px 0;
+    }
+    
+}
+@media screen and (max-width: 425px) {
+    .introduction {
+        background-size: 700px;
+    }
+    .introduction .slide {
+        height: auto;
+        min-height: 205px;
+    }
+    .congNghe .boxContent {
+        height: 580px;
+        overflow: hidden;
+    }
+    .congNghe .boxContent .bigObject {
+        transform: scale(0.35) translateY(-100%);
+    }
+    
 }
