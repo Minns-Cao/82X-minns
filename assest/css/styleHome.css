@@ -2,40 +2,11 @@
 .introduction {
     position: relative;
     width: 100%;
-    background-image: url(../img/home_img/backgroundTop.png);
+    background-image: url(../img/home_img/Group\ 3523.png);
+    background-position: center top;
     background-repeat: no-repeat;
-    background-position: center center;
     background-size: cover;
     overflow: hidden;
-}
-
-.introduction .backgroundGroup {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
-
-.introduction .backgroundGroup .object {
-    position: absolute;
-}
-
-.introduction .backgroundGroup .obj0 {
-    display: block;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-}
-.introduction .backgroundGroup .obj1 {
-    display: block;
-    width: 50%;
-    top: 0;
-    right: 2%;
-}
-.introduction .backgroundGroup .obj2 {
-    display: block;
-    width: 40%;
-    top: 0;
-    left: -2%;
 }
 
 .introduction .slide {
@@ -48,7 +19,6 @@
 .introduction .slideItem {
     width: 100%;
     height: 100%;
-    overflow: hidden;
 }
 
 .introduction .slideItem .object {
@@ -602,3 +572,102 @@
 .heThong .boxContent .rightBox {
     padding-left: 10%;
 }
+
+@media screen and (max-width: 1024px) {
+    .introduction .slide {
+        height: auto;
+        min-height: 465px;
+    }
+    .kiemTraNhanh .backgroundGroup .object {
+        display: none;
+    }
+    .khamPha .item {
+        margin-bottom: 180px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .introduction .slide {
+        height: auto;
+        min-height: 355px;
+    }
+    .kiemTraNhanh .boxContent .btnBox {
+        flex-direction: column;
+        margin-bottom: 60px;
+        margin-top: 20px;
+    }
+    .kiemTraNhanh .boxContent .btnBox .btn {
+        margin: 10px 0 0 0;
+        text-align: center;
+    }
+    .heading {
+        font-size: 30px;
+    }
+    .kiemTraNhanh .text {
+        font-size: 25px !important;
+        text-align: center;
+    }
+
+    .cauChuyen {
+        margin-top: 200px;
+    }
+
+    .cauChuyen .banContent,
+    .cauChuyen .uonLuon,
+    .cauChuyen .thanhVien82X {
+        display: none;
+    }
+
+    .cauChuyen .contentBox .textBox {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transform: translateY(-50%);
+        gap: 20px;
+    }
+    .cauChuyen .contentBox .textBox .heading {
+        padding: 0;
+        width: 100%;
+        font-size: 25px;
+    }
+    .cauChuyen .contentBox .textBox .heading strong {
+        font-size: 40px;
+    }
+    .cauChuyen .contentBox .textBox .desc {
+        width: 80%;
+        padding: 0 60px;
+    }
+    .tinTuc .tinTucSilder .swiper-slide {
+        height: 395px;
+    }
+    .tinTuc .tinTucSilder .item .categoryBox .category {
+        width: 100%;
+        font-size: 12px;
+    }
+    .tinTuc .tinTucSilder .item .title {
+        width: 100%;
+        font-size: 13px;
+    }
+    .heThong .btnGradient {
+        font-size: 15px !important;
+        display: block;
+        width: 220px;
+    }
+
+}
+@media screen and (max-width: 425px) {
+    .introduction {
+        background-size: 700px;
+    }
+    .introduction .slide {
+        height: auto;
+        min-height: 305px;
+    }
+    .tinTuc .tinTucSilder .swiper-slide {
+        height: 285px;
+    }
+    
+}
+

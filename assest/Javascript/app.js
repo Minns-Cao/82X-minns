@@ -1,3 +1,15 @@
+//nav mb
+let navMb = document.querySelector(".navMb");
+let iconNavMb = document.querySelector(".iconNavMb");
+let closeBtn = document.querySelector("#closeBtn");
+if (iconNavMb && navMb) {
+    iconNavMb.addEventListener("click", () => {
+        navMb.classList.add("active");
+    });
+    closeBtn.addEventListener("click", () => {
+        navMb.classList.remove("active");
+    });
+}
 // product Page
 let product_filter = document.querySelectorAll(".sanPham .filter");
 if (product_filter) {
@@ -350,45 +362,65 @@ function changeAmount(elm) {
     }
 }
 
-
 // ====== home function
 let filterHomeBtn = document.querySelectorAll(".filterBtn");
-if (filterHomeBtn.length !== 0)  {
+if (filterHomeBtn.length !== 0) {
     let itemList = document.querySelectorAll(".tinTuc .item");
-    itemList.forEach(_item => {
-        
-        _item.setAttribute("onclick", `window.location = 'article.html'`)
-    })
-    filterHomeBtn.forEach((filterBtn)=>{
-        filterBtn.addEventListener("click",(event)=>{
+    itemList.forEach((_item) => {
+        _item.setAttribute("onclick", `window.location = 'article.html'`);
+    });
+    filterHomeBtn.forEach((filterBtn) => {
+        filterBtn.addEventListener("click", (event) => {
             let btnTarget = event.currentTarget;
             let id = btnTarget.dataset.id;
             //xoá active cũ
-            filterHomeBtn.forEach(_filterBtn => {
-                _filterBtn.classList.remove('active')
+            filterHomeBtn.forEach((_filterBtn) => {
+                _filterBtn.classList.remove("active");
             });
             // thêm active hiện tại
-            btnTarget.classList.add('active');
-            itemList.forEach(item => {
+            btnTarget.classList.add("active");
+            itemList.forEach((item) => {
                 let itemId = item.getAttribute("type");
-                if (id === 'All') {
+                if (id === "All") {
                     item.classList.remove("noActive");
                 } else if (itemId === id) {
                     item.classList.remove("noActive");
                 } else {
                     item.classList.add("noActive");
                 }
-            })
+            });
         });
-    })
+    });
 }
 
 const tinTucSilder = new Swiper(".tinTucSilder", {
-    slidesPerView: 3,
-    grid: {
-        rows: 2,
+    breakpoints: {
+        320: {
+            slidesPerView: 2,
+            grid: {
+                rows: 2,
+            },
+
+            spaceBetween: 20,
+        },
+
+        640: {
+            slidesPerView: 2,
+            grid: {
+                rows: 2,
+            },
+
+            spaceBetween: 20,
+        },
+        1024: {
+            slidesPerView: 3,
+            grid: {
+                rows: 2,
+            },
+
+            spaceBetween: 20,
+        },
     },
-    spaceBetween: 20,
     pagination: {
         el: ".swiper-pagination",
         type: "fraction",

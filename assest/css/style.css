@@ -323,7 +323,8 @@ body {
     color: #666;
     padding: 13px 22px;
     border: 1px solid transparent;
-    border-color: transparent rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1);
+    border-color: transparent rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1)
+        rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
 
@@ -455,10 +456,79 @@ header {
     left: 0;
     z-index: 100;
 }
+
+header .navMb {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateX(-100%);
+    background-color: #fff;
+    color: var(--color-primary);
+    padding: 30px;
+    transition: var(--transition-1);
+}
+
+header .navMb.active {
+    transform: translateX(0);
+}
+
+header .navMb .closeBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .navMb .leftSide,
+header .navMb .rightSide {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+header .navMb .iconMb {
+    display: block;
+    width: 40px;
+    height: 40px;
+    fill: var(--color-primary);
+}
+
+header .menuMb .menuMb_item {
+    margin-top: 50px;
+    display: flex;
+    gap: 15px;
+    border-top: 2px solid #efefef;
+    border-bottom: 2px solid #efefef;
+    padding: 35px;
+}
+
+header .menuMb .menuMb_item a {
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+header .menuMb .menuMb_item .iconMenuMb {
+    width: 25px;
+    fill: var(--color-primary);
+}
+
 .navbar {
     padding-top: 20px;
     position: relative;
     animation: navAni 0.5s ease-out 1;
+}
+
+header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+header .iconNavMb {
+    display: none;
 }
 
 @keyframes navAni {
@@ -578,7 +648,7 @@ header {
 }
 
 /* ==login=== */
-body.login #loginIcon:hover .listSub{
+body.login #loginIcon:hover .listSub {
     display: block;
 }
 
@@ -615,7 +685,7 @@ body.login #loginIcon:hover .listSub{
     transition: all 0.1s ease;
 }
 
- #loginIcon .listSub a:hover {
+#loginIcon .listSub a:hover {
     color: var(--color-primary);
 }
 
@@ -1179,4 +1249,49 @@ footer .copyright .boxContent .imgBox .img {
     line-height: normal;
     text-transform: uppercase;
     padding: 13px;
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+        top: -12px;
+        position: sticky;
+        background-color: #fff;
+    }
+    header .bgNav {
+        display: none;
+    }
+    header .menu {
+        display: none;
+    }
+
+    header .navbar .logo {
+        width: 120px;
+        gap: 25px;
+    }
+
+    header .logo .iconNavMb {
+        display: flex;
+        align-items: center;
+        height: 50px;
+    }
+
+    header .logo .iconNavMb svg {
+        width: 100%;
+        height: 60%;
+        object-fit: contain;
+    }
+    header .logo img {
+        width: 50px !important;
+    }
+
+    footer .navFooter {
+        justify-content: center
+    }
+    footer .navFooter .midSide {
+        height: 25px;
+    }
+    footer .navFooter .leftSide,
+    footer .navFooter .rightSide {
+        display: none;
+    }
 }
