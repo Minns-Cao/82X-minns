@@ -256,9 +256,7 @@ main .backgroundMainGroup {
     margin-left: auto;
 }
 
-#donhang .line1 .maDonHangBox,
-#donhang .line1 .ngayMuaBox {
-}
+
 
 #donhang .line1 .ngayMuaBox {
     margin-left: 44px;
@@ -537,4 +535,57 @@ main .backgroundMainGroup {
 .banner img {
     width: 100%;
     object-fit: cover;
+}
+
+@media screen and (max-width: 1024px) {
+    .location {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .location .contentBox {
+        margin-bottom: 30px;
+    }
+    .codeBox .line2,
+    .codeBox .line1 svg {
+        display: none;
+    }
+    .codeBox .line1 {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .boxContent .myTabs .nav .desc {
+        display: none;
+    }
+    .boxContent .myTabs {
+        width: 13%;
+    }
+    .codeBox {
+        padding: 4px;
+    }
+    .codeBox .line1 .desc, 
+    .codeBox .line1 .num {
+        font-size: 10px;
+    }
+    .boxContent .myTabs_content {
+        width: 87%;
+        padding: 12px;
+    }
+    #donhang .itemGroup {
+        overflow: scroll;
+    }
+    #thekhtt .card {
+        right: 0%;
+        top: 100%;
+    }
+}
+
+@media screen and (max-width: 540px){
+    #thekhtt .card {
+        right: 0%;
+        top: 100%;
+        transform: scale(0.7);
+    }
+    .tabs .tab {
+        padding-left: 15px;
+    }
 }

@@ -278,3 +278,23 @@ main .backgroundMainGroup {
     font-style: normal;
     font-weight: 600;
 }
+
+@media screen and (max-width: 1024px) {
+    .location {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .location .contentBox {
+        margin-bottom: 30px;
+    }
+    
+}
+
+@media screen and (max-width: 768px){
+    .pay .boxContent {
+        flex-direction: column-reverse;
+    }
+    .pay .leftSide, .pay .rightSide {
+        width: 100%;
+    }
+}
