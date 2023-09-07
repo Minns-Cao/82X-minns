@@ -469,6 +469,7 @@ header .navMb {
     color: var(--color-primary);
     padding: 30px;
     transition: var(--transition-1);
+    overflow: scroll;
 }
 
 header .navMb.active {
@@ -1293,5 +1294,11 @@ footer .copyright .boxContent .imgBox .img {
     footer .navFooter .leftSide,
     footer .navFooter .rightSide {
         display: none;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    header .menuMb .menuMb_item {
+        margin-top: 15px;
     }
 }
